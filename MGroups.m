@@ -30,6 +30,8 @@ Subgroups::usage="Find all subgroups of the group.
 Subgroups[G]"
 SubgroupLattice::usage="Show the subgroup lattice of the group.
 SubgroupLattice[G]"
+SubgroupLattice1::usage="Show the subgroup lattice of the group with given subgroups.
+SubgroupLattice1[G]"
 Coset::usage="Generate a coset of the group.
 Coset[G,H,element,orientation"
 NormalSubgroupQ::usage="Check whether a subgroup of the group is normal in it or not.
@@ -206,6 +208,15 @@ LayeredGraphPlot[
 edges,PlotStyle->RGBColor["#4A84FF"]
 ]
 ]
+SubgroupLattice1[G_?GroupQ, subs_]:=Module[
+{subgroups,rel,edges},
+subgroups=Table[<|Table[x-><|Table[y->G[x][y],{y,group}]|>,{x,group}]|>,{group,subs}];
+rel=Select[Tuples[subgroups,2],SubgroupQ[#[[2]],Keys[#[[1]]]]&];
+edges=(#[[2]]->#[[1]])&/@(Select[rel,coversQ[rel,#]&]);
+LayeredGraphPlot[
+edges,PlotStyle->RGBColor["#4A84FF"]
+]
+]
 
 Coset[G_?GroupQ,H_,element_,orientation_:"l"]:=Module[
 {domain},
@@ -284,7 +295,9 @@ Automorphism[G,G[G[x][#]][ElementInverse[G,x]]&]
 VisualiseMorphism[M_?MorphismQ]:=Block[
 {x,y},
 Graph[KeyValueMap[Function[{k,v},x[k]->y[v]],M],
-GraphLayout->"BipartiteEmbedding",VertexLabels->{_[i_]:>i}
+GraphLayout->"BipartiteEmbedding",VertexLabels->{_[i_]:>i},
+EdgeStyle->RGBColor["#4A84FF"],
+VertexStyle->RGBColor["#4A84FF"]
 ]
 ]
 
