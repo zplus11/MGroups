@@ -2,6 +2,8 @@
 
 BeginPackage["MGroups`"]
 
+FormGroup::usage="Form a group with the domain and function.
+FormGroup[domain,bin_op]"
 FindDomain::usage="Find the domain of the group.
 FindDomain[G]"
 FindIdentity::usage="Find the identity of the group.
@@ -73,6 +75,8 @@ MapToAssociationQ[_->_?AssociationQ]:=True
 MapToAssociationQ[___]:=False
 GroupQ[Association[___?MapToAssociationQ]]:=True
 GroupQ[___]:=False
+
+FormGroup[domain_List,binop_]:=<|Table[x-><|Table[y->binop[{y,x}],{y,domain}]|>,{x,domain}]|>
 
 FindDomain[G_?GroupQ]:=Return[Keys[G]]
 
@@ -204,18 +208,14 @@ SubgroupLattice[G_?GroupQ]:=Module[
 subgroups=Table[<|Table[x-><|Table[y->G[x][y],{y,group}]|>,{x,group}]|>,{group,Subgroups[G]}];
 rel=Select[Tuples[subgroups,2],SubgroupQ[#[[2]],Keys[#[[1]]]]&];
 edges=(#[[2]]->#[[1]])&/@(Select[rel,coversQ[rel,#]&]);
-LayeredGraphPlot[
-edges,PlotStyle->RGBColor["#4A84FF"]
-]
+LayeredGraphPlot[edges,PlotStyle->RGBColor["#4A84FF"]]
 ]
 SubgroupLattice1[G_?GroupQ, subs_]:=Module[
 {subgroups,rel,edges},
 subgroups=Table[<|Table[x-><|Table[y->G[x][y],{y,group}]|>,{x,group}]|>,{group,subs}];
 rel=Select[Tuples[subgroups,2],SubgroupQ[#[[2]],Keys[#[[1]]]]&];
 edges=(#[[2]]->#[[1]])&/@(Select[rel,coversQ[rel,#]&]);
-LayeredGraphPlot[
-edges,PlotStyle->RGBColor["#4A84FF"]
-]
+LayeredGraphPlot[edges,PlotStyle->RGBColor["#4A84FF"]]
 ]
 
 Coset[G_?GroupQ,H_,element_,orientation_:"l"]:=Module[
@@ -256,10 +256,10 @@ Catch[
 domain=FindDomain[G1];
 If[Or@@Flatten[Table[def[G1[x][y]]!=G2[def[x]][def[y]],{x,domain},{y,domain}]],
 Throw["The map is not operation preserving."]];
-Return[map[FindDomain[G1],def]]
+map[FindDomain[G1],def]
 ]
 ]
-MorphismQ[{_?AssociationQ}]:=True
+MorphismQ[_?AssociationQ]:=True
 MorphismQ[___]:=True
 
 KernelMorphism[phi_?MorphismQ,G2_?GroupQ]:=Module[
@@ -292,20 +292,25 @@ Automorphism[G,G[G[x][#]][ElementInverse[G,x]]&]
 ]
 ]
 
-VisualiseMorphism[M_?MorphismQ]:=Block[
-{x,y},
+VisualiseMorphism[M_]:=Module[
+{x,y,n1,n2,p1,p2},
+n1=Length[Keys[M]];
+n2=Length[DeleteDuplicates[Values[M]]];
+p1=<|Table[x[[i]]->i,{i,1,Length[n1]}]|>;
+p2=<|Table[y[[i]]->i,{i,1,Length[n2]}]|>;
 Graph[KeyValueMap[Function[{k,v},x[k]->y[v]],M],
-GraphLayout->"BipartiteEmbedding",VertexLabels->{_[i_]:>i},
-EdgeStyle->RGBColor["#4A84FF"],
-VertexStyle->RGBColor["#4A84FF"]
+VertexCoordinates->Table[x[i]->{p1[i],0},{i,0,n1}]~Join~Table[y[i]->{(n1-n2)/2+p2[i],-3},{i,0,n2}];
+VertexLabels->{_[i_]:>i},
+VertexStyle->RGBColor["#4A84FF"],
+EdgeStyle->RGBColor["#4A84FF"]
 ]
 ]
 
-AdditiveGroup[n_Integer]:=<|Table[x-><|Table[y->Mod[x+y,n],{y,0,n-1}]|>,{x,0,n-1}]|>
+AdditiveGroup[n_Integer]:=FormGroup[Range[0,n-1],Mod[#[[1]]+#[[2]],n]&]
 
 MultiplicativeGroup[n_Integer]:=Module[{coprimes},
 coprimes=Select[Range[0,n-1], GCD[#,n]==1&];
-<|Table[x-><|Table[y->Mod[x y,n],{y,coprimes}]|>,{x,coprimes}]|>
+FormGroup[coprimes,Mod[#[[1]]#[[2]],n]&]
 ]
 
 applySymmetry[{s1_, s2_}, n_]:=Module[
@@ -327,7 +332,7 @@ DihedralGroupp[n_]:=Module[
 {members},
 members=Union[Table["r"<>ToString[i],{i,0,n-1}],Table["s"<>ToString[i],{i,0,n-1}]];
 Return[
-<|Table[x-><|Table[y->applySymmetry[{x,y},n],{y,members}]|>,{x,members}]|>
+FormGroup[members,applySymmetry[{#[[1]],#[[2]]},n]&]
 ]
 ]
 
@@ -352,7 +357,7 @@ QuaternionGroup:=Return[<|
 ExternalDirectProduct[Gs___?GroupQ]:=Module[{domain,n},
 domain=Tuples[FindDomain/@{Gs}];
 n=Length[{Gs}];
-<|Table[x-><|Table[y->Table[{Gs}[[i]][x[[i]]][y[[i]]],{i,n}],{y,domain}]|>,{x,domain}]|>
+FormGroup[domain,Table[{Gs}[[i]][#[[1]][[i]]][#[[2]][[i]]],{i,n}]&]
 ]
 
 
