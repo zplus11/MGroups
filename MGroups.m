@@ -2,6 +2,7 @@
 
 BeginPackage["MGroups`"]
 
+
 FormGroup::usage="Form a group with the domain and function.
 FormGroup[domain,bin_op]"
 FindDomain::usage="Find the domain of the group.
@@ -68,205 +69,211 @@ QuaternionGroup"
 ExternalDirectProduct::usage="External Direct Product of \!\(\*
 StyleBox[\"n\",\nFontSlant->\"Italic\"]\) groups: \!\(\*SubscriptBox[\(G\), \(1\)]\), \!\(\*SubscriptBox[\(G\), \(2\)]\), ..., \!\(\*SubscriptBox[\(G\), \(3\)]\).
 ExternalDirectProduct[G1, G2, ..., Gn]"
- 
+
+
 Begin["`Private`"]
+
 
 MapToAssociationQ[_->_?AssociationQ]:=True
 MapToAssociationQ[___]:=False
 GroupQ[Association[___?MapToAssociationQ]]:=True
 GroupQ[___]:=False
 
+
+getUnique[l_]:=If[Length@l===1,l[[1]],Null]
+
+
 FormGroup[domain_List,binop_]:=<|Table[x-><|Table[y->binop[{y,x}],{y,domain}]|>,{x,domain}]|>
-
-FindDomain[G_?GroupQ]:=Return[Keys[G]]
-
+FindDomain[G_?GroupQ]:=Keys@G
 FindIdentity[G_?GroupQ]:=Module[
 {domain},
 Catch[
-domain=FindDomain[G];
-Do[If[And@@Table[G[x][y]==y==G[y][x],{y,domain}],Throw[x]],{x,domain}];
-Throw[Null];
+domain=FindDomain@G;
+getUnique@Select[domain,And@@Table[G[#][y]==y==G[y][#],{y,domain}]&]
 ]
 ]
 
-ElementPower[G_?GroupQ,element_,power_]:=Module[
-{domain,result},
-Catch[
-domain=FindDomain[G];
-If[!MemberQ[domain,element],Throw["Invalid Member"]];
-result=FindIdentity[G];
-Do[result=G[element][result],{i,power}];
-Throw[result]
-]
-]
 
-OrderGroup[G_?GroupQ]:=Return[Length[FindDomain[G]]]
+ElementPower[G_?GroupQ,element_,power_]:=Piecewise[{
+{element,power==0},
+{Nest[G[#][element]&,element,power-1],power>0},
+{Nest[G[#][ElementInverse[G,element]]&,ElementInverse[G,element],-power-1],power<0}}]
+
+
+OrderGroup[G_?GroupQ]:=Length@FindDomain@G
 OrderElement[G_?GroupQ,element_]:=Module[
 {domain,identity},
 Catch[
-domain=FindDomain[G];
+domain=FindDomain@G;
 If[!MemberQ[domain,element],Throw["Invalid Member"]];
-identity=FindIdentity[G];
-Do[If[ElementPower[G,element,i]==identity,Throw[i]],{i,Divisors[OrderGroup[G]]}];
-Throw[Null]
+identity=FindIdentity@G;
+Do[If[ElementPower[G,element,i]==identity,Throw@i],{i,Divisors@OrderGroup@G}];
+Throw@Null
 ]
 ]
+
 
 ElementInverse[G_?GroupQ,element_]:=Module[
 {domain,identity},
 Catch[
-domain=FindDomain[G];
+domain=FindDomain@G;
 If[!MemberQ[domain,element],Throw["Invalid Member"]];
-identity=FindIdentity[G];
-Do[If[G[element][x]==identity==G[x][element],Throw[x]],{x,domain}];
+identity=FindIdentity@G;
+Do[If[G[element][x]==identity==G[x][element],Throw@x],{x,domain}];
 Throw[Null];
 ]
 ]
 
+
 CyclicQ[G_?GroupQ]:=Module[
 {domain,grouporder},
 Catch[
-domain=FindDomain[G];
-grouporder=OrderGroup[G];
-Do[If[OrderElement[G,x]==grouporder,Throw[True]],{x,domain}];
-Throw[False];
+domain=FindDomain@G;
+grouporder=OrderGroup@G;
+Do[If[OrderElement[G,x]==grouporder,Throw@True],{x,domain}];
+Throw@False;
 ]
 ]
+
 
 AbelianQ[G_?GroupQ]:=Module[
 {domain},
 Catch[
-domain=FindDomain[G];
-Do[If[G[x][y]!=G[y][x],Throw[False]],{x,domain},{y,domain}];
-Throw[True]
+domain=FindDomain@G;
+Do[If[G[x][y]!=G[y][x],Throw@False],{x,domain},{y,domain}];
+Throw@True
 ]
 ]
+
 
 CayleyTable[G_?GroupQ]:=Module[
 {domain},
-domain=FindDomain[G];
+domain=FindDomain@G;
 TableForm[Table[Table[G[x][y],{y,domain}],{x,domain}],TableHeadings->{domain,domain}]
 ]
 
+
 InversesTable[G_?GroupQ]:=Module[
 {domain},
-domain=FindDomain[G];
-TableForm[Table[{x,ElementInverse[G,x],OrderElement[G,x]},{x,FindDomain[G]}],TableHeadings->{None,{"x","\!\(\*SuperscriptBox[\(x\), \(-1\)]\)","|x|"}}]
+domain=FindDomain@G;
+TableForm[Table[{x,ElementInverse[G,x],OrderElement[G,x]},{x,FindDomain@G}],TableHeadings->{None,{"x","\!\(\*SuperscriptBox[\(x\), \(-1\)]\)","|x|"}}]
 ]
+
 
 SubgroupQ[G_?GroupQ,H_?ListQ]:=Module[
 {domain,identity},
 Catch[
-domain=FindDomain[G];
-identity=FindIdentity[G];
-If[!MemberQ[H,identity],Throw[False]];
-If[!SubsetQ[domain, H],Throw[False]];
-Do[If[!MemberQ[H,G[x][y]],Throw[False]],{x,H},{y,H}];
-Throw[True]
+domain=FindDomain@G;
+identity=FindIdentity@G;
+If[!MemberQ[H,identity],Throw@False];
+If[!SubsetQ[domain, H],Throw@False];
+Do[If[!MemberQ[H,G[x][y]],Throw@False],{x,H},{y,H}];
+Throw@True
 ]
 ]
+
 
 GenerateSubgroup[G_?GroupQ, x_]:=Module[
 {domain},
 Catch[
-domain=FindDomain[G];
-If[!MemberQ[domain,x],Throw["Invalid member"]];
+domain=FindDomain@G;
+If[!MemberQ[domain,x],Throw@"Invalid member"];
 Throw[Table[ElementPower[G,x,i],{i,OrderElement[G,x]}]]
 ]
 ]
 
+
 getGenerator[G_?GroupQ]:=Module[
 {domain,gorder},
 Catch[
-domain=FindDomain[G];
-gorder=OrderGroup[G];
-Do[If[OrderElement[G,x]==gorder,Throw[x]],{x,domain}];
-Throw[Null]
+domain=FindDomain@G;
+gorder=OrderGroup@G;
+Do[If[OrderElement[G,x]==gorder,Throw@x],{x,domain}];
+Throw@Null
 ]
 ]
 Subgroups[G_?GroupQ]:=Module[
 {subsets,gen},
-gen=getGenerator[G];
+gen=getGenerator@G;
 If[gen=!=Null,
-Return[Table[GenerateSubgroup[G,ElementPower[G,gen,i]],{i,Divisors[OrderGroup[G]]}]],
-subsets=Complement[Subsets[FindDomain[G]],{{}}];
-Return[Select[subsets,SubgroupQ[G,#]&]]
+Return[Table[GenerateSubgroup[G,ElementPower[G,gen,i]],{i,Divisors[OrderGroup@G]}]],
+subsets=Complement[Subsets[FindDomain@G],{{}}];
+Select[subsets,SubgroupQ[G,#]&]
 ]
 ]
+
 
 coversQ[R_,{x_,y_}]:=Module[
 {z,checkSet},
 Catch[
-If[x==y||!MemberQ[R,{x,y}],Throw[False]];
+If[x==y||!MemberQ[R,{x,y}],Throw@False];
 checkSet=Complement[Union[Flatten[R, 1]],{x,y}];
-Do[If[MemberQ[R,{x,z}]&&MemberQ[R,{z,y}],Throw[False]],{z,checkSet}];
-Throw[True]
+Do[If[MemberQ[R,{x,z}]&&MemberQ[R,{z,y}],Throw@False],{z,checkSet}];
+Throw@True
 ]
 ]
 SubgroupLattice[G_?GroupQ]:=Module[
 {subgroups,rel,edges},
-subgroups=Table[<|Table[x-><|Table[y->G[x][y],{y,group}]|>,{x,group}]|>,{group,Subgroups[G]}];
+subgroups=Table[<|Table[x-><|Table[y->G[x][y],{y,group}]|>,{x,group}]|>,{group,Subgroups@G}];
 rel=Select[Tuples[subgroups,2],SubgroupQ[#[[2]],Keys[#[[1]]]]&];
 edges=(#[[2]]->#[[1]])&/@(Select[rel,coversQ[rel,#]&]);
 LayeredGraphPlot[edges,PlotStyle->RGBColor["#4A84FF"]]
 ]
-SubgroupLattice1[G_?GroupQ, subs_]:=Module[
-{subgroups,rel,edges},
-subgroups=Table[<|Table[x-><|Table[y->G[x][y],{y,group}]|>,{x,group}]|>,{group,subs}];
-rel=Select[Tuples[subgroups,2],SubgroupQ[#[[2]],Keys[#[[1]]]]&];
-edges=(#[[2]]->#[[1]])&/@(Select[rel,coversQ[rel,#]&]);
-LayeredGraphPlot[edges,PlotStyle->RGBColor["#4A84FF"]]
-]
+
 
 Coset[G_?GroupQ,H_,element_,orientation_:"l"]:=Module[
 {domain},
 Catch[
-domain=FindDomain[G];
-If[!SubgroupQ[G,H],Throw["Invalid Subgroup"]];
-If[!MemberQ[domain,element],Throw["Invalid Member"]];
-If[!MemberQ[{"l","r"},orientation],Throw["Invalid Orientation"]];
+domain=FindDomain@G;
+If[!SubgroupQ[G,H],Throw@"Invalid Subgroup"];
+If[!MemberQ[domain,element],Throw@"Invalid Member"];
+If[!MemberQ[{"l","r"},orientation],Throw@"Invalid Orientation"];
 If[orientation=="l",
-Throw[Table[G[x][element],{x,H}]],
-Throw[Table[G[element][x],{x,H}]]
+Throw[G[#][element]&/@H],
+Throw[G[element][#]&/@H]
 ]
 ]
 ]
+
 
 NormalSubgroupQ[G_?GroupQ,H_]:=Module[
 {domain},
 Catch[
-domain=FindDomain[G];
-If[!SubgroupQ[G,H],Throw[False]];
-Do[If[!(Sort@Coset[G,H,x,"l"]===Sort@Coset[G,H,x,"r"]),Throw[False]],{x,domain}];
-Throw[True];
+domain=FindDomain@G;
+If[!SubgroupQ[G,H],Throw@False];
+Do[If[!(Sort@Coset[G,H,x,"l"]===Sort@Coset[G,H,x,"r"]),Throw@False],{x,domain}];
+Throw@True;
 ]
 ]
+
 
 NormalSubgroups[G_?GroupQ]:=Module[
 {subgroups},
-subgroups=Subgroups[G];
+subgroups=Subgroups@G;
 Return[Select[subgroups,NormalSubgroupQ[G,#]&]]
 ]
 
+
 map[domain_,def_]:=Return[<|Table[x->def[x],{x,domain}]|>];
+
 
 Homomorphism[G1_?GroupQ,G2_?GroupQ,def_]:=Module[
 {domain},
 Catch[
 domain=FindDomain[G1];
-If[Or@@Flatten[Table[def[G1[x][y]]!=G2[def[x]][def[y]],{x,domain},{y,domain}]],
-Throw["The map is not operation preserving."]];
-map[FindDomain[G1],def]
+If[Or@@Flatten[Table[def[G1[x][y]]!=G2[def@x][def@y],{x,domain},{y,domain}]],
+Throw@"The map is not operation preserving."];
+map[FindDomain@G1,def]
 ]
 ]
-MorphismQ[_?AssociationQ]:=True
-MorphismQ[___]:=True
 
-KernelMorphism[phi_?MorphismQ,G2_?GroupQ]:=Module[
+
+KernelMorphism[phi_?AssociationQ,G2_?GroupQ]:=Module[
 {idenitity},
 identity=FindIdentity[G2];
 Return[Select[KeyValueMap[Function[{k,v},{k,v}],phi],#[[2]]==identity&][[All,1]]]
 ]
+
 
 Isomorphism[G1_?GroupQ,G2_?GroupQ,def_]:=Module[
 {domain},
@@ -281,7 +288,9 @@ Throw[provisionalMap]
 ]
 ]
 
+
 Automorphism[G_?GroupQ,def_]:=Isomorphism[G,G,def]
+
 
 InnerAutomorphism[G_?GroupQ,x_]:=Module[
 {domain},
@@ -291,6 +300,7 @@ If[!MemberQ[domain,x],Throw["Invalid member."]];
 Automorphism[G,G[G[x][#]][ElementInverse[G,x]]&]
 ]
 ]
+
 
 VisualiseMorphism[M_]:=Module[
 {x,y,n1,n2,p1,p2},
@@ -306,12 +316,15 @@ EdgeStyle->RGBColor["#4A84FF"]
 ]
 ]
 
+
 AdditiveGroup[n_Integer]:=FormGroup[Range[0,n-1],Mod[#[[1]]+#[[2]],n]&]
+
 
 MultiplicativeGroup[n_Integer]:=Module[{coprimes},
 coprimes=Select[Range[0,n-1], GCD[#,n]==1&];
 FormGroup[coprimes,Mod[#[[1]]#[[2]],n]&]
 ]
+
 
 applySymmetry[{s1_, s2_}, n_]:=Module[
 {n1,n2},
@@ -336,12 +349,14 @@ FormGroup[members,applySymmetry[{#[[1]],#[[2]]},n]&]
 ]
 ]
 
+
 Klein4Group:=Return[<|
 "e" -> <|"e" -> "e", "a" -> "a", "b" -> "b", "c" -> "c"|>,
 "a" -> <|"e" -> "a", "a" -> "e", "b" -> "c", "c" -> "b"|>,
 "b" -> <|"e" -> "b", "a" -> "c", "b" -> "e", "c" -> "a"|>,
 "c" -> <|"e" -> "c", "a" -> "b", "b" -> "a", "c" -> "e"|>
 |>]
+
 
 QuaternionGroup:=Return[<|
 "1" -> <|"1" -> "1", "-1" -> "-1", "i" -> "i", "-i" -> "-i", "j" -> "j", "-j" -> "-j", "k" -> "k", "-k" -> "-k"|>,
@@ -353,6 +368,7 @@ QuaternionGroup:=Return[<|
 "k" -> <|"1" -> "k", "-1" -> "-k", "i" -> "j", "-i" -> "-j", "j" -> "-i", "-j" -> "i", "k" -> "-1", "-k" -> "1"|>,
 "-k" -> <|"1" -> "-k", "-1" -> "k", "i" -> "-j", "-i" -> "j", "j" -> "i", "-j" -> "-i", "k" -> "1", "-k" -> "-1"|>
 |>]
+
 
 ExternalDirectProduct[Gs___?GroupQ]:=Module[{domain,n},
 domain=Tuples[FindDomain/@{Gs}];
