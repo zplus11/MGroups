@@ -53,6 +53,10 @@ InnerAutomorphism::usage="Define an inner automorphism in the group by an elemen
 InnerAutomorphism[G, x]"
 VisualiseMorphism::usage="Visualise a morphism between groups.
 VisualiseMorphism[M]"
+GroupAction::usage="Define the group action of a group on a set defined by a function.
+GroupAction[G, A, f]"
+PermutationRepresentation::usage="Define the permutation representation associated to a given group action.
+PermutationRepresentation[G, A, f]"
 AdditiveGroup::usage="Addivitive group of order \!\(\*
 StyleBox[\"n\",\nFontSlant->\"Italic\"]\).
 AdditiveGroup[n]"
@@ -62,6 +66,9 @@ MultiplicativeGroup[n]"
 DihedralGroupp::usage="Dihedral group of order \!\(\*
 StyleBox[\"n\",\nFontSlant->\"Italic\"]\).
 DihedralGroupp[n]"
+PermutationsGroup::usage="Permutation group of set \!\(\*
+StyleBox[\"A\",\nFontSlant->\"Italic\"]\).
+Permutation[A]"
 Klein4Group::usage="Klein 4-Group
 Klein4Group"
 QuaternionGroup::usage="Quaternion Group
@@ -83,7 +90,7 @@ GroupQ[___]:=False
 getUnique[l_]:=If[Length@l===1,l[[1]],Null]
 
 
-FormGroup[domain_List,binop_]:=<|Table[x-><|Table[y->binop[{y,x}],{y,domain}]|>,{x,domain}]|>
+FormGroup[domain_List,binop_]:=<|Table[x-><|Table[y->binop[y,x],{y,domain}]|>,{x,domain}]|>
 FindDomain[G_?GroupQ]:=Keys@G
 FindIdentity[G_?GroupQ]:=Module[
 {domain},
@@ -149,14 +156,14 @@ Throw@True
 CayleyTable[G_?GroupQ]:=Module[
 {domain},
 domain=FindDomain@G;
-TableForm[Table[Table[G[x][y],{y,domain}],{x,domain}],TableHeadings->{domain,domain}]
+TableForm[Table[Table[G[x][y],{y,domain}],{x,domain}],TableHeadings->{domain,domain},TableDepth->2]
 ]
 
 
 InversesTable[G_?GroupQ]:=Module[
 {domain},
 domain=FindDomain@G;
-TableForm[Table[{x,ElementInverse[G,x],OrderElement[G,x]},{x,FindDomain@G}],TableHeadings->{None,{"x","\!\(\*SuperscriptBox[\(x\), \(-1\)]\)","|x|"}}]
+TableForm[Table[{x,ElementInverse[G,x],OrderElement[G,x]},{x,FindDomain@G}],TableHeadings->{None,{"x","\!\(\*SuperscriptBox[\(x\), \(-1\)]\)","|x|"}},TableDepth->2]
 ]
 
 
@@ -317,12 +324,33 @@ EdgeStyle->RGBColor["#4A84FF"]
 ]
 
 
-AdditiveGroup[n_Integer]:=FormGroup[Range[0,n-1],Mod[#[[1]]+#[[2]],n]&]
+GroupAction[G_,A_,f_]:=Module[
+{e=FindIdentity[G],
+d=FindDomain[G],
+mapping},
+mapping={#,f@@#}&/@Tuples[{d,A}];
+Catch[
+If[!SubsetQ[A,mapping[[All,2]]],Throw["Action not closed"]];
+If[Or@@@(f[#[[1]],f[#[[2]],#[[3]]]]!=f[G[#[[1]]][#[[2]]],#[[3]]]&/@Tuples[{d,d,A}]),Throw["Property 1 fails"]];
+If[Or@@@(f[e,#]!=#&/@d),Throw["Property 2 fails"]];
+Throw[Association[Rule@@@mapping]]
+]
+]
+
+
+PermutationRepresentation[G_,A_,f_]:=Homomorphism[
+G,
+PermutationsGroup[A],
+Function[{a},f[#,a]]/@A&
+]
+
+
+AdditiveGroup[n_Integer]:=FormGroup[Range[0,n-1],Mod[#1+#2,n]&]
 
 
 MultiplicativeGroup[n_Integer]:=Module[{coprimes},
 coprimes=Select[Range[0,n-1], GCD[#,n]==1&];
-FormGroup[coprimes,Mod[#[[1]]#[[2]],n]&]
+FormGroup[coprimes,Mod[#1 #2,n]&]
 ]
 
 
@@ -345,9 +373,12 @@ DihedralGroupp[n_]:=Module[
 {members},
 members=Union[Table["r"<>ToString[i],{i,0,n-1}],Table["s"<>ToString[i],{i,0,n-1}]];
 Return[
-FormGroup[members,applySymmetry[{#[[1]],#[[2]]},n]&]
+FormGroup[members,applySymmetry[{#1,#2},n]&]
 ]
 ]
+
+
+PermutationsGroup[A_]:=FormGroup[Permutations[A],PermutationProduct[#1,#2]&]
 
 
 Klein4Group:=Return[<|
@@ -373,7 +404,7 @@ QuaternionGroup:=Return[<|
 ExternalDirectProduct[Gs___?GroupQ]:=Module[{domain,n},
 domain=Tuples[FindDomain/@{Gs}];
 n=Length[{Gs}];
-FormGroup[domain,Table[{Gs}[[i]][#[[1]][[i]]][#[[2]][[i]]],{i,n}]&]
+FormGroup[domain,Table[{Gs}[[i]][#1[[i]]][#2[[i]]],{i,n}]&]
 ]
 
 
