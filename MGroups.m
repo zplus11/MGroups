@@ -41,6 +41,10 @@ NormalSubgroupQ::usage="Check whether a subgroup of the group is normal in it or
 NormalSubgroupQ[G,H]"
 NormalSubgroups::usage="Find all normal subgroups of the group.
 NormalSubgroups[G]"
+CenterGroup::usage="Find kernel of the group.
+KernelGroup[G]"
+CentralizerElement::usage="Find centralizer of element in the group.
+CentralizerElement[G,x]"
 Homomorphism::usage="Define a homomorphism between 2 groups.
 Homomorphism[G1, G2, phi]"
 KernelMorphism::usage="Find the kernel of a Morphism.
@@ -57,6 +61,12 @@ GroupAction::usage="Define the group action of a group on a set defined by a fun
 GroupAction[G, A, f]"
 PermutationRepresentation::usage="Define the permutation representation associated to a given group action.
 PermutationRepresentation[G, A, f]"
+KernelAction::usage="Find kernel of the action.
+KernelAction[action]"
+StabilizerElement::usage="Find stabilizer of element in the action.
+StabilizerElement[action,x]"
+OrbitElement::usage="Find orbit of element in the action.
+OrbitElement[action,x]"
 AdditiveGroup::usage="Addivitive group of order \!\(\*
 StyleBox[\"n\",\nFontSlant->\"Italic\"]\).
 AdditiveGroup[n]"
@@ -109,10 +119,8 @@ ElementPower[G_?GroupQ,element_,power_]:=Piecewise[{
 
 OrderGroup[G_?GroupQ]:=Length@FindDomain@G
 OrderElement[G_?GroupQ,element_]:=Module[
-{domain,identity},
+{identity},
 Catch[
-domain=FindDomain@G;
-If[!MemberQ[domain,element],Throw["Invalid Member"]];
 identity=FindIdentity@G;
 Do[If[ElementPower[G,element,i]==identity,Throw@i],{i,Divisors@OrderGroup@G}];
 Throw@Null
@@ -121,23 +129,19 @@ Throw@Null
 
 
 ElementInverse[G_?GroupQ,element_]:=Module[
-{domain,identity},
+{identity},
 Catch[
-domain=FindDomain@G;
-If[!MemberQ[domain,element],Throw["Invalid Member"]];
 identity=FindIdentity@G;
-Do[If[G[element][x]==identity==G[x][element],Throw@x],{x,domain}];
+Do[If[G[element][x]==identity==G[x][element],Throw@x],{x,FindDomain@G}];
 Throw[Null];
 ]
 ]
 
 
 CyclicQ[G_?GroupQ]:=Module[
-{domain,grouporder},
+{grouporder},
 Catch[
-domain=FindDomain@G;
-grouporder=OrderGroup@G;
-Do[If[OrderElement[G,x]==grouporder,Throw@True],{x,domain}];
+Do[If[OrderElement[G,x]==grouporder,Throw@True],{x,FindDomain@G}];
 Throw@False;
 ]
 ]
@@ -163,7 +167,7 @@ TableForm[Table[Table[G[x][y],{y,domain}],{x,domain}],TableHeadings->{domain,dom
 InversesTable[G_?GroupQ]:=Module[
 {domain},
 domain=FindDomain@G;
-TableForm[Table[{x,ElementInverse[G,x],OrderElement[G,x]},{x,FindDomain@G}],TableHeadings->{None,{"x","\!\(\*SuperscriptBox[\(x\), \(-1\)]\)","|x|"}},TableDepth->2]
+TableForm[Table[{x,ElementInverse[G,x],OrderElement[G,x]},{x,domain}],TableHeadings->{None,{"x","\!\(\*SuperscriptBox[\(x\), \(-1\)]\)","|x|"}},TableDepth->2]
 ]
 
 
@@ -181,10 +185,8 @@ Throw@True
 
 
 GenerateSubgroup[G_?GroupQ, x_]:=Module[
-{domain},
+{},
 Catch[
-domain=FindDomain@G;
-If[!MemberQ[domain,x],Throw@"Invalid member"];
 Throw[Table[ElementPower[G,x,i],{i,OrderElement[G,x]}]]
 ]
 ]
@@ -200,12 +202,13 @@ Throw@Null
 ]
 ]
 Subgroups[G_?GroupQ]:=Module[
-{subsets,gen},
+{potential,gen,div},
+div=Divisors@OrderGroup@G;
 gen=getGenerator@G;
 If[gen=!=Null,
 Return[Table[GenerateSubgroup[G,ElementPower[G,gen,i]],{i,Divisors[OrderGroup@G]}]],
-subsets=Complement[Subsets[FindDomain@G],{{}}];
-Select[subsets,SubgroupQ[G,#]&]
+potential=Select[Subsets@Keys@G,MemberQ[div,Length@#]&];
+Select[potential,SubgroupQ[G,#]&]
 ]
 ]
 
@@ -261,6 +264,16 @@ Return[Select[subgroups,NormalSubgroupQ[G,#]&]]
 ]
 
 
+CenterGroup[G_?GroupQ]:=Module[
+{domain=Keys@G},
+Select[domain,And@@Table[G[#][y]==G[y][#],{y,domain}]&]
+]
+CentralizerElement[G_?GroupQ,elem_]:=Module[
+{},
+Select[Keys@G,G[#][elem]==G[elem][#]&]
+]
+
+
 map[domain_,def_]:=Return[<|Table[x->def[x],{x,domain}]|>];
 
 
@@ -276,9 +289,9 @@ map[FindDomain@G1,def]
 
 
 KernelMorphism[phi_?AssociationQ,G2_?GroupQ]:=Module[
-{idenitity},
+{identity},
 identity=FindIdentity[G2];
-Return[Select[KeyValueMap[Function[{k,v},{k,v}],phi],#[[2]]==identity&][[All,1]]]
+Select[Keys@phi,phi[#]==identity&]
 ]
 
 
@@ -345,6 +358,21 @@ Function[{a},f[#,a]]/@A&
 ]
 
 
+KernelAction[act_?AssociationQ]:=Module[
+{G=DeleteDuplicates[Keys[act][[All,1]]],
+A=DeleteDuplicates[Keys[act][[All,2]]]},
+Select[G,And@@Table[act[{#,a}]==a,{a,A}]&]
+]
+StabilizerElement[act_?AssociationQ,elem_]:=Module[
+{G=DeleteDuplicates[Keys[act][[All,1]]]},
+Select[G,act[{#,elem}]==elem&]
+]
+OrbitElement[act_?AssociationQ,elem_]:=Module[
+{},
+act[{#,elem}]&/@DeleteDuplicates[Keys[act][[All,1]]]//DeleteDuplicates
+]
+
+
 AdditiveGroup[n_Integer]:=FormGroup[Range[0,n-1],Mod[#1+#2,n]&]
 
 
@@ -378,7 +406,9 @@ FormGroup[members,applySymmetry[{#1,#2},n]&]
 ]
 
 
-PermutationsGroup[A_]:=FormGroup[Permutations[A],PermutationProduct[#1,#2]&]
+PermutationsGroup[A_List]:=Association@@KeyValueMap[#1->Association@@#2&,
+Association@@(FormGroup[Permutations[Range@Length@A],
+PermutationProduct[#2,#1]&]/.Association->List/.Rule@@@Transpose[{Range@Length@A,A}])]
 
 
 Klein4Group:=Return[<|
