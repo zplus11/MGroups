@@ -1,0 +1,317 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     11974,        307]
+NotebookOptionsPosition[      8821,        237]
+NotebookOutlinePosition[     11031,        293]
+CellTagsIndexPosition[     10946,        288]
+WindowTitle->MKlein4Group
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["TAGGAR/ M GROUPS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "277d0613-acde-404a-94d8-31f5c00124b9"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b62b52a0-f011-f446-ac4d-7a879716581c"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "916ad97a-94ef-3d43-a01a-82ce43c24de3"]
+         }],ExpressionUUID->"cb7f6e0f-5ef8-3546-a889-f2b126ff5036"],
+         StripOnInput->False],{
+        "\"MGroups Package\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/guide/MGroupsPackage"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "1865e234-6576-ad4d-8de3-1c20896b0675"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "f5fe9ad9-8a39-5d40-ad7f-0373e69728d0"]
+         }],ExpressionUUID->"b03efce9-e931-dd40-b657-45a41d400ca3"],
+         StripOnInput->False],{
+        "\"Taggar/MGroups/ref/MKlein4Group\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["Taggar/MGroups/ref/MKlein4Group"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$347009]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/Taggar/MGroups/ref/\
+MKlein4Group.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$347009]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[False], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "Taggar/MGroups/ref/MKlein4Group" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "8a35b8e5-b063-6c42-81f0-d7b74fa515ab"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "1cddb998-ae2e-7b4e-b8fc-617963f7e29c"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"5d35f92d-f1e2-5c47-a6a3-af45e166111e"],
+
+Cell["Taggar`MGroups`", "ContextNameCell",ExpressionUUID->"057a4825-deb5-de41-9681-f43d08d4e5f7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MKlein4Group", "ObjectName",ExpressionUUID->
+      "174add01-ce36-ac47-8ac3-fbfc218e534e"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"33f38611-b73c-bc4b-a173-083d3e5a712f"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "a1382f79-ca5a-1e48-8213-ac7b846a224e"]
+    }],ExpressionUUID->"afb17bba-31d2-f34e-b29a-da66ceba5ed6"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"9e100a85-e55b-8a47-9e97-\
+f3257a7039e5"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["MKlein4Group"], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a4e82992-930c-0141-867f-37827df38ddc"],
+     "\[LineSeparator]represents the Klein 4-Group"
+    }],ExpressionUUID->"a76f8edb-2357-be44-bdbc-6bc1c0fe765f"]}
+  }]], "Usage",
+ CellID->386764865,ExpressionUUID->"4920ce43-8b7d-0b42-84ea-aacbed4774e5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.84893795674434, 8.751062043255661}}]],
+  ExpressionUUID->"6106d7b7-a680-864b-b937-b1a7163567e7"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"fd2f4d82-ba2f-7c49-8667-16608ad4fbb2"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "e6840c1a-713d-304c-bcf6-2e07c4180e48"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->346035225,ExpressionUUID->"e344e212-5480-f444-b943-ef64bf23f6b3"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", "]"}]], "Input", \
+"ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->391712577,ExpressionUUID->"d7ee05cb-c75b-2e44-b8dd-9a3d487bb944"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {26.472656144876964`, 33.527343855123036`}}], 
+    GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["MGroups Package"]], 
+           "paclet:Taggar/MGroups/guide/MGroupsPackage"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "0be62923-546a-e342-93c2-6b5f0cb8e318"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"a9526d87-1dde-4041-9dd8-\
+3778b39f4df5"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"08d88195-c921-494f-9d47-0c58d89175f0"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MKlein4Group",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "HasOptions" -> 
+  True, "RootCaptions" -> "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 6, 2, 18, 37, 41.5738768}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Taggar`MGroups`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Taggar/ M Groups Symbol", "language" -> "en", "paclet" -> 
+    "Taggar/MGroups", "status" -> "None", "summary" -> 
+    "MKlein4Group represents the Klein 4-Group", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "MKlein4Group", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> "MKlein4Group", "type" -> 
+    "Symbol", "uri" -> "Taggar/MGroups/ref/MKlein4Group", 
+    "WorkflowDockedCell" -> ""}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "14.1 for Microsoft Windows (64-bit) (July 16, 2024)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"e170169e-9c4e-c24e-b592-56178117ce0e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6203, 164, 1439, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"e344e212-5480-f444-b943-ef64bf23f6b3",
+   CellTags->"PrimaryExamplesSection",
+   CellID->346035225]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 10747, 281}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[580, 21, 4498, 108, 70, "AnchorBarGrid",ExpressionUUID->"5d35f92d-f1e2-5c47-a6a3-af45e166111e",
+ CellID->1],
+Cell[5081, 131, 97, 0, 70, "ContextNameCell",ExpressionUUID->"057a4825-deb5-de41-9681-f43d08d4e5f7"],
+Cell[CellGroupData[{
+Cell[5203, 135, 555, 14, 70, "ObjectNameGrid",ExpressionUUID->"9e100a85-e55b-8a47-9e97-f3257a7039e5"],
+Cell[5761, 151, 405, 8, 70, "Usage",ExpressionUUID->"4920ce43-8b7d-0b42-84ea-aacbed4774e5",
+ CellID->386764865]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6203, 164, 1439, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"e344e212-5480-f444-b943-ef64bf23f6b3",
+ CellTags->"PrimaryExamplesSection",
+ CellID->346035225],
+Cell[7645, 204, 205, 4, 70, "Input",ExpressionUUID->"d7ee05cb-c75b-2e44-b8dd-9a3d487bb944",
+ CellID->391712577]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[7968, 213, 768, 20, 70, "MoreAboutSection",ExpressionUUID->"a9526d87-1dde-4041-9dd8-3778b39f4df5"],
+Cell[8739, 235, 78, 0, 70, "FooterCell",ExpressionUUID->"08d88195-c921-494f-9d47-0c58d89175f0"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

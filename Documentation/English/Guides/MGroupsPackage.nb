@@ -1,0 +1,773 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     30722,        764]
+NotebookOptionsPosition[     26765,        679]
+NotebookOutlinePosition[     27286,        697]
+CellTagsIndexPosition[     27243,        694]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MGroups Package", "GuideTitle",
+ CellID->478013545,ExpressionUUID->"25ba8cc7-e57f-2f4c-b8b8-20de515394ef"],
+
+Cell[TextData[{
+ "MGroups package allows exploration of finite groups in terms of their \
+Cayley tables, subgroup structures (lattices), group morphisms, actions, and \
+so on. It provides extensive functionality to study finite groups using \
+functions such as ",
+ Cell[BoxData[
+  ButtonBox["MCayleyTable",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCayleyTable"]], "InlineFormula",
+  ExpressionUUID->"6306ac7e-188f-a244-a5cd-52e778b5f1b0"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["MSubgroups",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroups"]], "InlineFormula",
+  ExpressionUUID->"b937d774-fc6b-4445-afdf-d1c624d0f595"],
+ ", and so on."
+}], "GuideAbstract",
+ CellChangeTimes->{{3.9576545964557476`*^9, 3.9576546493703766`*^9}, {
+  3.9576547326644535`*^9, 3.957654747593807*^9}},
+ CellID->143880982,ExpressionUUID->"b442fd4f-aaeb-7a49-86a1-12b92789b81c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideFunctionsSection",
+ CellID->282796149,ExpressionUUID->"41f0125f-9071-c747-81bf-b2e18e1757c1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MCayleyTable",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCayleyTable"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "0bc2a546-75a8-b040-9a51-16dbd6b85c8a"],
+ " \[LongDash] Cayley table of a group"
+}], "GuideText",
+ CellChangeTimes->{{3.9576547735191154`*^9, 3.9576547951860523`*^9}, {
+  3.957654901002041*^9, 3.9576549012052517`*^9}, {3.9576554457288647`*^9, 
+  3.9576554457288647`*^9}},
+ CellID->942163894,ExpressionUUID->"83b3e680-22ca-c247-a7e0-0c5b8502cc0c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MCayleyGraph",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCayleyGraph"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "fbf9bcff-7e0f-9649-99c3-43f8cf82bcd3"],
+ " \[LongDash] Cayley graph of a group corresponding to certain generators"
+}], "GuideText",
+ CellChangeTimes->{{3.9576548873321*^9, 3.957654912004921*^9}, {
+  3.9576554494291935`*^9, 3.9576554494291935`*^9}},
+ CellID->349188921,ExpressionUUID->"6712d4c2-99da-fd4a-ae02-94300c8c5a64"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MInversesTable",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MInversesTable"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "3850db5a-8a1f-1944-a8a6-944e05112600"],
+ " \[LongDash] concise table summarising element inverses and orders"
+}], "GuideText",
+ CellChangeTimes->{{3.9576549200338936`*^9, 3.9576549398873787`*^9}, {
+  3.9576554522037163`*^9, 3.9576554522037163`*^9}},
+ CellID->397293128,ExpressionUUID->"63aff2d5-4c7a-f841-aa49-dc70fcf6861d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MSubgroups",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroups"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "bf2b404e-6108-dc45-8352-5b861b0c8003"],
+ " \[LongDash] subgroups of a group"
+}], "GuideText",
+ CellChangeTimes->{{3.957654800627537*^9, 3.9576548487744083`*^9}, {
+  3.9576554562329845`*^9, 3.9576554562329845`*^9}},
+ CellID->138272114,ExpressionUUID->"f0dde4f8-8eb2-ee46-9993-5f13b3e5ccc1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MSubgroupLattice",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroupLattice"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "c6390104-0e20-034d-a5bf-f85dff31dcbb"],
+ " \[LongDash] subgroup lattice of a group"
+}], "GuideText",
+ CellChangeTimes->{{3.957654964951008*^9, 3.957654975599016*^9}, {
+  3.9576554595729446`*^9, 3.9576554595729446`*^9}},
+ CellID->222323367,ExpressionUUID->"b99a3d31-366a-144d-a5c0-b1b37c2acf5a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MFactorGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MFactorGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "fa9b7696-2a6d-6e41-9215-b1d12e3fd600"],
+ " \[LongDash] factor or quotient group by a normal subgroup"
+}], "GuideText",
+ CellChangeTimes->{{3.9576549830068016`*^9, 3.957655023619179*^9}, {
+  3.957655462729336*^9, 3.957655462729336*^9}},
+ CellID->403679086,ExpressionUUID->"8f250d0d-4388-6b4c-9151-4b4e28b16cc9"],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->808165437,ExpressionUUID->"0488c341-3919-704e-adfa-dc48028b385c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroup"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "d2ac7c80-f72a-2749-9eab-2ac9d20ffcd8"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["FormMGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/FormMGroup"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"62a5fb9e-d4d4-4d39-9130-736c05c48a88",ExpressionUUID->
+  "11d8df6f-e40d-794e-9c64-d15ce65b28b3"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["SemiGroupQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/SemiGroupQ"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"ea8a1cb2-a274-43eb-a8b6-f727c7f5c632",ExpressionUUID->
+  "9a30e344-63e2-0143-ba0c-17590aa30661"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MonoidQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MonoidQ"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"c7d6b851-09c5-4dff-b1b8-06208fb7ff51",ExpressionUUID->
+  "19f67ae6-5105-7b46-bc60-5bdc8a029ea7"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MGroupDomain",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroupDomain"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"47dfbd17-f3bf-4915-981e-9c85c03f76d7",ExpressionUUID->
+  "7fab323f-146d-614f-8b2b-194c27402bd9"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MGroupIdentity",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroupIdentity"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"e9bd303d-c7b6-4a8a-b784-e35e5ef715bd",ExpressionUUID->
+  "9de2ae2f-51fe-434e-9d62-7ad8ee28ab8a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MElementPower",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MElementPower"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"6f1ec678-0748-45cc-8743-f159c2514728",ExpressionUUID->
+  "65b35a6d-7876-6348-8dc3-ae282f7d8e49"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MGroupOrder",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroupOrder"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"b08a5f17-80d3-409c-b733-b8ac80157952",ExpressionUUID->
+  "bdb25805-4bc0-8d4a-a800-61edd56c9d97"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MElementInverse",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MElementInverse"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"157f937a-121c-46ff-84b8-b3cb2255e98f",ExpressionUUID->
+  "85521d45-a40d-8a40-acec-7b831f9346c9"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MElementOrder",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MElementOrder"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"7b40c3ca-bf12-4090-bc58-dd7a5bd3c7bc",ExpressionUUID->
+  "f083b42b-9fe5-9448-bf95-515c0a86b340"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MCyclicQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCyclicQ"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"aa739177-a8f5-4783-9b71-00ab9414f72d",ExpressionUUID->
+  "3d85f438-c053-1c4f-a44b-f559f1ff8220"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MAbelianQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MAbelianQ"]], "InlineGuideFunction",
+  
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"fdd52731-05d9-4747-832e-793a0acd0298",ExpressionUUID->
+  "aa0bbae1-8125-9a43-bf29-c694568bf27c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MCayleyTable",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCayleyTable"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"3b620bbc-2380-49fe-928b-4bfc547bdc08",ExpressionUUID->
+  "fd253015-1e0c-1e48-a5c7-327d65460af0"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MCayleyGraph",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCayleyGraph"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"1e0b721e-faaa-41ae-afd1-fa77003d9636",ExpressionUUID->
+  "f711ce05-5df5-c549-91e3-9c9b75516bb9"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MCayleyGraph3D",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCayleyGraph3D"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"d05f0d8d-7e3d-4e0c-9b55-786501bf4dd1",ExpressionUUID->
+  "276a3044-01a9-e548-8545-767bf6d645f3"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MInversesTable",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MInversesTable"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"66fec925-41b2-4150-a3ab-eaa0948ba388",ExpressionUUID->
+  "b3b518a3-d493-4f4b-ab31-4a5e050e1da4"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MSubgroupQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroupQ"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"1fe1f2f6-fdf6-4697-a7a6-fa3694313daf",ExpressionUUID->
+  "c823da73-1a51-4d41-a652-eed5199e431f"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MGenerateSubgroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGenerateSubgroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"871cc6e7-fe33-46f1-85ea-54b6c7cfff6a",ExpressionUUID->
+  "d1cda32c-1e6f-c14f-99f4-dcd853d69335"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MSubgroups",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroups"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"1b2dc981-d459-4cbf-8788-201969612e5e",ExpressionUUID->
+  "90f49cab-c211-9445-a5df-c4ebfe87ab94"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MSubgroupLattice",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroupLattice"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"290f937b-4231-4a4b-b424-84319cdfc8a5",ExpressionUUID->
+  "73af9a56-e966-2b4a-9ea9-0b50418a6cea"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MSubgroupLattice3D",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MSubgroupLattice3D"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"a655ffcf-b1d7-4af4-9995-698f3808fa7a",ExpressionUUID->
+  "1af96614-4377-6e40-82c6-38725a6eb3b3"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MCoset",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCoset"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"65c2d595-35f0-419e-ad3f-1ee001e2269d",ExpressionUUID->
+  "b4a0dacf-5ff7-214e-8dff-c2677279764c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MNormalSubgroupQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MNormalSubgroupQ"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"63dcb34b-3d83-416e-a794-5910084a9d85",ExpressionUUID->
+  "b1b3b136-6223-0e45-83bf-7edc48ff5068"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MNormalSubgroups",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MNormalSubgroups"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"4de3188a-9a2b-4612-89f1-4bf4c87ce585",ExpressionUUID->
+  "c99be744-68af-014c-a747-3b05f2c7dc8b"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MFactorGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MFactorGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"5d05972c-9698-4f27-b7c3-941502440c8f",ExpressionUUID->
+  "c44862de-e986-d94b-aea3-e0cd99f8e2ae"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MGroupCenter",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroupCenter"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"b633c8ea-ee29-472c-bce7-fca01748055f",ExpressionUUID->
+  "d77e8494-fe41-fe45-aaf6-f6155d5c95f8"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MElementCentralizer",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MElementCentralizer"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"6fc9da9e-10b9-4fee-a77d-65123e5b8168",ExpressionUUID->
+  "1f16ab1f-a2b5-614a-be1b-ddf8af715800"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MAdditiveGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MAdditiveGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"64084c86-c31b-4f3b-a937-a53fd7cc741f",ExpressionUUID->
+  "8df2c620-a71a-664c-8df2-70791c85fbba"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MMultiplicativeGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MMultiplicativeGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"39f1032b-de34-4433-99f2-6e479148fdf7",ExpressionUUID->
+  "c50ec3b9-df34-2045-b8c8-253a5a30ca70"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MDihedralGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MDihedralGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"826627ca-027c-4559-be8f-dd046a4ef80f",ExpressionUUID->
+  "6d2f136a-2fbe-4c40-a59b-4994b459989c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MPermutationsGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MPermutationsGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"42d51518-16ef-4bfd-a191-e85a6d42fe8f",ExpressionUUID->
+  "9d4e68ce-464c-bd42-b6d1-d3a00911f47a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MCycleForm",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MCycleForm"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"7241b106-3df7-4a6a-a853-80726c98f72e",ExpressionUUID->
+  "65d1cad1-0152-9342-a890-38461db585f5"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MKlein4Group",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MKlein4Group"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"8e905e0c-ae48-4565-b3e6-9ae84ef7f84b",ExpressionUUID->
+  "f3a93c4e-0487-6944-b6e9-947fb00d4c65"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MQuaternionGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MQuaternionGroup"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"b97afc10-e7f2-42ee-acd4-e4f12daeccdc",ExpressionUUID->
+  "d4782306-758c-c844-850a-ca020007600f"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MTuple",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MTuple"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"76f9d935-ea8c-47b8-b8fc-0dde7d0db98a",ExpressionUUID->
+  "8035597f-e7bb-e64f-a0af-5c0183487e7c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MEDP",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MEDP"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"710a5957-94ca-405d-b015-13cd43b44eaf",ExpressionUUID->
+  "faccac6d-ef47-0f41-a6f9-696a1843e991"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MHomomorphism",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MHomomorphism"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"47b6652a-f44c-420f-9558-8d6bbe885454",ExpressionUUID->
+  "d5f5bf48-0007-6249-90c1-58803d95aef4"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MIsomorphism",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MIsomorphism"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"86f001ac-a4e0-4a25-bae9-41eb8375f4d7",ExpressionUUID->
+  "13674f60-2553-c14b-b02d-42878cd0659c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MAutomorphism",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MAutomorphism"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"f6688fda-33dc-494c-ab27-d06d2ba42b00",ExpressionUUID->
+  "02130cdf-b152-f74b-a801-4704daffb501"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MInnerAutomorphism",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MInnerAutomorphism"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"b43c25cf-5cb2-4f6b-ba55-29edb95c00b6",ExpressionUUID->
+  "aa162089-4475-bd4d-a1c2-3da8ea818a31"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MVisualiseMorphism",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MVisualiseMorphism"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"65e5ffe6-bd74-42a6-a2be-a68add7433fd",ExpressionUUID->
+  "6c9b016f-cf21-804a-a3e1-486ae8ba4d85"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MAction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MAction"]], "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"e45bcc1f-48ee-4623-9d1e-8c3dc6070c26",ExpressionUUID->
+  "85d0c7c3-309e-a742-b42f-5342e91ef553"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["FormMAction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/FormMAction"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"9d84ce42-f0e7-4b70-8e04-a9e55671b128",ExpressionUUID->
+  "b6152e46-8e66-534c-a5da-89fea16acb30"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MPermutationRepresentation",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MPermutationRepresentation"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"ebdb9e68-66f9-4894-aee7-981b191a9dcc",ExpressionUUID->
+  "763dca57-99c0-b04c-ac8a-51f29049c01a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MKernelAction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MKernelAction"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"e12253a9-afee-40d2-b451-2e99887a7baf",ExpressionUUID->
+  "a47e04d0-9f1e-604a-a9b2-bd61a2e96e7a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MElementStabilizer",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MElementStabilizer"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"243665e3-2027-42bb-b8c4-aa950c554606",ExpressionUUID->
+  "07d36f61-4909-6046-8f17-0c5902b4fbf7"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["MElementOrbit",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MElementOrbit"]], 
+  "InlineGuideFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"fe8484f5-4c1c-4ddb-bdd8-d8efab797f26",ExpressionUUID->
+  "4c28e9f7-6a9f-2743-b537-7065d33c34e8"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "4931060f-3897-cd44-9f63-4a6f00d69d93"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "1f67fcfa-e80f-8d4c-9319-2b7668a912e8", 
+     "d389ca30-f425-8348-9442-44be16977833"], $CellContext`cellobj$$ = 
+    CellObject[
+    "c772473f-5d33-7a48-be4d-9677fe5355e8", 
+     "769b4331-f679-5944-bdfb-be37edfb40c3"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "c772473f-5d33-7a48-be4d-9677fe5355e8"]
+}], "InlineGuideFunctionListing",
+ CellChangeTimes->{{3.9576547535269527`*^9, 3.957654753558197*^9}, {
+  3.9576550274491653`*^9, 3.957655392815346*^9}, {3.957655482092228*^9, 
+  3.9576556227318916`*^9}},
+ CellID->216703074,ExpressionUUID->"03a273ae-a2bd-264c-847a-05af77e29a89"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tech Notes", "GuideTutorialsSection",
+ CellID->235849364,ExpressionUUID->"0acf5ca2-c0fe-104c-8ff9-d1c065eff831"],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->518222370,ExpressionUUID->"2524bfc3-a699-f04b-8993-2a280cea583c"],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->683698548,ExpressionUUID->"8960b83e-d148-7e4b-9f87-2b689e422e3e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "GuideMoreAboutSection",
+ CellChangeTimes->{{3.8430423939366693`*^9, 3.843042395176153*^9}},
+ CellID->233337436,ExpressionUUID->"707e62f3-901d-6e4a-ae38-7fab11a4e4b4"],
+
+Cell["XXXX", "GuideMoreAbout",
+ CellID->389327993,ExpressionUUID->"e1684a69-5cb8-b440-80c3-df701210ba87"],
+
+Cell["XXXX", "GuideMoreAbout",
+ CellID->885457271,ExpressionUUID->"4c2bf5d6-585a-0443-a9e0-d3ac3fabc12d"]
+}, Open  ]],
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->122201550,ExpressionUUID->"ccaac61d-feb2-3646-b740-944ce632e0b6"],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->775471,ExpressionUUID->"442ef50c-6dd4-fb41-b88f-d15ad76a3775"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"013a8c41-594f-e44a-ab89-e1379f28f5bd"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"b6a31ced-12b9-224a-a40d-38a046fc4847"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "83b5a4d3-f132-bb4d-bc77-c59975cc25d8"]
+}], "History",
+ CellID->420106485,ExpressionUUID->"233b2fa6-f171-4a47-aa17-3f62c3a7a32d"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->298661102,ExpressionUUID->"40b28e0d-c331-924f-be29-2a863caee7f9"],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->916473065,ExpressionUUID->"46769b39-e80d-d949-8844-562b498789db"],
+
+Cell["Taggar/MGroups", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->471144895,ExpressionUUID->"0450066f-dbbc-b247-b2f4-a05617b8afd8"],
+
+Cell["Taggar`MGroups`", "Categorization",
+ CellLabel->"Context",
+ CellID->84693342,ExpressionUUID->"7045f8e5-aaaa-8748-ba2d-b0042c0b5da9"],
+
+Cell["Taggar/MGroups/guide/MGroupsPackage", "Categorization",
+ CellLabel->"URI",
+ CellID->47218633,ExpressionUUID->"afecbd5f-3d58-ad49-9369-70a373f91a33"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->189006552,ExpressionUUID->"47b55186-472e-3749-a717-e6eb74c45bbe"],
+
+Cell["XXXX", "Keywords",
+ CellID->120257169,ExpressionUUID->"bbf2e286-0de1-aa40-9439-1e3cdfd4795c"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1024.5, 507.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+TaggingRules-><|"Paclet" -> "MGroups"|>,
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"1f67fcfa-e80f-8d4c-9319-2b7668a912e8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 112, 1, 70, "GuideTitle",ExpressionUUID->"25ba8cc7-e57f-2f4c-b8b8-20de515394ef",
+ CellID->478013545],
+Cell[691, 25, 899, 20, 70, "GuideAbstract",ExpressionUUID->"b442fd4f-aaeb-7a49-86a1-12b92789b81c",
+ CellID->143880982]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1627, 50, 108, 1, 70, "GuideFunctionsSection",ExpressionUUID->"41f0125f-9071-c747-81bf-b2e18e1757c1",
+ CellID->282796149],
+Cell[1738, 53, 626, 14, 70, "GuideText",ExpressionUUID->"83b3e680-22ca-c247-a7e0-0c5b8502cc0c",
+ CellID->942163894],
+Cell[2367, 69, 605, 13, 70, "GuideText",ExpressionUUID->"6712d4c2-99da-fd4a-ae02-94300c8c5a64",
+ CellID->349188921],
+Cell[2975, 84, 609, 13, 70, "GuideText",ExpressionUUID->"63aff2d5-4c7a-f841-aa49-dc70fcf6861d",
+ CellID->397293128],
+Cell[3587, 99, 563, 12, 70, "GuideText",ExpressionUUID->"f0dde4f8-8eb2-ee46-9993-5f13b3e5ccc1",
+ CellID->138272114],
+Cell[4153, 113, 583, 13, 70, "GuideText",ExpressionUUID->"b99a3d31-366a-144d-a5c0-b1b37c2acf5a",
+ CellID->222323367],
+Cell[4739, 128, 591, 13, 70, "GuideText",ExpressionUUID->"8f250d0d-4388-6b4c-9151-4b4e28b16cc9",
+ CellID->403679086],
+Cell[CellGroupData[{
+Cell[5355, 145, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"0488c341-3919-704e-adfa-dc48028b385c",
+ CellID->808165437],
+Cell[5461, 148, 18727, 448, 70, "InlineGuideFunctionListing",ExpressionUUID->"03a273ae-a2bd-264c-847a-05af77e29a89",
+ CellID->216703074]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24237, 602, 118, 1, 70, "GuideTutorialsSection",ExpressionUUID->"0acf5ca2-c0fe-104c-8ff9-d1c065eff831",
+ CellID->235849364],
+Cell[24358, 605, 104, 1, 70, "GuideTutorial",ExpressionUUID->"2524bfc3-a699-f04b-8993-2a280cea583c",
+ CellID->518222370],
+Cell[24465, 608, 104, 1, 70, "GuideTutorial",ExpressionUUID->"8960b83e-d148-7e4b-9f87-2b689e422e3e",
+ CellID->683698548]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24606, 614, 190, 2, 70, "GuideMoreAboutSection",ExpressionUUID->"707e62f3-901d-6e4a-ae38-7fab11a4e4b4",
+ CellID->233337436],
+Cell[24799, 618, 105, 1, 70, "GuideMoreAbout",ExpressionUUID->"e1684a69-5cb8-b440-80c3-df701210ba87",
+ CellID->389327993],
+Cell[24907, 621, 105, 1, 70, "GuideMoreAbout",ExpressionUUID->"4c2bf5d6-585a-0443-a9e0-d3ac3fabc12d",
+ CellID->885457271]
+}, Open  ]],
+Cell[25027, 625, 124, 1, 70, "GuideRelatedLinksSection",ExpressionUUID->"ccaac61d-feb2-3646-b740-944ce632e0b6",
+ CellID->122201550],
+Cell[CellGroupData[{
+Cell[25176, 630, 107, 1, 70, "MetadataSection",ExpressionUUID->"442ef50c-6dd4-fb41-b88f-d15ad76a3775",
+ CellID->775471],
+Cell[25286, 633, 476, 12, 70, "History",ExpressionUUID->"233b2fa6-f171-4a47-aa17-3f62c3a7a32d",
+ CellID->420106485],
+Cell[CellGroupData[{
+Cell[25787, 649, 122, 1, 70, "CategorizationSection",ExpressionUUID->"40b28e0d-c331-924f-be29-2a863caee7f9",
+ CellID->298661102],
+Cell[25912, 652, 133, 2, 70, "Categorization",ExpressionUUID->"46769b39-e80d-d949-8844-562b498789db",
+ CellID->916473065],
+Cell[26048, 656, 142, 2, 70, "Categorization",ExpressionUUID->"0450066f-dbbc-b247-b2f4-a05617b8afd8",
+ CellID->471144895],
+Cell[26193, 660, 138, 2, 70, "Categorization",ExpressionUUID->"7045f8e5-aaaa-8748-ba2d-b0042c0b5da9",
+ CellID->84693342],
+Cell[26334, 664, 154, 2, 70, "Categorization",ExpressionUUID->"afecbd5f-3d58-ad49-9369-70a373f91a33",
+ CellID->47218633]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[26525, 671, 110, 1, 70, "KeywordsSection",ExpressionUUID->"47b55186-472e-3749-a717-e6eb74c45bbe",
+ CellID->189006552],
+Cell[26638, 674, 99, 1, 70, "Keywords",ExpressionUUID->"bbf2e286-0de1-aa40-9439-1e3cdfd4795c",
+ CellID->120257169]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

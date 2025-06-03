@@ -1,0 +1,339 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     12961,        329]
+NotebookOptionsPosition[      9669,        257]
+NotebookOutlinePosition[     12017,        315]
+CellTagsIndexPosition[     11932,        310]
+WindowTitle->MPermutationsGroup
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["TAGGAR/ M GROUPS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "84d32218-ed56-9242-9a9d-af28d23ad4ca"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "c6b8b65b-ee17-aa4c-b01e-f8fab98213a1"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "041b3fcf-b909-714f-95b3-d09630e41552"]
+         }],ExpressionUUID->"fd29e1ee-747a-1244-9ed8-3b849b6445fa"],
+         StripOnInput->False],{
+        "\"MGroups Package\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/guide/MGroupsPackage"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "8e206fc0-75cf-3f45-9450-e22355fd270c"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "1fc011e0-f949-f145-a284-400879989924"]
+         }],ExpressionUUID->"8e46cb9e-67d1-0142-9a1d-ca7fe2617e90"],
+         StripOnInput->False],{
+        "\"Taggar/MGroups/ref/MPermutationsGroup\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["Taggar/MGroups/ref/MPermutationsGroup"]}, 
+               Visible -> DocumentationBuild`Make`Private`visible$350334]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/Taggar/MGroups/ref/\
+MPermutationsGroup.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$350334]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[False], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "Taggar/MGroups/ref/MPermutationsGroup" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5657bf81-ca88-d240-bd99-a5e73df7e339"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "1e3e1cc3-1755-9e49-8c77-d325676beb4e"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"f45b96b5-f41f-9343-b82f-c96dd638d64b"],
+
+Cell["Taggar`MGroups`", "ContextNameCell",ExpressionUUID->"a0b2fe0d-1a88-3a4e-aa8c-88bc33450c60"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MPermutationsGroup", "ObjectName",ExpressionUUID->
+      "3d9f9543-e275-9348-bc43-2824f2ee68b5"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"040e8f5a-55d0-2e40-83f6-b1aebf9d18cd"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "06cb510b-dfdd-eb4a-85a6-b3189f7eaec3"]
+    }],ExpressionUUID->"59be6571-37d4-064a-9abd-a59342e01694"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"bab09745-f717-b146-9d09-\
+8cba34480ccd"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"MPermutationsGroup", "[", 
+       StyleBox["n", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e0cc4efe-efde-c543-8243-bb1e6df6f21d"],
+     "\[LineSeparator]defines the group of permutations on ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a2b4ec98-2c68-bc44-94b9-6f35c1825bec"],
+     " symbols."
+    }],ExpressionUUID->"720059b8-d941-8e4e-8e5b-fc55ea8adc05"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"MPermutationsGroup", "[", 
+       StyleBox["permutations", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fc51580f-ddfb-c64d-9510-abe6cd52d7d3"],
+     "\[LineSeparator]defines the group of permutations on ",
+     Cell[BoxData[
+      StyleBox["permutations", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "252a970a-7455-ce4b-9c38-6fbbad1cb0e3"],
+     "."
+    }],ExpressionUUID->"101aa219-3230-714c-b86d-84b7e9d0b62d"]}
+  }]], "Usage",
+ CellID->77483973,ExpressionUUID->"4002dad8-52b6-a74d-af57-7e04291e204f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.84893795674434, 8.751062043255661}}]],
+  ExpressionUUID->"c864230b-fed0-1a49-9d41-dcfac307b0ef"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"23e69928-9536-9844-bf9b-63202f000e3f"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "8ccc20ca-4400-a340-b055-69da31c474b6"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->134067504,ExpressionUUID->"00b815e9-1b82-1e43-8ee4-c4150543ed84"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", "]"}]], "Input", \
+"ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->268595248,ExpressionUUID->"300fa713-70ad-bd48-b912-b9f81e3be81f"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {26.472656144876964`, 33.527343855123036`}}], 
+    GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["MGroups Package"]], 
+           "paclet:Taggar/MGroups/guide/MGroupsPackage"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "750193b8-cbee-c842-9147-4fdbb0119549"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"b2f07584-9743-f74d-97fb-\
+540f57eb808e"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"220071f0-4d3b-2e40-ba8a-1ea31e123a9e"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MPermutationsGroup",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "HasOptions" -> 
+  True, "RootCaptions" -> "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 6, 2, 18, 37, 48.9721264}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Taggar`MGroups`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Taggar/ M Groups Symbol", "language" -> "en", "paclet" -> 
+    "Taggar/MGroups", "status" -> "None", "summary" -> 
+    "MPermutationsGroup[n] defines the group of permutations on n symbols. \
+MPermutationsGroup[permutations] defines the group of permutations on \
+permutations.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "MPermutationsGroup", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "MPermutationsGroup", "type" -> "Symbol", "uri" -> 
+    "Taggar/MGroups/ref/MPermutationsGroup", "WorkflowDockedCell" -> ""}, 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "14.1 for Microsoft Windows (64-bit) (July 16, 2024)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"415be79c-2846-4149-b499-adde33df8d77"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7051, 184, 1439, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"00b815e9-1b82-1e43-8ee4-c4150543ed84",
+   CellTags->"PrimaryExamplesSection",
+   CellID->134067504]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 11733, 303}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[586, 21, 4522, 108, 70, "AnchorBarGrid",ExpressionUUID->"f45b96b5-f41f-9343-b82f-c96dd638d64b",
+ CellID->1],
+Cell[5111, 131, 97, 0, 70, "ContextNameCell",ExpressionUUID->"a0b2fe0d-1a88-3a4e-aa8c-88bc33450c60"],
+Cell[CellGroupData[{
+Cell[5233, 135, 561, 14, 70, "ObjectNameGrid",ExpressionUUID->"bab09745-f717-b146-9d09-8cba34480ccd"],
+Cell[5797, 151, 1217, 28, 70, "Usage",ExpressionUUID->"4002dad8-52b6-a74d-af57-7e04291e204f",
+ CellID->77483973]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7051, 184, 1439, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"00b815e9-1b82-1e43-8ee4-c4150543ed84",
+ CellTags->"PrimaryExamplesSection",
+ CellID->134067504],
+Cell[8493, 224, 205, 4, 70, "Input",ExpressionUUID->"300fa713-70ad-bd48-b912-b9f81e3be81f",
+ CellID->268595248]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[8816, 233, 768, 20, 70, "MoreAboutSection",ExpressionUUID->"b2f07584-9743-f74d-97fb-540f57eb808e"],
+Cell[9587, 255, 78, 0, 70, "FooterCell",ExpressionUUID->"220071f0-4d3b-2e40-ba8a-1ea31e123a9e"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

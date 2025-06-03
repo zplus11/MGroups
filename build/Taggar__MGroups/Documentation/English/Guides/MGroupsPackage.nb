@@ -1,0 +1,953 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     39723,        943]
+NotebookOptionsPosition[     36407,        877]
+NotebookOutlinePosition[     38284,        920]
+CellTagsIndexPosition[     38241,        917]
+WindowTitle->MGroups Package
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["TAGGAR/ M GROUPS GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "ed542654-78ff-6f4b-9ad5-8c48aa2ee0ec"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "a45199e0-4080-7243-90f5-c27280610514"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "09a80ad5-9a71-204f-ad11-b74d090ef885"]
+         }],ExpressionUUID->"b86fa1b6-014c-2745-a4cf-c9dfd4b95824"],
+         StripOnInput->False],{
+        StyleBox["\"FormMAction\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/FormMAction"], 
+         StyleBox["\"FormMGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/FormMGroup"], 
+         StyleBox["\"MAbelianQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MAbelianQ"], 
+         StyleBox["\"MAction\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MAction"], 
+         StyleBox[
+          "\"MAdditiveGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MAdditiveGroup"],
+          StyleBox[
+          "\"MAutomorphism\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MAutomorphism"], 
+         StyleBox[
+          "\"MCayleyGraph\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MCayleyGraph"], 
+         StyleBox[
+          "\"MCayleyGraph3D\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MCayleyGraph3D"],
+          StyleBox[
+          "\"MCayleyTable\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MCayleyTable"], 
+         StyleBox["\"MCoset\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MCoset"], 
+         StyleBox["\"MCycleForm\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MCycleForm"], 
+         StyleBox["\"MCyclicQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MCyclicQ"], 
+         StyleBox[
+          "\"MDihedralGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MDihedralGroup"],
+          StyleBox["\"MEDP\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MEDP"], 
+         StyleBox[
+          "\"MElementCentralizer\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MElementCentralizer"], 
+         StyleBox[
+          "\"MElementInverse\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MElementInverse"], 
+         StyleBox[
+          "\"MElementOrbit\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MElementOrbit"], 
+         StyleBox[
+          "\"MElementOrder\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MElementOrder"], 
+         StyleBox[
+          "\"MElementPower\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MElementPower"], 
+         StyleBox[
+          "\"MElementStabilizer\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MElementStabilizer"], 
+         StyleBox[
+          "\"MFactorGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MFactorGroup"], 
+         StyleBox[
+          "\"MGenerateSubgroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MGenerateSubgroup"], 
+         StyleBox["\"MGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MGroup"], 
+         StyleBox[
+          "\"MGroupCenter\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MGroupCenter"], 
+         StyleBox[
+          "\"MGroupDomain\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MGroupDomain"], 
+         StyleBox[
+          "\"MGroupIdentity\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MGroupIdentity"],
+          StyleBox[
+          "\"MGroupOrder\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MGroupOrder"], 
+         StyleBox[
+          "\"MHomomorphism\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MHomomorphism"], 
+         StyleBox[
+          "\"MInnerAutomorphism\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MInnerAutomorphism"], 
+         StyleBox[
+          "\"MInversesTable\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MInversesTable"],
+          StyleBox[
+          "\"MIsomorphism\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MIsomorphism"], 
+         StyleBox[
+          "\"MKernelAction\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MKernelAction"], 
+         StyleBox[
+          "\"MKlein4Group\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MKlein4Group"], 
+         StyleBox[
+          "\"MMultiplicativeGroup\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MMultiplicativeGroup"], 
+         StyleBox[
+          "\"MNormalSubgroupQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MNormalSubgroupQ"], 
+         StyleBox[
+          "\"MNormalSubgroups\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MNormalSubgroups"], 
+         StyleBox["\"MonoidQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MonoidQ"], 
+         StyleBox[
+          "\"MPermutationRepresentation\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MPermutationRepresentation"], 
+         StyleBox[
+          "\"MPermutationsGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MPermutationsGroup"], 
+         StyleBox[
+          "\"MQuaternionGroup\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MQuaternionGroup"], 
+         StyleBox[
+          "\"MSubgroupLattice\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MSubgroupLattice"], 
+         StyleBox[
+          "\"MSubgroupLattice3D\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MSubgroupLattice3D"], 
+         StyleBox["\"MSubgroupQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MSubgroupQ"], 
+         StyleBox["\"MSubgroups\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MSubgroups"], 
+         StyleBox["\"MTuple\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/MTuple"], 
+         StyleBox[
+          "\"MVisualiseMorphism\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/ref/MVisualiseMorphism"], 
+         StyleBox["\"SemiGroupQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup["paclet:Taggar/MGroups/ref/SemiGroupQ"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "ff413a5b-1417-a44c-9b05-1657c54cef9f"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "aa71b88a-5c52-3540-9836-595cc3dd087d"]
+         }],ExpressionUUID->"4d5fd33a-c182-7247-be52-5109987ab087"],
+         StripOnInput->False],{
+        "\"Taggar/MGroups/guide/MGroupsPackage\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["Taggar/MGroups/guide/MGroupsPackage"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$330758]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/Taggar/MGroups/\
+guide/MGroupsPackage.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$330758]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[False], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "Taggar/MGroups/guide/MGroupsPackage" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "cb671cd5-7427-6740-afaa-741c2cee2c52"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "92e980c9-423a-054e-b8ad-feb540d050f1"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"49cd5d3b-e0ce-5f4e-a849-4601ca5cb83a"],
+
+Cell[CellGroupData[{
+
+Cell["MGroups Package", "GuideTitle",
+ CellID->478013545,ExpressionUUID->"25ba8cc7-e57f-2f4c-b8b8-20de515394ef"],
+
+Cell[TextData[{
+ "MGroups package allows exploration of finite groups in terms of their \
+Cayley tables, subgroup structures (lattices), group morphisms, actions, and \
+so on. It provides extensive functionality to study finite groups using \
+functions such as ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCayleyTable"]], "paclet:Taggar/MGroups/ref/MCayleyTable", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "6306ac7e-188f-a244-a5cd-52e778b5f1b0"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroups"]], "paclet:Taggar/MGroups/ref/MSubgroups", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "b937d774-fc6b-4445-afdf-d1c624d0f595"],
+ ", and so on."
+}], "GuideAbstract",
+ CellID->143880982,ExpressionUUID->"b442fd4f-aaeb-7a49-86a1-12b92789b81c"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"8550857c-45ee-134f-9668-3a9189b67f60"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCayleyTable"]], "paclet:Taggar/MGroups/ref/MCayleyTable", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "0bc2a546-75a8-b040-9a51-16dbd6b85c8a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Cayley table of a group"
+}], "GuideText",
+ CellID->942163894,ExpressionUUID->"83b3e680-22ca-c247-a7e0-0c5b8502cc0c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCayleyGraph"]], "paclet:Taggar/MGroups/ref/MCayleyGraph", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "fbf9bcff-7e0f-9649-99c3-43f8cf82bcd3"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Cayley graph of a group corresponding to certain generators"
+}], "GuideText",
+ CellID->349188921,ExpressionUUID->"6712d4c2-99da-fd4a-ae02-94300c8c5a64"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MInversesTable"]], "paclet:Taggar/MGroups/ref/MInversesTable", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "3850db5a-8a1f-1944-a8a6-944e05112600"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " concise table summarising element inverses and orders"
+}], "GuideText",
+ CellID->397293128,ExpressionUUID->"63aff2d5-4c7a-f841-aa49-dc70fcf6861d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroups"]], "paclet:Taggar/MGroups/ref/MSubgroups", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "bf2b404e-6108-dc45-8352-5b861b0c8003"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " subgroups of a group"
+}], "GuideText",
+ CellID->138272114,ExpressionUUID->"f0dde4f8-8eb2-ee46-9993-5f13b3e5ccc1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroupLattice"]], 
+    "paclet:Taggar/MGroups/ref/MSubgroupLattice", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "c6390104-0e20-034d-a5bf-f85dff31dcbb"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " subgroup lattice of a group"
+}], "GuideText",
+ CellID->222323367,ExpressionUUID->"b99a3d31-366a-144d-a5c0-b1b37c2acf5a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MFactorGroup"]], "paclet:Taggar/MGroups/ref/MFactorGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"5be3f549-d1c8-4768-989a-ed07b76bf7ef",ExpressionUUID->
+  "fa9b7696-2a6d-6e41-9215-b1d12e3fd600"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " factor or quotient group by a normal subgroup"
+}], "GuideText",
+ CellID->403679086,ExpressionUUID->"8f250d0d-4388-6b4c-9151-4b4e28b16cc9"],
+
+Cell["\t", "GuideDelimiter",
+ CellID->808165437,ExpressionUUID->"0488c341-3919-704e-adfa-dc48028b385c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroup"]], "paclet:Taggar/MGroups/ref/MGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d2ac7c80-f72a-2749-9eab-2ac9d20ffcd8"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FormMGroup"]], "paclet:Taggar/MGroups/ref/FormMGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"62a5fb9e-d4d4-4d39-9130-736c05c48a88",ExpressionUUID->
+  "11d8df6f-e40d-794e-9c64-d15ce65b28b3"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SemiGroupQ"]], "paclet:Taggar/MGroups/ref/SemiGroupQ", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"ea8a1cb2-a274-43eb-a8b6-f727c7f5c632",ExpressionUUID->
+  "9a30e344-63e2-0143-ba0c-17590aa30661"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MonoidQ"]], "paclet:Taggar/MGroups/ref/MonoidQ", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c7d6b851-09c5-4dff-b1b8-06208fb7ff51",ExpressionUUID->
+  "19f67ae6-5105-7b46-bc60-5bdc8a029ea7"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroupDomain"]], "paclet:Taggar/MGroups/ref/MGroupDomain", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"47dfbd17-f3bf-4915-981e-9c85c03f76d7",ExpressionUUID->
+  "7fab323f-146d-614f-8b2b-194c27402bd9"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroupIdentity"]], "paclet:Taggar/MGroups/ref/MGroupIdentity", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"e9bd303d-c7b6-4a8a-b784-e35e5ef715bd",ExpressionUUID->
+  "9de2ae2f-51fe-434e-9d62-7ad8ee28ab8a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MElementPower"]], "paclet:Taggar/MGroups/ref/MElementPower", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"6f1ec678-0748-45cc-8743-f159c2514728",ExpressionUUID->
+  "65b35a6d-7876-6348-8dc3-ae282f7d8e49"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroupOrder"]], "paclet:Taggar/MGroups/ref/MGroupOrder", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"b08a5f17-80d3-409c-b733-b8ac80157952",ExpressionUUID->
+  "bdb25805-4bc0-8d4a-a800-61edd56c9d97"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MElementInverse"]], 
+    "paclet:Taggar/MGroups/ref/MElementInverse", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"157f937a-121c-46ff-84b8-b3cb2255e98f",ExpressionUUID->
+  "85521d45-a40d-8a40-acec-7b831f9346c9"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MElementOrder"]], "paclet:Taggar/MGroups/ref/MElementOrder", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"7b40c3ca-bf12-4090-bc58-dd7a5bd3c7bc",ExpressionUUID->
+  "f083b42b-9fe5-9448-bf95-515c0a86b340"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCyclicQ"]], "paclet:Taggar/MGroups/ref/MCyclicQ", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"aa739177-a8f5-4783-9b71-00ab9414f72d",ExpressionUUID->
+  "3d85f438-c053-1c4f-a44b-f559f1ff8220"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MAbelianQ"]], "paclet:Taggar/MGroups/ref/MAbelianQ", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"fdd52731-05d9-4747-832e-793a0acd0298",ExpressionUUID->
+  "aa0bbae1-8125-9a43-bf29-c694568bf27c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCayleyTable"]], "paclet:Taggar/MGroups/ref/MCayleyTable", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"3b620bbc-2380-49fe-928b-4bfc547bdc08",ExpressionUUID->
+  "fd253015-1e0c-1e48-a5c7-327d65460af0"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCayleyGraph"]], "paclet:Taggar/MGroups/ref/MCayleyGraph", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"1e0b721e-faaa-41ae-afd1-fa77003d9636",ExpressionUUID->
+  "f711ce05-5df5-c549-91e3-9c9b75516bb9"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCayleyGraph3D"]], "paclet:Taggar/MGroups/ref/MCayleyGraph3D", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"d05f0d8d-7e3d-4e0c-9b55-786501bf4dd1",ExpressionUUID->
+  "276a3044-01a9-e548-8545-767bf6d645f3"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MInversesTable"]], "paclet:Taggar/MGroups/ref/MInversesTable", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"66fec925-41b2-4150-a3ab-eaa0948ba388",ExpressionUUID->
+  "b3b518a3-d493-4f4b-ab31-4a5e050e1da4"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroupQ"]], "paclet:Taggar/MGroups/ref/MSubgroupQ", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"1fe1f2f6-fdf6-4697-a7a6-fa3694313daf",ExpressionUUID->
+  "c823da73-1a51-4d41-a652-eed5199e431f"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGenerateSubgroup"]], 
+    "paclet:Taggar/MGroups/ref/MGenerateSubgroup", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"871cc6e7-fe33-46f1-85ea-54b6c7cfff6a",ExpressionUUID->
+  "d1cda32c-1e6f-c14f-99f4-dcd853d69335"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroups"]], "paclet:Taggar/MGroups/ref/MSubgroups", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"1b2dc981-d459-4cbf-8788-201969612e5e",ExpressionUUID->
+  "90f49cab-c211-9445-a5df-c4ebfe87ab94"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroupLattice"]], 
+    "paclet:Taggar/MGroups/ref/MSubgroupLattice", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"290f937b-4231-4a4b-b424-84319cdfc8a5",ExpressionUUID->
+  "73af9a56-e966-2b4a-9ea9-0b50418a6cea"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MSubgroupLattice3D"]], 
+    "paclet:Taggar/MGroups/ref/MSubgroupLattice3D", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"a655ffcf-b1d7-4af4-9995-698f3808fa7a",ExpressionUUID->
+  "1af96614-4377-6e40-82c6-38725a6eb3b3"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCoset"]], "paclet:Taggar/MGroups/ref/MCoset", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"65c2d595-35f0-419e-ad3f-1ee001e2269d",ExpressionUUID->
+  "b4a0dacf-5ff7-214e-8dff-c2677279764c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MNormalSubgroupQ"]], 
+    "paclet:Taggar/MGroups/ref/MNormalSubgroupQ", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"63dcb34b-3d83-416e-a794-5910084a9d85",ExpressionUUID->
+  "b1b3b136-6223-0e45-83bf-7edc48ff5068"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MNormalSubgroups"]], 
+    "paclet:Taggar/MGroups/ref/MNormalSubgroups", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"4de3188a-9a2b-4612-89f1-4bf4c87ce585",ExpressionUUID->
+  "c99be744-68af-014c-a747-3b05f2c7dc8b"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MFactorGroup"]], "paclet:Taggar/MGroups/ref/MFactorGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"5d05972c-9698-4f27-b7c3-941502440c8f",ExpressionUUID->
+  "c44862de-e986-d94b-aea3-e0cd99f8e2ae"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroupCenter"]], "paclet:Taggar/MGroups/ref/MGroupCenter", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"b633c8ea-ee29-472c-bce7-fca01748055f",ExpressionUUID->
+  "d77e8494-fe41-fe45-aaf6-f6155d5c95f8"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MElementCentralizer"]], 
+    "paclet:Taggar/MGroups/ref/MElementCentralizer", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"6fc9da9e-10b9-4fee-a77d-65123e5b8168",ExpressionUUID->
+  "1f16ab1f-a2b5-614a-be1b-ddf8af715800"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MAdditiveGroup"]], "paclet:Taggar/MGroups/ref/MAdditiveGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"64084c86-c31b-4f3b-a937-a53fd7cc741f",ExpressionUUID->
+  "8df2c620-a71a-664c-8df2-70791c85fbba"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MMultiplicativeGroup"]], 
+    "paclet:Taggar/MGroups/ref/MMultiplicativeGroup", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"39f1032b-de34-4433-99f2-6e479148fdf7",ExpressionUUID->
+  "c50ec3b9-df34-2045-b8c8-253a5a30ca70"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MDihedralGroup"]], "paclet:Taggar/MGroups/ref/MDihedralGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"826627ca-027c-4559-be8f-dd046a4ef80f",ExpressionUUID->
+  "6d2f136a-2fbe-4c40-a59b-4994b459989c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MPermutationsGroup"]], 
+    "paclet:Taggar/MGroups/ref/MPermutationsGroup", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"42d51518-16ef-4bfd-a191-e85a6d42fe8f",ExpressionUUID->
+  "9d4e68ce-464c-bd42-b6d1-d3a00911f47a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MCycleForm"]], "paclet:Taggar/MGroups/ref/MCycleForm", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"7241b106-3df7-4a6a-a853-80726c98f72e",ExpressionUUID->
+  "65d1cad1-0152-9342-a890-38461db585f5"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MKlein4Group"]], "paclet:Taggar/MGroups/ref/MKlein4Group", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"8e905e0c-ae48-4565-b3e6-9ae84ef7f84b",ExpressionUUID->
+  "f3a93c4e-0487-6944-b6e9-947fb00d4c65"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MQuaternionGroup"]], 
+    "paclet:Taggar/MGroups/ref/MQuaternionGroup", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"b97afc10-e7f2-42ee-acd4-e4f12daeccdc",ExpressionUUID->
+  "d4782306-758c-c844-850a-ca020007600f"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MTuple"]], "paclet:Taggar/MGroups/ref/MTuple", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"76f9d935-ea8c-47b8-b8fc-0dde7d0db98a",ExpressionUUID->
+  "8035597f-e7bb-e64f-a0af-5c0183487e7c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MEDP"]], "paclet:Taggar/MGroups/ref/MEDP", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"710a5957-94ca-405d-b015-13cd43b44eaf",ExpressionUUID->
+  "faccac6d-ef47-0f41-a6f9-696a1843e991"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MHomomorphism"]], "paclet:Taggar/MGroups/ref/MHomomorphism", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"47b6652a-f44c-420f-9558-8d6bbe885454",ExpressionUUID->
+  "d5f5bf48-0007-6249-90c1-58803d95aef4"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MIsomorphism"]], "paclet:Taggar/MGroups/ref/MIsomorphism", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"86f001ac-a4e0-4a25-bae9-41eb8375f4d7",ExpressionUUID->
+  "13674f60-2553-c14b-b02d-42878cd0659c"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MAutomorphism"]], "paclet:Taggar/MGroups/ref/MAutomorphism", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"f6688fda-33dc-494c-ab27-d06d2ba42b00",ExpressionUUID->
+  "02130cdf-b152-f74b-a801-4704daffb501"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MInnerAutomorphism"]], 
+    "paclet:Taggar/MGroups/ref/MInnerAutomorphism", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"b43c25cf-5cb2-4f6b-ba55-29edb95c00b6",ExpressionUUID->
+  "aa162089-4475-bd4d-a1c2-3da8ea818a31"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MVisualiseMorphism"]], 
+    "paclet:Taggar/MGroups/ref/MVisualiseMorphism", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"65e5ffe6-bd74-42a6-a2be-a68add7433fd",ExpressionUUID->
+  "6c9b016f-cf21-804a-a3e1-486ae8ba4d85"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MAction"]], "paclet:Taggar/MGroups/ref/MAction", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"e45bcc1f-48ee-4623-9d1e-8c3dc6070c26",ExpressionUUID->
+  "85d0c7c3-309e-a742-b42f-5342e91ef553"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FormMAction"]], "paclet:Taggar/MGroups/ref/FormMAction", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"9d84ce42-f0e7-4b70-8e04-a9e55671b128",ExpressionUUID->
+  "b6152e46-8e66-534c-a5da-89fea16acb30"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MPermutationRepresentation"]], 
+    "paclet:Taggar/MGroups/ref/MPermutationRepresentation", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"ebdb9e68-66f9-4894-aee7-981b191a9dcc",ExpressionUUID->
+  "763dca57-99c0-b04c-ac8a-51f29049c01a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MKernelAction"]], "paclet:Taggar/MGroups/ref/MKernelAction", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"e12253a9-afee-40d2-b451-2e99887a7baf",ExpressionUUID->
+  "a47e04d0-9f1e-604a-a9b2-bd61a2e96e7a"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MElementStabilizer"]], 
+    "paclet:Taggar/MGroups/ref/MElementStabilizer", "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"243665e3-2027-42bb-b8c4-aa950c554606",ExpressionUUID->
+  "07d36f61-4909-6046-8f17-0c5902b4fbf7"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MElementOrbit"]], "paclet:Taggar/MGroups/ref/MElementOrbit", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"fe8484f5-4c1c-4ddb-bdd8-d8efab797f26",ExpressionUUID->
+  "4c28e9f7-6a9f-2743-b537-7065d33c34e8"]
+}], "InlineGuideFunctionListing",
+ CellID->216703074,ExpressionUUID->"03a273ae-a2bd-264c-847a-05af77e29a89"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"7d151dc5-327c-b74d-865e-ec173d4d9f4c"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MGroups Package",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 6, 2, 18, 36, 59.0000559}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Taggar`MGroups`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Taggar/ M Groups Guide", "language" -> "en", "paclet" -> 
+    "Taggar/MGroups", "status" -> "None", "summary" -> 
+    "MGroups package allows exploration of finite groups in terms of their \
+Cayley tables, subgroup structures (lattices), group morphisms, actions, and \
+so on. It provides extensive functionality to study finite groups using \
+functions such as MCayleyTable, MSubgroups, and so on.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "MGroups Package", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> "MGroups Package", "type" -> 
+    "Guide", "uri" -> "Taggar/MGroups/guide/MGroupsPackage", 
+    "WorkflowDockedCell" -> ""}, "SearchTextTranslated" -> ""},
+CacheGraphics->False,
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"c73f31a3-099e-644d-b152-5953dadd319c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[583, 21, 12552, 246, 70, "AnchorBarGrid",ExpressionUUID->"49cd5d3b-e0ce-5f4e-a849-4601ca5cb83a",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[13160, 271, 112, 1, 70, "GuideTitle",ExpressionUUID->"25ba8cc7-e57f-2f4c-b8b8-20de515394ef",
+ CellID->478013545],
+Cell[13275, 274, 944, 24, 70, "GuideAbstract",ExpressionUUID->"b442fd4f-aaeb-7a49-86a1-12b92789b81c",
+ CellID->143880982],
+Cell[14222, 300, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"8550857c-45ee-134f-9668-3a9189b67f60"],
+Cell[14318, 302, 517, 14, 70, "GuideText",ExpressionUUID->"83b3e680-22ca-c247-a7e0-0c5b8502cc0c",
+ CellID->942163894],
+Cell[14838, 318, 553, 14, 70, "GuideText",ExpressionUUID->"6712d4c2-99da-fd4a-ae02-94300c8c5a64",
+ CellID->349188921],
+Cell[15394, 334, 551, 14, 70, "GuideText",ExpressionUUID->"63aff2d5-4c7a-f841-aa49-dc70fcf6861d",
+ CellID->397293128],
+Cell[15948, 350, 510, 14, 70, "GuideText",ExpressionUUID->"f0dde4f8-8eb2-ee46-9993-5f13b3e5ccc1",
+ CellID->138272114],
+Cell[16461, 366, 529, 14, 70, "GuideText",ExpressionUUID->"b99a3d31-366a-144d-a5c0-b1b37c2acf5a",
+ CellID->222323367],
+Cell[16993, 382, 539, 14, 70, "GuideText",ExpressionUUID->"8f250d0d-4388-6b4c-9151-4b4e28b16cc9",
+ CellID->403679086],
+Cell[17535, 398, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"0488c341-3919-704e-adfa-dc48028b385c",
+ CellID->808165437],
+Cell[17641, 401, 18669, 471, 70, "InlineGuideFunctionListing",ExpressionUUID->"03a273ae-a2bd-264c-847a-05af77e29a89",
+ CellID->216703074]
+}, Open  ]],
+Cell[36325, 875, 78, 0, 70, "FooterCell",ExpressionUUID->"7d151dc5-327c-b74d-865e-ec173d4d9f4c"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
