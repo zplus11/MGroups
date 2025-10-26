@@ -1,0 +1,2616 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    110408,       2608]
+NotebookOptionsPosition[    100470,       2394]
+NotebookOutlinePosition[    101247,       2420]
+CellTagsIndexPosition[    101166,       2415]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MSubgroupLattice", "ObjectName",
+ CellID->875072023,ExpressionUUID->"ebbc37fc-72e2-d640-9697-b8e7e64a1389"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"8759dc41-ec19-bd40-a021-cda789d711cf"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["MSubgroupLattice",
+    BaseStyle->"Link",
+    ButtonData->"paclet:Taggar/MGroups/ref/MSubgroupLattice"], "[", 
+   StyleBox["group", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+  "7e5fce33-0e07-4b4b-8628-3f82530464b0"],
+ "\[LineSeparator]draws the subgroup lattice of group."
+}], "Usage",
+ CellChangeTimes->{3.9567193663949833`*^9, 3.956986706460493*^9},
+ CellID->132231642,ExpressionUUID->"2d7ad226-e435-aa4b-8e31-6f2e44495542"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "0c213498-0550-1b48-a7f9-d7421e0312c8"],
+ " should be an ",
+ Cell[BoxData[
+  ButtonBox["MGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroup"]], "InlineFormula",
+  ExpressionUUID->"ed47148f-7731-a94c-8560-acde6cc0555b"],
+ " object."
+}], "Notes",
+ CellChangeTimes->{{3.956986708877325*^9, 3.956986709177368*^9}},
+ CellID->793391568,ExpressionUUID->"e0e0f7e9-9fff-404f-9b43-f21fa566f8ce"],
+
+Cell["The following options can be given: ", "Notes",
+ CellChangeTimes->{3.956986708877325*^9},
+ CellID->17261858,ExpressionUUID->"df78c62e-eb0c-e647-af10-1198363de4a2"],
+
+Cell[BoxData[GridBox[{
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "757aa93a-2902-bc4a-a7d8-2a04ca3aba9d"], "Highlight", 
+    RowBox[{
+     RowBox[{"True", " ", "&"}], " "}], Cell[
+    "Criterion for highlighting of subgroups in the lattice.", "TableText",
+     ExpressionUUID->"8a86953c-6d0b-de4c-9dd6-8a6dc2cb2d28"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "6cfdf359-4006-9c4d-9ec5-95c2f92bee2a"], "ShowInfo", "\"\<All\>\"", 
+    Cell["\<\
+Information regarding subgroups to be printed in the lattice.\
+\>", "TableText",ExpressionUUID->"860df0f4-483f-7742-a13f-47bd945edd59"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "779583d9-88a3-504a-b1bd-b9d85ac3bea1"], "CombinationsLimit", "2", 
+    Cell["\<\
+Maximum cardinality of subsets to check for generating subgroups.\
+\>", "TableText",ExpressionUUID->"48ebe5a4-9e28-244c-9ac7-37a0ce58f41e"]}
+  }]], "3ColumnTableMod",
+ CellChangeTimes->{{3.9567256385653973`*^9, 3.956725652263117*^9}, {
+  3.956725695051262*^9, 3.956725790119648*^9}, {3.970203824697588*^9, 
+  3.970203824853895*^9}},
+ CellID->56841579,ExpressionUUID->"f214e3e9-6cb2-c04a-95bf-477dc717163c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "8b9d4ab6-c767-f040-941e-dd6373ca2ee5"]
+}], "SeeAlsoSection",
+ CellID->351357884,ExpressionUUID->"0fc13cef-a4ee-4447-a9dc-dbaf69893bdb"],
+
+Cell[TextData[{
+ Cell[BoxData["MSubgroupLattice3D"], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "0cacc351-3eba-be45-b144-005d21521528"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "361a6348-bbe1-2546-8fce-9758e7c6068a"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "03afd5ac-bdcd-e149-9084-34fc3e8a2002", 
+     "99c53592-4101-0b4a-8a09-6c955fc4a979"], $CellContext`cellobj$$ = 
+    CellObject[
+    "eb744e1a-89c8-614a-9b09-f89c0a6ffc69", 
+     "862e7020-f753-b940-a93b-6bf68af16d49"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "eb744e1a-89c8-614a-9b09-f89c0a6ffc69"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.956985315703953*^9, 3.9569853188986683`*^9}},
+ CellID->203451549,ExpressionUUID->"b5a3671b-b9a9-8d4f-880e-ffb038895672"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "7771479c-3e7d-f647-a4e9-93ffd438e2f3"]
+}], "TechNotesSection",
+ CellID->212911749,ExpressionUUID->"5a46bc1f-5b1d-1244-a430-ee94669f6719"],
+
+Cell["XXXX", "Tutorials",
+ CellID->132613665,ExpressionUUID->"f28df55a-c05c-f447-8cb8-d02bbc0577a9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->203256386,ExpressionUUID->"f0f91fe5-e9a8-4541-90be-56f9a2002c6a"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->548244560,ExpressionUUID->"ed20d0c4-d286-3540-8e10-91c1dc81b898"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "da747529-427a-2246-9b5a-f54c73319143"]
+}], "RelatedLinksSection",
+ CellID->49073640,ExpressionUUID->"0e084690-57e6-ad44-ab90-ea3d5a3c0cac"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->148621203,ExpressionUUID->"36383e23-2088-5043-b421-a13573eab9ff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "2108149b-8725-7246-aaaa-843982c3ea56"]
+}], "ExamplesInitializationSection",
+ CellID->33779641,ExpressionUUID->"599f8001-c260-6947-8adc-9a919efc86f8"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->105505954,ExpressionUUID->"da226716-2746-c042-bc4e-d5326fad24ee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->459429290,ExpressionUUID->"89a50f77-045f-fc4b-a28f-09a6985c17c1"],
+
+Cell[TextData[{
+ "Draw the subgroup lattice of ",
+ Cell[BoxData[
+  SubscriptBox["U", "30"]], "InlineFormula",ExpressionUUID->
+  "d8f3b77d-5ab6-b94b-8e28-8cf3eb6da94c"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.956725798837967*^9, 3.9567258149813976`*^9}},
+ CellID->195258644,ExpressionUUID->"ff91d940-bf3d-a14d-af3c-7903c44aa1ef"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MMultiplicativeGroup", "[", "30", "]"}], "//", 
+  "MSubgroupLattice"}]], "Input",
+ CellChangeTimes->{{3.9567258188533382`*^9, 3.9567258255323944`*^9}},
+ CellLabel->"In[629]:=",
+ CellID->201704552,ExpressionUUID->"a42da4e8-38cb-2646-9474-900b3000106a"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{1}, {
+       1}}, {{1, 7, 13, 19}, {7}}, {{1, 19}, {19}}, {{1, 11}, {11}}, {{1, 17, 
+        19, 23}, {17}}, {{1, 29}, {29}}, {{1, 7, 11, 13, 17, 19, 23, 29}, {7, 
+        11}}, {{1, 11, 19, 29}, {11, 19}}}, {
+       SparseArray[
+       Automatic, {8, 8}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 5, 8, 11}, {{3}, {1}, {1}, {3}, {1}, {2}, {
+          5}, {8}, {3}, {4}, {6}}}, Pattern}], Null}, {EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{1, 7, 11, 13, 17, 19, 23, 29}, {7, 11}} -> Placed[
+           
+           Grid[{{{1, 7, 11, 13, 17, 19, 23, 29}}, {"Generated by {7, 11}"}, {
+             "Order = 8"}}, Frame -> All], Tooltip], {{1, 19}, {19}} -> Placed[
+           
+           Grid[{{{1, 19}}, {"Generated by {19}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{1, 17, 19, 23}, {17}} -> Placed[
+           
+           Grid[{{{1, 17, 19, 23}}, {"Generated by {17}"}, {"Order = 4"}}, 
+            Frame -> All], Tooltip], {{1, 29}, {29}} -> Placed[
+           
+           Grid[{{{1, 29}}, {"Generated by {29}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{1}, {1}} -> Placed[
+           Grid[{{{1}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All], 
+           Tooltip], {{1, 11, 19, 29}, {11, 19}} -> Placed[
+           
+           Grid[{{{1, 11, 19, 29}}, {"Generated by {11, 19}"}, {"Order = 4"}},
+             Frame -> All], Tooltip], {{1, 11}, {11}} -> Placed[
+           
+           Grid[{{{1, 11}}, {"Generated by {11}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{1, 7, 13, 19}, {7}} -> Placed[
+           
+           Grid[{{{1, 7, 13, 19}}, {"Generated by {7}"}, {"Order = 4"}}, 
+            Frame -> All], Tooltip]}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{1, 19}, {19}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           29}, {29}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+          1}, {1}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           11}, {11}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           11, 19, 29}, {11, 19}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           7, 13, 19}, {7}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           7, 11, 13, 17, 19, 23, 29}, {7, 11}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           17, 19, 23}, {17}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{-2., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{-1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-2., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-1., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {0., 2.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {1., 1.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 0.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "1", "}"}]}, {"\"Generated by {1}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          Grid[{{{1}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-2., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "7", ",", "13", ",", "19"}], "}"}]}, {
+             "\"Generated by {7}\""}, {"\"Order = 4\""}}, AutoDelete -> False,
+             GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 7, 13, 19}}, {"Generated by {7}"}, {"Order = 4"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "19"}], "}"}]}, {"\"Generated by {19}\""}, {
+             "\"Order = 2\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 19}}, {"Generated by {19}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "11"}], "}"}]}, {"\"Generated by {11}\""}, {
+             "\"Order = 2\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 11}}, {"Generated by {11}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "17", ",", "19", ",", "23"}], "}"}]}, {
+             "\"Generated by {17}\""}, {"\"Order = 4\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 17, 19, 23}}, {"Generated by {17}"}, {"Order = 4"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "29"}], "}"}]}, {"\"Generated by {29}\""}, {
+             "\"Order = 2\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 29}}, {"Generated by {29}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 3.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "1", ",", "7", ",", "11", ",", "13", ",", "17", ",", "19", 
+                  ",", "23", ",", "29"}], "}"}]}, {
+             "\"Generated by {7, 11}\""}, {"\"Order = 8\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 7, 11, 13, 17, 19, 23, 29}}, {"Generated by {7, 11}"}, {
+            "Order = 8"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "11", ",", "19", ",", "29"}], "}"}]}, {
+             "\"Generated by {11, 19}\""}, {"\"Order = 4\""}}, AutoDelete -> 
+            False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 11, 19, 29}}, {"Generated by {11, 19}"}, {"Order = 4"}}, 
+           Frame -> All], "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.9567258270653152`*^9, 3.9569855125327835`*^9, 3.956985584488039*^9, {
+   3.970203918590309*^9, 3.9702039373171234`*^9}, {3.9702039867135086`*^9, 
+   3.9702039953286858`*^9}, 3.9702041211125793`*^9},
+ CellLabel->"Out[629]=",
+ CellID->13575082,ExpressionUUID->"e3dd55fd-0f73-b744-8057-9669b6df6b6f"]
+}, Open  ]],
+
+Cell["\<\
+Hovering on nodes reveals information about the respective group.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.956725831394287*^9, 3.9567258518375187`*^9}},
+ CellID->252596940,ExpressionUUID->"cc873828-2fc6-ed48-b2fd-603c607d38fc"],
+
+Cell[TextData[{
+ "For ",
+ Cell[BoxData[
+  SubscriptBox["D", "3"]], "InlineFormula",ExpressionUUID->
+  "f1e23668-50bb-b644-9877-221b7a2b4c0b"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.9567258710152016`*^9, 3.956725875526697*^9}},
+ CellID->515873538,ExpressionUUID->"ab2b2815-83a1-1842-be02-9b692848bc0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MDihedralGroup", "[", "3", "]"}], "//", 
+  "MSubgroupLattice"}]], "Input",
+ CellChangeTimes->{{3.956725877236553*^9, 3.9567258825301323`*^9}},
+ CellLabel->"In[630]:=",
+ CellID->359248587,ExpressionUUID->"c09bb547-38c8-b04e-bfc9-e69a4b0f1762"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0"}, {"r0"}}, {{"r0", "r1", "r2"}, {"r1"}}, {{"r0", "s0"}, {
+        "s0"}}, {{"r0", "s1"}, {"s1"}}, {{"r0", "s2"}, {"s2"}}, {{
+        "r0", "r1", "r2", "s0", "s1", "s2"}, {"r1", "s0"}}}, {
+       SparseArray[
+       Automatic, {6, 6}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 8}, {{1}, {1}, {1}, {1}, {2}, {3}, {4}, {5}}}, 
+         Pattern}], Null}, {EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{"r0", "s2"}, {"s2"}} -> Placed[
+           
+           Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s0"}, {"s0"}} -> Placed[
+           
+           Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r1", "r2", "s0", "s1", "s2"}, {
+           "r1", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "s0", "s1", "s2"}}, {
+             "Generated by {r1, s0}"}, {"Order = 6"}}, Frame -> All], 
+           Tooltip], {{"r0"}, {"r0"}} -> Placed[
+           
+           Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{"r0", "s1"}, {"s1"}} -> Placed[
+           
+           Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r1", "r2"}, {"r1"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2"}}, {"Generated by {r1}"}, {"Order = 3"}}, 
+            Frame -> All], Tooltip]}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{"r0", "r1", "r2", "s0", "s1", "s2"}, {"r1", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s2"}, {"s2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s1"}, {"s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0"}, {"r0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r1", "r2"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{-2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {1., 1.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 0.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"r0\"", "}"}]}, {"\"Generated by {r0}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-2., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"r1\"", ",", "\"r2\""}], "}"}]}, {
+             "\"Generated by {r1}\""}, {"\"Order = 3\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2"}}, {"Generated by {r1}"}, {"Order = 3"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s0\""}], "}"}]}, {
+             "\"Generated by {s0}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s1\""}], "}"}]}, {
+             "\"Generated by {s1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {s2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"s0\"", ",", 
+                  "\"s1\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {r1, s0}\""}, {"\"Order = 6\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "s0", "s1", "s2"}}, {
+            "Generated by {r1, s0}"}, {"Order = 6"}}, Frame -> All], 
+          "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{3.956725883142807*^9, 3.9702041236717415`*^9},
+ CellLabel->"Out[630]=",
+ CellID->58129549,ExpressionUUID->"392bae30-3a23-734e-ab4f-c7fac7c89217"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "5700a530-f944-814f-8696-42cb0147fd82"]
+}], "ExtendedExamplesSection",
+ CellChangeTimes->{3.9567258092603855`*^9},
+ CellTags->"ExtendedExamples",
+ CellID->9881491,ExpressionUUID->"5489ae16-b12a-274b-b3d1-2a0c630421db"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "80f0fea7-3c23-7b45-9913-b73b6cb6d79e"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->376057,ExpressionUUID->"ebdb8257-bb4c-2244-8e22-b49e42fd2c5c"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "4c0e913c-e27e-e941-b1c3-0d663908294c"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->484131122,ExpressionUUID->"f1ad716f-a0ad-a84f-9b4e-fb54758afd0f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "f2ab2314-6674-7d4f-9ec3-25e812d29b50"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->24237513,ExpressionUUID->"b38b18f4-d57b-6943-baae-7e552b80ac12"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "MCombinationsLimit", "ExampleSubsection",ExpressionUUID->
+   "94ba10d1-1d09-d947-97bf-b5409363c2a1"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.9579128806052*^9, 3.9579128806052*^9}, {
+  3.9702038972946186`*^9, 3.9702038972946186`*^9}},
+ CellID->444255716,ExpressionUUID->"8fefc1e4-6cb2-7d4d-a244-6e0ffd1b3d15"],
+
+Cell[TextData[{
+ "CombinationsLimit can be set to define the maximum cardinality of subsets \
+that should be used to generate subgroups. For example, all subgroups of ",
+ Cell[BoxData[
+  SubscriptBox["S", "4"]], "InlineFormula",ExpressionUUID->
+  "a13c940d-5ebb-8e47-805c-2d6a8ca4bcc0"],
+ " can be generated by a maximum of 2 elements as the rank of this group is \
+2. Hence, compare CombinationsLimit set to 2:"
+}], "ExampleText",
+ CellChangeTimes->{{3.956725356230221*^9, 3.9567254166430225`*^9}, {
+  3.970203873709791*^9, 3.9702038767648563`*^9}},
+ CellID->556403549,ExpressionUUID->"2c86007c-46a6-9948-a328-6be8252ef4c5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MSubgroupLattice3D", "[", 
+    RowBox[{
+     RowBox[{"MPermutationsGroup", "[", "4", "]"}], ",", 
+     RowBox[{"MCombinationsLimit", "->", "3"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.9567254182431755`*^9, 3.9567254435431976`*^9}, {
+   3.9569856932601967`*^9, 3.95698571906448*^9}, {3.97020385348337*^9, 
+   3.9702038549096375`*^9}, 3.9702041307540684`*^9},
+ CellLabel->"In[632]:=",
+ CellID->116169446,ExpressionUUID->"1c230179-c2b7-bd41-a22b-731e7d267de4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1.9516618`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9567254470487843`*^9, 3.956985726963953*^9, {3.970204128182953*^9, 
+   3.9702041333211403`*^9}},
+ CellLabel->"Out[632]=",
+ CellID->277160215,ExpressionUUID->"129866c7-e38f-e745-b371-1aba6a3b95e2"]
+}, Open  ]],
+
+Cell["with the sufficing default value:", "ExampleText",
+ CellChangeTimes->{{3.956725449682106*^9, 3.9567254624469223`*^9}, {
+  3.9702038805051785`*^9, 3.970203883640396*^9}},
+ CellID->858087461,ExpressionUUID->"c1d831c9-fbc7-cd4b-8135-b24393628810"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MSubgroupLattice3D", "[", 
+    RowBox[{"MPermutationsGroup", "[", "4", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.9567254699932575`*^9, 3.956725475412262*^9}, {
+   3.9569857209648743`*^9, 3.956985722015522*^9}, 3.97020388738286*^9},
+ CellLabel->"In[633]:=",
+ CellID->305057397,ExpressionUUID->"7f2bd456-db4f-d14c-bbdf-93f1ed84cb9e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.2469983`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.9567254760225525`*^9, 3.9569857284352665`*^9, 
+  3.970204135780302*^9},
+ CellLabel->"Out[633]=",
+ CellID->2485306,ExpressionUUID->"3d4789c1-2a31-bb48-8f9d-4b03eee07545"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "MHighlight", "ExampleSubsection",ExpressionUUID->
+   "f6c65689-389c-e940-8e16-8c6158708bf2"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.9579128837595596`*^9, 3.9579128837595596`*^9}, {
+  3.970203901459345*^9, 3.970203901459345*^9}},
+ CellID->73041630,ExpressionUUID->"c6bbbea9-510e-0f4f-8a19-98316e5fcbb2"],
+
+Cell["\<\
+Nodes can be highlighted using certain criterion. For example, cyclic \
+subgroups can be highlighted using the MCyclicQ function:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.9567259131747704`*^9, 3.956725939851015*^9}, {
+  3.956726005776026*^9, 3.9567260065772457`*^9}, {3.957912374109812*^9, 
+  3.957912379807602*^9}},
+ CellID->333207987,ExpressionUUID->"a8751a49-002c-a943-aaba-b7b0b6461314"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "8", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "MCyclicQ"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.956725974857252*^9, 3.9567259957259464`*^9}, {
+   3.9569857751039257`*^9, 3.956985775759802*^9}, {3.95791235646278*^9, 
+   3.957912369368414*^9}, 3.970203891924364*^9},
+ CellLabel->"In[640]:=",
+ CellID->121211298,ExpressionUUID->"c78bbd01-aa52-0d4b-b4bb-de3e6b0ec51f"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0"}, {"r0"}}, {{
+        "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}, {"r1"}}, {{
+        "r0", "r2", "r4", "r6"}, {"r2"}}, {{"r0", "r4"}, {"r4"}}, {{
+        "r0", "s0"}, {"s0"}}, {{"r0", "s1"}, {"s1"}}, {{"r0", "s2"}, {
+        "s2"}}, {{"r0", "s3"}, {"s3"}}, {{"r0", "s4"}, {"s4"}}, {{
+        "r0", "s5"}, {"s5"}}, {{"r0", "s6"}, {"s6"}}, {{"r0", "s7"}, {
+        "s7"}}, {{
+        "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", "s2", 
+         "s3", "s4", "s5", "s6", "s7"}, {"r1", "s0"}}, {{
+        "r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}, {"r2", "s0"}}, {{
+        "r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}, {"r2", "s1"}}, {{
+        "r0", "r4", "s0", "s4"}, {"r4", "s0"}}, {{"r0", "r4", "s1", "s5"}, {
+        "r4", "s1"}}, {{"r0", "r4", "s2", "s6"}, {"r4", "s2"}}, {{
+        "r0", "r4", "s3", "s7"}, {"r4", "s3"}}}, {
+       SparseArray[
+       Automatic, {19, 19}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 17, 20, 23, 26, 29, 
+          32}, {{3}, {4}, {1}, {1}, {1}, {1}, {1}, {1}, {1}, {1}, {1}, {2}, {
+          14}, {15}, {3}, {16}, {18}, {3}, {17}, {19}, {4}, {5}, {9}, {4}, {
+          6}, {10}, {4}, {7}, {11}, {4}, {8}, {12}}}, Pattern}], Null}, {
+      EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{"r0", "s6"}, {"s6"}} -> Placed[
+           
+           Grid[{{{"r0", "s6"}}, {"Generated by {s6}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0"}, {"r0"}} -> Placed[
+           
+           Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}, {"r2", "s0"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}}, {
+             "Generated by {r2, s0}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip], {{"r0", "r4", "s2", "s6"}, {"r4", "s2"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s2", "s6"}}, {"Generated by {r4, s2}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", "s2", 
+            "s3", "s4", "s5", "s6", "s7"}, {"r1", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1",
+                "s2", "s3", "s4", "s5", "s6", "s7"}}, {
+             "Generated by {r1, s0}"}, {"Order = 16"}}, Frame -> All], 
+           Tooltip], {{"r0", "r4", "s1", "s5"}, {"r4", "s1"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s1", "s5"}}, {"Generated by {r4, s1}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "r0", "r4", "s0", "s4"}, {"r4", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s0", "s4"}}, {"Generated by {r4, s0}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s3"}, {"s3"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s4"}, {"s4"}} -> Placed[
+           
+           Grid[{{{"r0", "s4"}}, {"Generated by {s4}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s1"}, {"s1"}} -> Placed[
+           
+           Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r2", "r4", "r6"}, {"r2"}} -> Placed[
+           
+           Grid[{{{"r0", "r2", "r4", "r6"}}, {"Generated by {r2}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s7"}, {"s7"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s7"}}, {"Generated by {s7}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r4"}, {"r4"}} -> Placed[
+           
+           Grid[{{{"r0", "r4"}}, {"Generated by {r4}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r4", "s3", "s7"}, {"r4", "s3"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s3", "s7"}}, {"Generated by {r4, s3}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s5"}, {"s5"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s5"}}, {"Generated by {s5}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}, {"r1"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}}, {
+             "Generated by {r1}"}, {"Order = 8"}}, Frame -> All], Tooltip], {{
+           "r0", "s2"}, {"s2"}} -> Placed[
+           
+           Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s0"}, {"s0"}} -> Placed[
+           
+           Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}, {"r2", "s1"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}}, {
+             "Generated by {r2, s1}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip]}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{"r0", "s2"}, {"s2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "r4", "r6"}, {"r2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s4"}, {"s4"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0"}, {"r0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s7"}, {"s7"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r4", "s1", "s5"}, {"r4", "s1"}} -> 
+         GrayLevel[0.85], {{"r0", "r4"}, {"r4"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r4", "s3", "s7"}, {"r4", "s3"}} -> 
+         GrayLevel[0.85], {{"r0", "s1"}, {"s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s3"}, {"s3"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}, {"r2", "s0"}} -> 
+         GrayLevel[
+          0.85], {{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}, {"r2", "s1"}} -> 
+         GrayLevel[0.85], {{"r0", "r4", "s0", "s4"}, {"r4", "s0"}} -> 
+         GrayLevel[0.85], {{"r0", "s5"}, {"s5"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r4", "s2", "s6"}, {"r4", "s2"}} -> 
+         GrayLevel[0.85], {{"r0", "s6"}, {"s6"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", "s2", 
+            "s3", "s4", "s5", "s6", "s7"}, {"r1", "s0"}} -> 
+         GrayLevel[0.85]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{-2., 3.}, {-2., 2.}}, 0.1], 
+        ArrowBox[{{-2., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-4., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{3., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-3., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{4., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 4.}, {-2., 3.}}, 0.1], 
+        ArrowBox[{{-1., 4.}, {-1., 3.}}, 0.1], 
+        ArrowBox[{{-1., 4.}, {1., 3.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-2., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-3., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-1., 2.}}, 0.1], 
+        ArrowBox[{{1., 3.}, {-2., 2.}}, 0.1], 
+        ArrowBox[{{1., 3.}, {1., 2.}}, 0.1], 
+        ArrowBox[{{1., 3.}, {3., 2.}}, 0.1], 
+        ArrowBox[{{-3., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-3., 2.}, {-4., 1.}}, 0.1], 
+        ArrowBox[{{-3., 2.}, {-3., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {1., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {2., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{3., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{3., 2.}, {3., 1.}}, 0.1], 
+        ArrowBox[{{3., 2.}, {4., 1.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 0.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"r0\"", "}"}]}, {"\"Generated by {r0}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-2., 3.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\"", ",", 
+                  "\"r4\"", ",", "\"r5\"", ",", "\"r6\"", ",", "\"r7\""}], 
+                "}"}]}, {"\"Generated by {r1}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}}, {
+            "Generated by {r1}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-2., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"r4\"", ",", "\"r6\""}], 
+                "}"}]}, {"\"Generated by {r2}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "r4", "r6"}}, {"Generated by {r2}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-2., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"r4\""}], "}"}]}, {
+             "\"Generated by {r4}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4"}}, {"Generated by {r4}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-4., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s0\""}], "}"}]}, {
+             "\"Generated by {s0}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s1\""}], "}"}]}, {
+             "\"Generated by {s1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {s2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{3., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s3\""}], "}"}]}, {
+             "\"Generated by {s3}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-3., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s4\""}], "}"}]}, {
+             "\"Generated by {s4}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s4"}}, {"Generated by {s4}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{2., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s5\""}], "}"}]}, {
+             "\"Generated by {s5}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s5"}}, {"Generated by {s5}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s6\""}], "}"}]}, {
+             "\"Generated by {s6}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s6"}}, {"Generated by {s6}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{4., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s7\""}], "}"}]}, {
+             "\"Generated by {s7}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s7"}}, {"Generated by {s7}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-1., 4.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\"", ",", 
+                  "\"r4\"", ",", "\"r5\"", ",", "\"r6\"", ",", "\"r7\"", ",", 
+                  "\"s0\"", ",", "\"s1\"", ",", "\"s2\"", ",", "\"s3\"", ",", 
+                  "\"s4\"", ",", "\"s5\"", ",", "\"s6\"", ",", "\"s7\""}], 
+                "}"}]}, {"\"Generated by {r1, s0}\""}, {"\"Order = 16\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", 
+              "s2", "s3", "s4", "s5", "s6", "s7"}}, {
+            "Generated by {r1, s0}"}, {"Order = 16"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-1., 3.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"r4\"", ",", "\"r6\"", ",", 
+                  "\"s0\"", ",", "\"s2\"", ",", "\"s4\"", ",", "\"s6\""}], 
+                "}"}]}, {"\"Generated by {r2, s0}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}}, {
+            "Generated by {r2, s0}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{1., 3.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"r4\"", ",", "\"r6\"", ",", 
+                  "\"s1\"", ",", "\"s3\"", ",", "\"s5\"", ",", "\"s7\""}], 
+                "}"}]}, {"\"Generated by {r2, s1}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}}, {
+            "Generated by {r2, s1}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-3., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s0\"", ",", "\"s4\""}], 
+                "}"}]}, {"\"Generated by {r4, s0}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s0", "s4"}}, {"Generated by {r4, s0}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s1\"", ",", "\"s5\""}], 
+                "}"}]}, {"\"Generated by {r4, s1}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s1", "s5"}}, {"Generated by {r4, s1}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s2\"", ",", "\"s6\""}], 
+                "}"}]}, {"\"Generated by {r4, s2}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s2", "s6"}}, {"Generated by {r4, s2}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{3., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s3\"", ",", "\"s7\""}], 
+                "}"}]}, {"\"Generated by {r4, s3}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s3", "s7"}}, {"Generated by {r4, s3}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.956725997359913*^9, 3.956985784495594*^9, 3.9569862169789467`*^9, 
+   3.956986337970068*^9, {3.957912359334303*^9, 3.9579123822237206`*^9}, 
+   3.970204139124445*^9, 3.9702041711122*^9},
+ CellLabel->"Out[640]=",
+ CellID->107511312,ExpressionUUID->"44ce3cf1-0af6-de44-a385-934332634220"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Abelian subgroups of ",
+ Cell[BoxData[
+  ButtonBox["MQuaternionGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MQuaternionGroup"]], 
+  "InlineFormula",ExpressionUUID->"7463d82b-8fcd-f249-8173-4f288deeaaa5"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.9567260095113487`*^9, 3.956726024372841*^9}},
+ CellID->289203421,ExpressionUUID->"d64aa205-3d7e-654d-b93b-bb832a063ce0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice", "[", "\[IndentingNewLine]", 
+  RowBox[{"MQuaternionGroup", ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "MAbelianQ"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.956726034575758*^9, 3.9567260419558105`*^9}, {
+   3.9569863475193443`*^9, 3.956986348005516*^9}, {3.957912387560177*^9, 
+   3.9579123887852917`*^9}, {3.9579129355788345`*^9, 3.95791293575078*^9}, 
+   3.970203894072735*^9},
+ CellLabel->"In[795]:=",
+ CellID->163700922,ExpressionUUID->"171d08e8-9477-4a43-992b-b95891968eec"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"1"}, {"1"}}, {{"-1", "1"}, {"-1"}}, {{"-1", "1", "-i", "i"}, {
+        "i"}}, {{"-1", "1", "-j", "j"}, {"j"}}, {{"-1", "1", "-k", "k"}, {
+        "k"}}, {{"-1", "1", "-i", "i", "-j", "j", "-k", "k"}, {"i", "j"}}}, {
+       SparseArray[
+       Automatic, {6, 6}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 7}, {{1}, {2}, {2}, {2}, {3}, {4}, {5}}}, 
+         Pattern}], Null}, {EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{"-1", "1"}, {"-1"}} -> Placed[
+           
+           Grid[{{{"-1", "1"}}, {"Generated by {-1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"-1", "1", "-i", "i"}, {"i"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-i", "i"}}, {"Generated by {i}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "-1", "1", "-k", "k"}, {"k"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-k", "k"}}, {"Generated by {k}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "-1", "1", "-i", "i", "-j", "j", "-k", "k"}, {"i", "j"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-i", "i", "-j", "j", "-k", "k"}}, {
+             "Generated by {i, j}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip], {{"-1", "1", "-j", "j"}, {"j"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-j", "j"}}, {"Generated by {j}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"1"}, {"1"}} -> Placed[
+           Grid[{{{"1"}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All],
+            Tooltip]}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{"-1", "1", "-i", "i"}, {"i"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1"}, {"-1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1", "-j", "j"}, {"j"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1", "-i", "i", "-j", "j", "-k", "k"}, {"i", "j"}} -> 
+         GrayLevel[0.85], {{"1"}, {"1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1", "-k", "k"}, {"k"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{0., 3.}, {-1., 2.}}, 0.1], 
+        ArrowBox[{{0., 3.}, {0., 2.}}, 0.1], 
+        ArrowBox[{{0., 3.}, {1., 2.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 0.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"1\"", "}"}]}, {"\"Generated by {1}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          Grid[{{{"1"}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\""}], "}"}]}, {
+             "\"Generated by {-1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1"}}, {"Generated by {-1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\"", ",", "\"-i\"", ",", "\"i\""}],
+                 "}"}]}, {"\"Generated by {i}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-i", "i"}}, {"Generated by {i}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\"", ",", "\"-j\"", ",", "\"j\""}],
+                 "}"}]}, {"\"Generated by {j}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-j", "j"}}, {"Generated by {j}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\"", ",", "\"-k\"", ",", "\"k\""}],
+                 "}"}]}, {"\"Generated by {k}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-k", "k"}}, {"Generated by {k}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{0., 3.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"-1\"", ",", "\"1\"", ",", "\"-i\"", ",", "\"i\"", ",", 
+                  "\"-j\"", ",", "\"j\"", ",", "\"-k\"", ",", "\"k\""}], 
+                "}"}]}, {"\"Generated by {i, j}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-i", "i", "-j", "j", "-k", "k"}}, {
+            "Generated by {i, j}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.9567260425853863`*^9, 3.9569857970267277`*^9, 3.956985888838827*^9, {
+   3.9569863452117367`*^9, 3.956986348585251*^9}, 3.9579123893039474`*^9, 
+   3.957912943282404*^9, {3.970204141287039*^9, 3.970204178764183*^9}},
+ CellLabel->"Out[795]=",
+ CellID->82844506,ExpressionUUID->"cb7f1f0a-a3fe-164c-9b1f-4ba32d500972"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Normal subgroups of ",
+ Cell[BoxData[
+  SubscriptBox["S", "3"]], "InlineFormula",ExpressionUUID->
+  "0e9e97f8-e5fc-1242-a546-202d4cfb2f2c"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.956726050181383*^9, 3.95672605510425*^9}},
+ CellID->214006743,ExpressionUUID->"a00d91d7-66ad-5143-b1b0-7b4491cc83b3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MPermutationsGroup", "[", "3", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "MNormalSubgroupQ"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9567260602883472`*^9, 3.956726067949606*^9}, {
+   3.95698635268186*^9, 3.9569863531534786`*^9}, {3.9579123957719727`*^9, 
+   3.957912398788309*^9}, {3.9579129466190166`*^9, 3.957912946791355*^9}, 
+   3.970204183801157*^9},
+ CellLabel->"In[797]:=",
+ CellID->225127098,ExpressionUUID->"f2c93715-c937-d744-ad04-35efa5d80ed9"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"(1)"}, {"(1)"}}, {{"(1)", "(23)"}, {"(23)"}}, {{
+        "(1)", "(12)"}, {"(12)"}}, {{"(1)", "(123)", "(132)"}, {"(123)"}}, {{
+        "(1)", "(13)"}, {"(13)"}}, {{
+        "(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}, {"(23)", "(12)"}}}, {
+       SparseArray[
+       Automatic, {6, 6}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 8}, {{1}, {1}, {1}, {1}, {2}, {3}, {4}, {5}}}, 
+         Pattern}], Null}, {EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{"(1)", "(12)"}, {"(12)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(12)"}}, {"Generated by {(12)}"}, {"Order = 2"}}, 
+            Frame -> All], Tooltip], {{
+           "(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}, {
+           "(23)", "(12)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}}, {
+             "Generated by {(23), (12)}"}, {"Order = 6"}}, Frame -> All], 
+           Tooltip], {{"(1)", "(13)"}, {"(13)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(13)"}}, {"Generated by {(13)}"}, {"Order = 2"}}, 
+            Frame -> All], Tooltip], {{"(1)", "(23)"}, {"(23)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(23)"}}, {"Generated by {(23)}"}, {"Order = 2"}}, 
+            Frame -> All], Tooltip], {{"(1)"}, {"(1)"}} -> Placed[
+           
+           Grid[{{{"(1)"}}, {"Generated by {(1)}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{"(1)", "(123)", "(132)"}, {"(123)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(123)", "(132)"}}, {"Generated by {(123)}"}, {
+             "Order = 3"}}, Frame -> All], Tooltip]}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{"(1)", "(23)"}, {"(23)"}} -> 
+         GrayLevel[
+          0.85], {{"(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}, {
+           "(23)", "(12)"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "(1)", "(13)"}, {"(13)"}} -> GrayLevel[0.85], {{"(1)"}, {"(1)"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "(1)", "(12)"}, {"(12)"}} -> 
+         GrayLevel[0.85], {{"(1)", "(123)", "(132)"}, {"(123)"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{-2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{0., 2.}, {1., 1.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 0.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"(1)\"", "}"}]}, {"\"Generated by {(1)}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)"}}, {"Generated by {(1)}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-2., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(23)\""}], "}"}]}, {
+             "\"Generated by {(23)}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(23)"}}, {"Generated by {(23)}"}, {"Order = 2"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(12)\""}], "}"}]}, {
+             "\"Generated by {(12)}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(12)"}}, {"Generated by {(12)}"}, {"Order = 2"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(123)\"", ",", "\"(132)\""}], 
+                "}"}]}, {"\"Generated by {(123)}\""}, {"\"Order = 3\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(123)", "(132)"}}, {"Generated by {(123)}"}, {
+            "Order = 3"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(13)\""}], "}"}]}, {
+             "\"Generated by {(13)}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(13)"}}, {"Generated by {(13)}"}, {"Order = 2"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{0., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"(1)\"", ",", "\"(12)\"", ",", "\"(123)\"", ",", 
+                  "\"(13)\"", ",", "\"(132)\"", ",", "\"(23)\""}], "}"}]}, {
+             "\"Generated by {(23), (12)}\""}, {"\"Order = 6\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}}, {
+            "Generated by {(23), (12)}"}, {"Order = 6"}}, Frame -> All], 
+          "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.9567260713223267`*^9, 3.956986353717985*^9, 3.9579123993836594`*^9, 
+   3.9579129473247623`*^9, {3.9702041810372524`*^9, 3.970204184507023*^9}},
+ CellLabel->"Out[797]=",
+ CellID->195946801,ExpressionUUID->"95d7e983-3669-ba40-9531-dab16457bb26"]
+}, Open  ]],
+
+Cell["Highlight subgroups of length 4:", "ExampleText",
+ CellChangeTimes->{{3.9579124022069225`*^9, 3.9579124085776825`*^9}},
+ CellID->425773105,ExpressionUUID->"a6760a38-5678-fb4d-8698-600321a8d197"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"len4", "[", 
+   RowBox[{"g_", ",", "h_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Length", "[", "h", "]"}], "==", "4"}]}], "\[IndentingNewLine]", 
+ RowBox[{"MSubgroupLattice", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "4", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "len4"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9579124231544056`*^9, 3.9579124310711765`*^9}, {
+   3.9579124710697536`*^9, 3.9579125032628155`*^9}, {3.957912565987999*^9, 
+   3.9579125865782967`*^9}, {3.9579128119097404`*^9, 3.95791282727948*^9}, 
+   3.970204188789688*^9},
+ CellLabel->"In[798]:=",
+ CellID->92136134,ExpressionUUID->"68703f22-a600-b247-81d7-745c784733dd"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0"}, {"r0"}}, {{"r0", "r1", "r2", "r3"}, {"r1"}}, {{
+        "r0", "r2"}, {"r2"}}, {{"r0", "s0"}, {"s0"}}, {{"r0", "s1"}, {
+        "s1"}}, {{"r0", "s2"}, {"s2"}}, {{"r0", "s3"}, {"s3"}}, {{
+        "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}}, {{
+        "r0", "r2", "s0", "s2"}, {"r2", "s0"}}, {{"r0", "r2", "s1", "s3"}, {
+        "r2", "s1"}}}, {
+       SparseArray[
+       Automatic, {10, 10}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15}, {{3}, {1}, {1}, {1}, {1}, {
+          1}, {2}, {9}, {10}, {3}, {4}, {6}, {3}, {5}, {7}}}, Pattern}], 
+       Null}, {EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{"r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r2", "s0", "s2"}}, {"Generated by {r2, s0}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s1"}, {"s1"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> Placed[
+           
+           Grid[{{{"r0", "r2", "s1", "s3"}}, {"Generated by {r2, s1}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "r2"}, {"r2"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r2"}}, {"Generated by {r2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}}, {
+             "Generated by {r1, s0}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip], {{"r0", "s2"}, {"s2"}} -> Placed[
+           
+           Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r1", "r2", "r3"}, {"r1"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3"}}, {"Generated by {r1}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0"}, {"r0"}} -> 
+         Placed[
+           
+           Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{"r0", "s3"}, {"s3"}} -> Placed[
+           
+           Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s0"}, {"s0"}} -> Placed[
+           
+           Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip]}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{"r0", "r1", "r2", "r3"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s3"}, {"s3"}} -> GrayLevel[0.85], {{"r0", "s1"}, {"s1"}} -> 
+         GrayLevel[0.85], {{"r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> GrayLevel[0.85], {{"r0"}, {"r0"}} -> 
+         GrayLevel[0.85], {{"r0", "r2"}, {"r2"}} -> 
+         GrayLevel[0.85], {{"r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s2"}, {"s2"}} -> 
+         GrayLevel[
+          0.85], {{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {
+           "r1", "s0"}} -> GrayLevel[0.85]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{-2., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-2., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-1., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {1., 2.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {1., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {2., 1.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{0., 0.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"r0\"", "}"}]}, {"\"Generated by {r0}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-2., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\""}], 
+                "}"}]}, {"\"Generated by {r1}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3"}}, {"Generated by {r1}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-2., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"r2\""}], "}"}]}, {
+             "\"Generated by {r2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2"}}, {"Generated by {r2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s0\""}], "}"}]}, {
+             "\"Generated by {s0}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{1., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s1\""}], "}"}]}, {
+             "\"Generated by {s1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{0., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {s2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{2., 1.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s3\""}], "}"}]}, {
+             "\"Generated by {s3}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], DiskBox[{-1., 3.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\"", ",", 
+                  "\"s0\"", ",", "\"s1\"", ",", "\"s2\"", ",", "\"s3\""}], 
+                "}"}]}, {"\"Generated by {r1, s0}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}}, {
+            "Generated by {r1, s0}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{-1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"s0\"", ",", "\"s2\""}], 
+                "}"}]}, {"\"Generated by {r2, s0}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "s0", "s2"}}, {"Generated by {r2, s0}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           DiskBox[{1., 2.}, 0.1]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"s1\"", ",", "\"s3\""}], 
+                "}"}]}, {"\"Generated by {r2, s1}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "s1", "s3"}}, {"Generated by {r2, s1}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.957912492026787*^9, 3.957912514816326*^9}, {
+   3.9579125670822372`*^9, 3.9579125871355305`*^9}, {3.9579128085865097`*^9, 
+   3.95791282787607*^9}, 3.970204189666395*^9},
+ CellLabel->"Out[799]=",
+ CellID->62079908,ExpressionUUID->"f72e2dd1-0fa0-f74b-a465-f96a83ef44b0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"M", 
+  InterpretationBox[Cell[
+   "ShowInfo", "ExampleSubsection",ExpressionUUID->
+    "bce234e5-39ed-4e41-b0d7-fa73d1df78d2"],
+   $Line = 0; Null]}]], "ExampleSubsection",
+ CellChangeTimes->{{3.9579128910528603`*^9, 3.9579128910528603`*^9}, 
+   3.9702039056333847`*^9},
+ CellID->897777693,ExpressionUUID->"f2080ef9-1d65-6349-a263-fc01bfe9207c"],
+
+Cell["\<\
+ShowInfo can be set to \"Generators\" to show generators without hovering:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.9567262226315823`*^9, 3.9567262406270504`*^9}},
+ CellID->26472660,ExpressionUUID->"f576ca35-db8c-cf49-a033-fe4924c451ff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "4", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MShowInfo", "->", "\"\<Generators\>\""}]}], "\[IndentingNewLine]",
+   "]"}]], "Input",
+ CellChangeTimes->{{3.9567262427752724`*^9, 3.95672625899*^9}, {
+   3.9567262990126247`*^9, 3.956726300630659*^9}, {3.9569863712476482`*^9, 
+   3.956986386038826*^9}, {3.9579129515224724`*^9, 3.957912951694231*^9}, 
+   3.9702041925889816`*^9},
+ CellLabel->"In[800]:=",
+ CellID->897345503,ExpressionUUID->"d5950ff7-0603-e048-9aac-70fe009a1a7f"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0"}, {"r0"}}, {{"r0", "r1", "r2", "r3"}, {"r1"}}, {{
+        "r0", "r2"}, {"r2"}}, {{"r0", "s0"}, {"s0"}}, {{"r0", "s1"}, {
+        "s1"}}, {{"r0", "s2"}, {"s2"}}, {{"r0", "s3"}, {"s3"}}, {{
+        "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}}, {{
+        "r0", "r2", "s0", "s2"}, {"r2", "s0"}}, {{"r0", "r2", "s1", "s3"}, {
+        "r2", "s1"}}}, {
+       SparseArray[
+       Automatic, {10, 10}, 0, {
+        1, {{0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15}, {{3}, {1}, {1}, {1}, {1}, {
+          1}, {2}, {9}, {10}, {3}, {4}, {6}, {3}, {5}, {7}}}, Pattern}], 
+       Null}, {EdgeStyle -> {
+         GrayLevel[0.5]}, GraphLayout -> "LayeredDigraphEmbedding", 
+       VertexLabels -> {{{"r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> 
+         "{r2, s0}", {{"r0", "s1"}, {"s1"}} -> 
+         "{s1}", {{"r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> 
+         "{r2, s1}", {{"r0", "r2"}, {"r2"}} -> 
+         "{r2}", {{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {
+           "r1", "s0"}} -> "{r1, s0}", {{"r0", "s2"}, {"s2"}} -> 
+         "{s2}", {{"r0", "r1", "r2", "r3"}, {"r1"}} -> 
+         "{r1}", {{"r0"}, {"r0"}} -> "{r0}", {{"r0", "s3"}, {"s3"}} -> 
+         "{s3}", {{"r0", "s0"}, {"s0"}} -> "{s0}"}, VertexSize -> {Medium}, 
+       VertexStyle -> {{{"r0", "r1", "r2", "r3"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s3"}, {"s3"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s1"}, {"s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0"}, {"r0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2"}, {"r2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s2"}, {"s2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {GrayLevel[0.5], Opacity[0.7], CapForm["Round"], Arrowheads[Medium], 
+        ArrowBox[{{-2., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{1., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{0., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{2., 1.}, {0., 0.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-2., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {-1., 2.}}, 0.1], 
+        ArrowBox[{{-1., 3.}, {1., 2.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {-1., 1.}}, 0.1], 
+        ArrowBox[{{-1., 2.}, {0., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {-2., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {1., 1.}}, 0.1], 
+        ArrowBox[{{1., 2.}, {2., 1.}}, 0.1]}, 
+       {Hue[0.6, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.7]}], {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{0., 0.}, 0.1]}, 
+         InsetBox["\<\"{r0}\"\>", Offset[{0, -2}, {0., -0.1}], ImageScaled[{0.5, 1}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{-2., 2.}, 0.1]}, 
+         InsetBox["\<\"{r1}\"\>", {-2.12934313455158, 2.0535756805311127}, 
+          ImageScaled[{1.192909649383465, 0.21298742572618223}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{-2., 1.}, 0.1]}, 
+         InsetBox["\<\"{r2}\"\>", {-2.1190911131692856, 0.9263976443033214}, 
+          ImageScaled[{1.1379881062640302, 0.8942983340893497}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{-1., 1.}, 0.1]}, 
+         InsetBox["\<\"{s0}\"\>", {-1.1293431345515803, 0.9464243194688875}, 
+          ImageScaled[{1.192909649383465, 0.7870125742738174}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{1., 1.}, 0.1]}, 
+         InsetBox["\<\"{s1}\"\>", {1.12934313455158, 0.9464243194688874}, 
+          ImageScaled[{-0.19290964938346478, 0.7870125742738179}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{0., 1.}, 0.1]}, 
+         InsetBox["\<\"{s2}\"\>", {0.12934313455158014, 1.0535756805311127}, 
+          ImageScaled[{-0.192909649383465, 0.21298742572618262}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{2., 1.}, 0.1]}, 
+         InsetBox["\<\"{s3}\"\>", {2.13819224406925, 0.9775744859790246}, 
+          ImageScaled[{-0.24031559322812235, 0.6201366822552263}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{-1., 3.}, 0.1]}, 
+         InsetBox["\<\"{r1, s0}\"\>", Offset[{0, 2}, {-1., 3.1}], 
+          ImageScaled[{0.5, 0}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{-1., 2.}, 0.1]}, 
+         InsetBox["\<\"{r2, s0}\"\>", {-1.1293431345515803, 2.0535756805311127},
+           ImageScaled[{1.192909649383465, 0.21298742572618223}],
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          DiskBox[{1., 2.}, 0.1]}, 
+         InsetBox["\<\"{r2, s1}\"\>", {1.081859439852927, 2.1135739059245786},
+           ImageScaled[{0.06146728650217603, -0.1084316388816704}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.956726256249708*^9, 3.9567263014642773`*^9, {3.9569863724726276`*^9, 
+   3.9569863866189766`*^9}, 3.9579129523413887`*^9, 3.970204194624117*^9},
+ CellLabel->"Out[800]=",
+ CellID->89970462,ExpressionUUID->"c6f161f6-9103-d94e-a7fb-eb1a75ebb78f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "ffc30142-5c1b-9943-92da-f5f8b49a178a"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->145628453,ExpressionUUID->"cefeaac7-9d41-0d4d-8929-e890a052490b"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "5cf2de51-e241-2448-a422-9885bed3bfa6"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->150673359,ExpressionUUID->"685f4f1c-0b6f-5140-abe9-93300e974678"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "ac8e2ac1-b080-c244-a951-2fbf216637ce"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->415863504,ExpressionUUID->"b9cacde4-6806-1042-b744-ab7e14413081"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "d8d9e951-ded9-1849-97ee-b61f32a613d0"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->860333169,ExpressionUUID->"5a9aacda-4bb4-d94b-b49b-c14e35ed449e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "a5c55767-070c-4848-bc98-ebe0c50b5389"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->542484280,ExpressionUUID->"1e8a1256-005b-7b4d-a71f-29cda1dfbff3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->817042541,ExpressionUUID->"b6a5abf9-57de-ec46-ba5d-6bc3e92b077b"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"c67c2ac8-d01a-3243-bd01-d7d065eba4a2"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"37ae426e-d428-db4e-a73f-0092c2ba1f7a"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "8fe4b9ca-ba26-2349-8ec5-7a486de3b843"]
+}], "History",
+ CellID->341744486,ExpressionUUID->"738efd8f-59d1-6c4d-b8d8-5a87c4eee4bc"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "bc9ed6eb-2842-b040-b9a0-358af6f777c2"]
+}], "CategorizationSection",
+ CellID->353004883,ExpressionUUID->"395ca83b-7160-4b4f-a23b-0ba10845d676"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->25541681,ExpressionUUID->"e285e21b-134f-9d45-82bf-78249eb59eae"],
+
+Cell["Taggar/MGroups", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->112068157,ExpressionUUID->"8e58467b-2acf-6744-8488-0599239c9c6a"],
+
+Cell["Taggar`MGroups`", "Categorization",
+ CellLabel->"Context",
+ CellID->985360887,ExpressionUUID->"59430e5f-32ba-d945-920a-37a05b0e8d29"],
+
+Cell["Taggar/MGroups/ref/MSubgroupLattice", "Categorization",
+ CellLabel->"URI",
+ CellID->51763602,ExpressionUUID->"e8e7f251-451e-324e-b9d9-b64be03a4641"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->310326220,ExpressionUUID->"08ca8b2f-4c66-a248-91ad-09a07da2d61b"],
+
+Cell["XXXX", "Keywords",
+ CellID->78110545,ExpressionUUID->"ad36d5f7-1fd8-0342-ba18-b78398f80e97"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->840097414,ExpressionUUID->"f0c94546-3542-1748-aad7-cd1276f8e1dc"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->380341935,ExpressionUUID->"6a239334-abe8-7c4d-8557-6b439f1914a6"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->262767993,ExpressionUUID->"8706300c-6937-9940-8815-234e63dd1097"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->19902058,ExpressionUUID->"93c0c027-8c83-9a45-a87d-614f39df4974"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->11679166,ExpressionUUID->"d94f5fd7-370f-494a-af44-08c42f86a6b9"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700.5, 495.75},
+WindowMargins->{{4.5, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "MGroups"|>,
+CellContext->"Global`",
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"03afd5ac-bdcd-e149-9084-34fc3e8a2002"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[27274, 691, 529, 14, 56, "ExtendedExamplesSection",ExpressionUUID->"5489ae16-b12a-274b-b3d1-2a0c630421db",
+   CellTags->"ExtendedExamples",
+   CellID->9881491]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 100974, 2408}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 113, 1, 72, "ObjectName",ExpressionUUID->"ebbc37fc-72e2-d640-9697-b8e7e64a1389",
+ CellID->875072023],
+Cell[692, 25, 568, 12, 76, "Usage",ExpressionUUID->"2d7ad226-e435-aa4b-8e31-6f2e44495542",
+ CellID->132231642],
+Cell[1263, 39, 507, 13, 26, "Notes",ExpressionUUID->"e0e0f7e9-9fff-404f-9b43-f21fa566f8ce",
+ CellID->793391568],
+Cell[1773, 54, 169, 2, 26, "Notes",ExpressionUUID->"df78c62e-eb0c-e647-af10-1198363de4a2",
+ CellID->17261858],
+Cell[1945, 58, 1129, 21, 91, "3ColumnTableMod",ExpressionUUID->"f214e3e9-6cb2-c04a-95bf-477dc717163c",
+ CellID->56841579]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3111, 84, 458, 13, 38, "SeeAlsoSection",ExpressionUUID->"0fc13cef-a4ee-4447-a9dc-dbaf69893bdb",
+ CellID->351357884],
+Cell[3572, 99, 1676, 40, 21, "SeeAlso",ExpressionUUID->"b5a3671b-b9a9-8d4f-880e-ffb038895672",
+ CellID->203451549]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5285, 144, 435, 12, 39, "TechNotesSection",ExpressionUUID->"5a46bc1f-5b1d-1244-a430-ee94669f6719",
+ CellID->212911749],
+Cell[5723, 158, 100, 1, 17, "Tutorials",ExpressionUUID->"f28df55a-c05c-f447-8cb8-d02bbc0577a9",
+ CellID->132613665]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5860, 164, 117, 1, 37, "MoreAboutSection",ExpressionUUID->"f0f91fe5-e9a8-4541-90be-56f9a2002c6a",
+ CellID->203256386],
+Cell[5980, 167, 100, 1, 17, "MoreAbout",ExpressionUUID->"ed20d0c4-d286-3540-8e10-91c1dc81b898",
+ CellID->548244560]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6117, 173, 471, 13, 38, "RelatedLinksSection",ExpressionUUID->"0e084690-57e6-ad44-ab90-ea3d5a3c0cac",
+ CellID->49073640],
+Cell[6591, 188, 103, 1, 17, "RelatedLinks",ExpressionUUID->"36383e23-2088-5043-b421-a13573eab9ff",
+ CellID->148621203]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6731, 194, 529, 14, 68, "ExamplesInitializationSection",ExpressionUUID->"599f8001-c260-6947-8adc-9a919efc86f8",
+ CellID->33779641],
+Cell[7263, 210, 174, 3, 45, "ExampleInitialization",ExpressionUUID->"da226716-2746-c042-bc4e-d5326fad24ee",
+ CellID->105505954]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7474, 218, 442, 12, 69, "PrimaryExamplesSection",ExpressionUUID->"89a50f77-045f-fc4b-a28f-09a6985c17c1",
+ CellID->459429290],
+Cell[7919, 232, 335, 8, 23, "ExampleText",ExpressionUUID->"ff91d940-bf3d-a14d-af3c-7903c44aa1ef",
+ CellID->195258644],
+Cell[CellGroupData[{
+Cell[8279, 244, 286, 6, 25, "Input",ExpressionUUID->"a42da4e8-38cb-2646-9474-900b3000106a",
+ CellID->201704552],
+Cell[8568, 252, 9952, 225, 369, "Output",ExpressionUUID->"e3dd55fd-0f73-b744-8057-9669b6df6b6f",
+ CellID->13575082]
+}, Open  ]],
+Cell[18535, 480, 239, 4, 23, "ExampleText",ExpressionUUID->"cc873828-2fc6-ed48-b2fd-603c607d38fc",
+ CellID->252596940],
+Cell[18777, 486, 309, 8, 23, "ExampleText",ExpressionUUID->"ab2b2815-83a1-1842-be02-9b692848bc0d",
+ CellID->515873538],
+Cell[CellGroupData[{
+Cell[19111, 498, 277, 6, 25, "Input",ExpressionUUID->"c09bb547-38c8-b04e-bfc9-e69a4b0f1762",
+ CellID->359248587],
+Cell[19391, 506, 7834, 179, 261, "Output",ExpressionUUID->"392bae30-3a23-734e-ab4f-c7fac7c89217",
+ CellID->58129549]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27274, 691, 529, 14, 56, "ExtendedExamplesSection",ExpressionUUID->"5489ae16-b12a-274b-b3d1-2a0c630421db",
+ CellTags->"ExtendedExamples",
+ CellID->9881491],
+Cell[27806, 707, 238, 5, 32, "ExampleSection",ExpressionUUID->"ebdb8257-bb4c-2244-8e22-b49e42fd2c5c",
+ CellID->376057],
+Cell[28047, 714, 264, 5, 20, "ExampleSection",ExpressionUUID->"f1ad716f-a0ad-a84f-9b4e-fb54758afd0f",
+ CellID->484131122],
+Cell[CellGroupData[{
+Cell[28336, 723, 242, 5, 20, "ExampleSection",ExpressionUUID->"b38b18f4-d57b-6943-baae-7e552b80ac12",
+ CellID->24237513],
+Cell[CellGroupData[{
+Cell[28603, 732, 375, 7, 23, "ExampleSubsection",ExpressionUUID->"8fefc1e4-6cb2-7d4d-a244-6e0ffd1b3d15",
+ CellID->444255716],
+Cell[28981, 741, 625, 11, 55, "ExampleText",ExpressionUUID->"2c86007c-46a6-9948-a328-6be8252ef4c5",
+ CellID->556403549],
+Cell[CellGroupData[{
+Cell[29631, 756, 593, 12, 60, "Input",ExpressionUUID->"1c230179-c2b7-bd41-a22b-731e7d267de4",
+ CellID->116169446],
+Cell[30227, 770, 306, 7, 24, "Output",ExpressionUUID->"129866c7-e38f-e745-b371-1aba6a3b95e2",
+ CellID->277160215]
+}, Open  ]],
+Cell[30548, 780, 250, 3, 23, "ExampleText",ExpressionUUID->"c1d831c9-fbc7-cd4b-8135-b24393628810",
+ CellID->858087461],
+Cell[CellGroupData[{
+Cell[30823, 787, 468, 9, 60, "Input",ExpressionUUID->"7f2bd456-db4f-d14c-bbdf-93f1ed84cb9e",
+ CellID->305057397],
+Cell[31294, 798, 276, 6, 24, "Output",ExpressionUUID->"3d4789c1-2a31-bb48-8f9d-4b03eee07545",
+ CellID->2485306]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31619, 810, 370, 7, 23, "ExampleSubsection",ExpressionUUID->"c6bbbea9-510e-0f4f-8a19-98316e5fcbb2",
+ CellID->73041630],
+Cell[31992, 819, 403, 7, 39, "ExampleText",ExpressionUUID->"a8751a49-002c-a943-aaba-b7b0b6461314",
+ CellID->333207987],
+Cell[CellGroupData[{
+Cell[32420, 830, 538, 10, 77, "Input",ExpressionUUID->"c78bbd01-aa52-0d4b-b4bb-de3e6b0ec51f",
+ CellID->121211298],
+Cell[32961, 842, 24317, 546, 201, "Output",ExpressionUUID->"44ce3cf1-0af6-de44-a385-934332634220",
+ CellID->107511312]
+}, Open  ]],
+Cell[57293, 1391, 416, 10, 23, "ExampleText",ExpressionUUID->"d64aa205-3d7e-654d-b93b-bb832a063ce0",
+ CellID->289203421],
+Cell[CellGroupData[{
+Cell[57734, 1405, 566, 10, 77, "Input",ExpressionUUID->"171d08e8-9477-4a43-992b-b95891968eec",
+ CellID->163700922],
+Cell[58303, 1417, 8008, 176, 442, "Output",ExpressionUUID->"cb7f1f0a-a3fe-164c-9b1f-4ba32d500972",
+ CellID->82844506]
+}, Open  ]],
+Cell[66326, 1596, 322, 8, 23, "ExampleText",ExpressionUUID->"a00d91d7-66ad-5143-b1b0-7b4491cc83b3",
+ CellID->214006743],
+Cell[CellGroupData[{
+Cell[66673, 1608, 604, 11, 77, "Input",ExpressionUUID->"f2c93715-c937-d744-ad04-35efa5d80ed9",
+ CellID->225127098],
+Cell[67280, 1621, 7775, 172, 261, "Output",ExpressionUUID->"95d7e983-3669-ba40-9531-dab16457bb26",
+ CellID->195946801]
+}, Open  ]],
+Cell[75070, 1796, 200, 2, 23, "ExampleText",ExpressionUUID->"a6760a38-5678-fb4d-8698-600321a8d197",
+ CellID->425773105],
+Cell[CellGroupData[{
+Cell[75295, 1802, 759, 16, 95, "Input",ExpressionUUID->"68703f22-a600-b247-81d7-745c784733dd",
+ CellID->92136134],
+Cell[76057, 1820, 11983, 270, 287, "Output",ExpressionUUID->"f72e2dd1-0fa0-f74b-a465-f96a83ef44b0",
+ CellID->62079908]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88089, 2096, 369, 8, 23, "ExampleSubsection",ExpressionUUID->"f2080ef9-1d65-6349-a263-fc01bfe9207c",
+ CellID->897777693],
+Cell[88461, 2106, 249, 4, 23, "ExampleText",ExpressionUUID->"f576ca35-db8c-cf49-a033-fe4924c451ff",
+ CellID->26472660],
+Cell[CellGroupData[{
+Cell[88735, 2114, 600, 11, 77, "Input",ExpressionUUID->"d5950ff7-0603-e048-9aac-70fe009a1a7f",
+ CellID->897345503],
+Cell[89338, 2127, 7105, 141, 276, "Output",ExpressionUUID->"c6f161f6-9103-d94e-a7fb-eb1a75ebb78f",
+ CellID->89970462]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[96482, 2273, 248, 5, 32, "ExampleSection",ExpressionUUID->"cefeaac7-9d41-0d4d-8929-e890a052490b",
+ CellID->145628453],
+Cell[96733, 2280, 258, 5, 20, "ExampleSection",ExpressionUUID->"685f4f1c-0b6f-5140-abe9-93300e974678",
+ CellID->150673359],
+Cell[96994, 2287, 251, 5, 20, "ExampleSection",ExpressionUUID->"b9cacde4-6806-1042-b744-ab7e14413081",
+ CellID->415863504],
+Cell[97248, 2294, 256, 5, 20, "ExampleSection",ExpressionUUID->"5a9aacda-4bb4-d94b-b49b-c14e35ed449e",
+ CellID->860333169],
+Cell[97507, 2301, 249, 5, 20, "ExampleSection",ExpressionUUID->"1e8a1256-005b-7b4d-a71f-29cda1dfbff3",
+ CellID->542484280]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[97793, 2311, 110, 1, 71, "MetadataSection",ExpressionUUID->"b6a5abf9-57de-ec46-ba5d-6bc3e92b077b",
+ CellID->817042541],
+Cell[97906, 2314, 476, 12, 25, "History",ExpressionUUID->"738efd8f-59d1-6c4d-b8d8-5a87c4eee4bc",
+ CellID->341744486],
+Cell[CellGroupData[{
+Cell[98407, 2330, 484, 13, 20, "CategorizationSection",ExpressionUUID->"395ca83b-7160-4b4f-a23b-0ba10845d676",
+ CellID->353004883],
+Cell[98894, 2345, 133, 2, 70, "Categorization",ExpressionUUID->"e285e21b-134f-9d45-82bf-78249eb59eae",
+ CellID->25541681],
+Cell[99030, 2349, 142, 2, 70, "Categorization",ExpressionUUID->"8e58467b-2acf-6744-8488-0599239c9c6a",
+ CellID->112068157],
+Cell[99175, 2353, 139, 2, 70, "Categorization",ExpressionUUID->"59430e5f-32ba-d945-920a-37a05b0e8d29",
+ CellID->985360887],
+Cell[99317, 2357, 154, 2, 70, "Categorization",ExpressionUUID->"e8e7f251-451e-324e-b9d9-b64be03a4641",
+ CellID->51763602]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[99508, 2364, 110, 1, 20, "KeywordsSection",ExpressionUUID->"08ca8b2f-4c66-a248-91ad-09a07da2d61b",
+ CellID->310326220],
+Cell[99621, 2367, 98, 1, 70, "Keywords",ExpressionUUID->"ad36d5f7-1fd8-0342-ba18-b78398f80e97",
+ CellID->78110545]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[99756, 2373, 119, 1, 20, "TemplatesSection",ExpressionUUID->"f0c94546-3542-1748-aad7-cd1276f8e1dc",
+ CellID->840097414],
+Cell[99878, 2376, 148, 2, 70, "Template",ExpressionUUID->"6a239334-abe8-7c4d-8557-6b439f1914a6",
+ CellID->380341935],
+Cell[100029, 2380, 137, 2, 70, "Template",ExpressionUUID->"8706300c-6937-9940-8815-234e63dd1097",
+ CellID->262767993],
+Cell[100169, 2384, 134, 2, 70, "Template",ExpressionUUID->"93c0c027-8c83-9a45-a87d-614f39df4974",
+ CellID->19902058],
+Cell[100306, 2388, 136, 2, 70, "Template",ExpressionUUID->"d94f5fd7-370f-494a-af44-08c42f86a6b9",
+ CellID->11679166]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

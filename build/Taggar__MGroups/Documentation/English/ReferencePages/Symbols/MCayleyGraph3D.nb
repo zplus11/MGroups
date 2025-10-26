@@ -1,0 +1,1029 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     46065,       1019]
+NotebookOptionsPosition[     41675,        928]
+NotebookOutlinePosition[     43975,        985]
+CellTagsIndexPosition[     43890,        980]
+WindowTitle->MCayleyGraph3D
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["TAGGAR/ M GROUPS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "7305b048-0878-df42-9280-6af053851335"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b06f9a1d-3310-2f48-adc3-00a33bdcf640"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "6c12f9b9-83ca-774c-a6a2-3e9f9ab805a3"]
+         }],ExpressionUUID->"a531e96d-035a-a446-92aa-b8850f725786"],
+         StripOnInput->False],{
+        "\"MGroups Package\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/guide/MGroupsPackage"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "38bef9e9-e3db-8f4a-9b50-ca2c7b6fc9e8"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "7b21ea3f-574a-cc4c-9b00-af1182a4265e"]
+         }],ExpressionUUID->"b551abe4-1996-e942-a4ae-3a274cf3733a"],
+         StripOnInput->False],{
+        "\"Taggar/MGroups/ref/MCayleyGraph3D\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["Taggar/MGroups/ref/MCayleyGraph3D"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$334439]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/Taggar/MGroups/ref/\
+MCayleyGraph3D.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> 
+               DocumentationBuild`Make`Private`visible$334439]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[False], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "Taggar/MGroups/ref/MCayleyGraph3D" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "e338c433-4dc7-f444-b24f-a04b8254d0ba"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "5e46bc0c-8960-7146-b424-42143177e154"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"6ef6c2b5-18d0-ca4e-abe3-d5cbfdd94f33"],
+
+Cell["Taggar`MGroups`", "ContextNameCell",ExpressionUUID->"319e3345-a6f8-cc46-8d56-374fb7a50748"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MCayleyGraph3D", "ObjectName",ExpressionUUID->
+      "5cc13be7-4431-9c4e-9537-6333d0e58c14"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"2e6d05a0-47a2-f142-863c-836fc3330e56"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "2be95e5f-ace9-0547-a692-78ab4da4a727"]
+    }],ExpressionUUID->"3edf665e-4834-b644-91ad-e8ba3f4a1cb1"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"fa0a3063-cc18-b44f-a7e3-\
+4539bd9f7bba"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["MCayleyGraph3D"]], 
+         "paclet:Taggar/MGroups/ref/MCayleyGraph3D", "Taggar Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["group", "TI"], ",", 
+        StyleBox["generators", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "327df0aa-d956-db42-9660-8746976a02f0"],
+     "\[LineSeparator]draws the 3-D Cayley graph of ",
+     Cell[BoxData[
+      StyleBox["group", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "169c6c25-b695-d440-ace7-c70d2f26ec26"],
+     " corresponding to ",
+     Cell[BoxData[
+      StyleBox["generators", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8726d0fe-43d6-114b-a804-2fa199a1e6e5"],
+     "."
+    }],ExpressionUUID->"c9d99e3e-36ab-d94d-926c-5f456f1e0c0e"]}
+  }]], "Usage",
+ CellID->51396497,ExpressionUUID->"313ded54-3536-5141-b929-6525e75df803"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {-0.16630120645742785`, 13.76630120645743}}]],
+    ExpressionUUID->"dbd7571a-5a2b-d04c-97b1-0b1413028c42"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"d20b3354-ce5e-924d-a138-71e6e0d7f4ed"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"76768ab3-8929-1d4d-91c5-f62ba042d7e0"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"ff81c4e7-ce97-0643-85a0-c10c891c64bd"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->407506742,ExpressionUUID->"d1daa617-53e1-624c-a750-ae6ffbc92a7c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "2185d117-ee6a-8944-9d9a-3df6ff7f1608"],
+ " should be an ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroup"]], "paclet:Taggar/MGroups/ref/MGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "a745da76-d0fa-6b45-94b1-a7c25475daf5"],
+ " object."
+}], "Notes",
+ CellID->88610315,ExpressionUUID->"a8674c0c-0a7f-e64d-ba6d-9a729fa7db0b"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.253698793542572, 9.34630120645743}}]],
+  ExpressionUUID->"ac4b03ff-e210-a241-95f8-aa6b13ab7a7d"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"6de78fdf-ed7f-ee43-accd-155e39452615"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "747f290e-a047-0345-8883-0b919489f477"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->514537462,ExpressionUUID->"9d8c997f-68d4-c44b-9f4a-c50a0b0ae5bf"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", "]"}]], "Input", \
+"ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->73030701,ExpressionUUID->"2824939a-e06b-5e44-9c9b-dd8b9aa39865"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.551318296301179, 9.048681703698822}}]],
+  ExpressionUUID->"1361f210-8c1e-d047-aa54-132ccea0d965"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"482e63be-abad-ee48-8f70-a8614db196ce"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "2e8ef285-0e1c-a14e-9a81-2c4b225fa35b"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->246828020,ExpressionUUID->"664b1876-ce2e-ef4b-850b-86b5acbd3047"],
+
+Cell[TextData[{
+ "See the 3-D Cayley graph of ",
+ Cell[BoxData[
+  SubscriptBox["S", "5"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "5f01cf2f-0269-f04d-9017-e5ea441b1023"],
+ ":"
+}], "ExampleText",
+ CellID->70363883,ExpressionUUID->"6de2325c-c5d6-6e41-b7a0-8c54baecdf7a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MCayleyGraph3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MPermutationsGroup", "[", "4", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"\"\<(12)\>\"", ",", "\"\<(234)\>\""}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellProlog:>Needs["Taggar`MGroups`"],
+ CellLabel->"In[1]:=",
+ CellID->58547310,ExpressionUUID->"9f9c3116-a024-cd4e-8efa-3c4d40625e33"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+      "\[Epsilon]", "(34)", "(23)", "(234)", "(243)", "(24)", "(12)", 
+       "(12)(34)", "(123)", "(1234)", "(1243)", "(124)", "(132)", "(1342)", 
+       "(13)", "(134)", "(13)(24)", "(1324)", "(1432)", "(142)", "(143)", 
+       "(14)", "(1423)", "(14)(23)"}, {{{1, 7}, {2, 8}, {3, 13}, {4, 14}, {5, 
+       19}, {6, 20}, {7, 1}, {8, 2}, {9, 15}, {10, 16}, {11, 21}, {12, 22}, {
+       13, 3}, {14, 4}, {15, 9}, {16, 10}, {17, 23}, {18, 24}, {19, 5}, {20, 
+       6}, {21, 11}, {22, 12}, {23, 17}, {24, 18}, {1, 4}, {2, 6}, {3, 2}, {4,
+        5}, {5, 1}, {6, 3}, {7, 10}, {8, 12}, {9, 8}, {10, 11}, {11, 7}, {12, 
+       9}, {13, 16}, {14, 18}, {15, 14}, {16, 17}, {17, 13}, {18, 15}, {19, 
+       22}, {20, 24}, {21, 20}, {22, 23}, {23, 19}, {24, 21}}, Null}, {
+      EdgeStyle -> {
+        DirectedEdge["(14)(23)", "(1324)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1342)", "(1324)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(14)", "(1423)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1234)", "(134)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(12)", "\[Epsilon]"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(124)", "(14)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(24)", "(142)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(123)", "(13)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1324)", "(14)(23)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1243)", "(143)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], DirectedEdge["(24)", "(23)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(143)", "(142)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(132)", "(134)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(14)(23)", "(143)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(143)", "(1243)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(234)", "(243)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(132)", "(23)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1423)", "(1432)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1423)", "(13)(24)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(123)", "(12)(34)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1432)", "(14)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1324)", "(13)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(13)", "(1342)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(23)", "(132)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(134)", "(1234)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(234)", "(1342)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1234)", "(1243)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["\[Epsilon]", "(12)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(243)", "\[Epsilon]"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(13)(24)", "(1423)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(134)", "(13)(24)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(142)", "(24)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(243)", "(1432)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(13)", "(123)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1432)", "(243)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["\[Epsilon]", "(234)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(12)(34)", "(124)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(12)(34)", "(34)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(142)", "(14)(23)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(13)(24)", "(132)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(14)", "(124)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], DirectedEdge["(23)", "(34)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], DirectedEdge["(34)", "(24)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(124)", "(123)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1243)", "(12)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1342)", "(234)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(34)", "(12)(34)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(12)", "(1234)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128]}, 
+       GraphLayout -> {"Dimension" -> 3}, VertexLabels -> {
+         Placed["Name", Tooltip]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {Hue[0.6, 0.2, 0.8], Arrowheads[0.027160416770407578`], 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.365478303472744, 3.0370852835885436`, 
+          0.6095834288983317}, {0.6766974820548821, 2.5070304938629207`, 
+          0.5241946077593138}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.365478303472744, 
+          3.0370852835885436`, 0.6095834288983317}, {1.5699506398906076`, 
+          3.385887728037067, 1.0310177879149542`}, {1.9720751205498448`, 
+          3.4279351259123687`, 1.452452146931742}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.1116947478724883`, 0.39076183730044445`, 
+          2.7172914222123667`}, {2.052416735438096, 1.085104541088735, 
+          3.243632600589179}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.1116947478724883`, 
+          0.39076183730044445`, 2.7172914222123667`}, {1.907694629771064, 
+          0.042169860522768776`, 2.2960302378077846`}, {1.5060055493584794`, 
+          0., 1.874769053403107}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.8024379361895084`, 0.9216342474964053, 
+          2.803419738560402}, {2.1116947478724883`, 0.39076183730044445`, 
+          2.7172914222123667`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.8024379361895084`, 
+          0.9216342474964053, 2.803419738560402}, {3.005045199020412, 
+          1.350402090884342, 2.4605007688490708`}, {3.45247653024004, 
+          1.507554152014958, 2.1175817991384633`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.6766974820548821, 2.5070304938629207`, 
+          0.5241946077593138}, {1.4276848016608696`, 2.343869898009458, 
+          0.08530821579276782}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.6766974820548821, 
+          2.5070304938629207`, 0.5241946077593138}, {0.47559258028725115`, 
+          2.081813395017215, 0.8701937085733749}, {0.03097341609076487, 
+          1.9282993517012104`, 1.2161928093877004`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.4276848016608696`, 2.343869898009458, 
+          0.08530821579276782}, {1.365478303472744, 3.0370852835885436`, 
+          0.6095834288983317}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.4276848016608696`, 
+          2.343869898009458, 0.08530821579276782}, {1.931416484479921, 
+          2.040918545895779, 0.04265410789638964}, {2.1560544779225443`, 
+          1.4977216185062179`, 0.}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.052416735438096, 1.085104541088735, 
+          3.243632600589179}, {2.8024379361895084`, 0.9216342474964053, 
+          2.803419738560402}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.052416735438096, 1.085104541088735,
+           3.243632600589179}, {1.5489524567704251`, 1.3885532142469856`, 
+          3.286719715928105}, {1.3248443442867455`, 1.9319986402599856`, 
+          3.3298068312669953`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.9720751205498448`, 
+          3.4279351259123687`, 1.452452146931742}, {1.7676027841323179`, 
+          3.079132681464404, 1.0310177879158053`}, {1.365478303472744, 
+          3.0370852835885436`, 0.6095834288983317}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.9720751205498448`, 3.4279351259123687`, 
+          1.452452146931742}, {2.70332704025296, 3.1705732463117506`, 
+          1.8722306839391605`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.5060055493584794`, 0., 
+          1.874769053403107}, {1.7100056674600324`, 0.3485919767779008, 
+          2.2960302378079644`}, {2.1116947478724883`, 0.39076183730044445`, 
+          2.7172914222123667`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.5060055493584794`, 0., 1.874769053403107}, {
+          1.521499206734367, 0.1121747936819415, 1.0199634339847767`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.7777430077093708, 0.25838779018378677`, 
+          1.4560586768107648`}, {1.5060055493584794`, 0., 
+          1.874769053403107}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.7777430077093708, 
+          0.25838779018378677`, 1.4560586768107648`}, {0.28468645829946027`, 
+          0.5730265751959549, 1.4987499213422109`}, {0.07559329015098881, 
+          1.1192704520345036`, 1.5414411658736566`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.70332704025296, 3.1705732463117506`, 
+          1.8722306839391605`}, {1.9593943988569804`, 3.316684655726397, 
+          2.308179700699156}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.70332704025296, 
+          3.1705732463117506`, 1.8722306839391605`}, {3.196798083006238, 
+          2.857374242286802, 1.8304767817724266`}, {3.407121103787293, 
+          2.312056433034755, 1.7887228796057146`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.9593943988569804`, 3.316684655726397, 
+          2.308179700699156}, {1.9720751205498448`, 3.4279351259123687`, 
+          1.452452146931742}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.9593943988569804`, 
+          3.316684655726397, 2.308179700699156}, {1.750396052930388, 
+          2.886254306540472, 2.649194550149906}, {1.2979270229020836`, 
+          2.7306189282820315`, 2.990209399600689}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.521499206734367, 0.1121747936819415, 
+          1.0199634339847767`}, {0.7777430077093708, 0.25838779018378677`, 
+          1.4560586768107648`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.521499206734367, 
+          0.1121747936819415, 1.0199634339847767`}, {1.7307634057135712`, 
+          0.5430517778440012, 0.6796614527901879}, {2.1835983238985657`, 
+          0.6992152093105373, 0.33935947159559054`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{3.45247653024004, 1.507554152014958, 
+          2.1175817991384633`}, {3.249869267409194, 1.0787863086271374`, 
+          2.4605007688496996`}, {2.8024379361895084`, 0.9216342474964053, 
+          2.803419738560402}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{3.45247653024004, 1.507554152014958, 
+          2.1175817991384633`}, {3.407121103787293, 2.312056433034755, 
+          1.7887228796057146`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.03097341609076487, 
+          1.9282993517012104`, 1.2161928093877004`}, {0.23207831785846092`, 
+          2.3535164505470494`, 0.8701937085735278}, {0.6766974820548821, 
+          2.5070304938629207`, 0.5241946077593138}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.03097341609076487, 1.9282993517012104`, 
+          1.2161928093877004`}, {0., 1.8105755283582305`, 
+          2.0541230046129826`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.07559329015098881, 
+          1.1192704520345036`, 1.5414411658736566`}, {0.5686498395609512, 
+          0.8046316670223016, 1.4987499213422066`}, {0.7777430077093708, 
+          0.25838779018378677`, 1.4560586768107648`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.07559329015098881, 1.1192704520345036`, 
+          1.5414411658736566`}, {0.03097341609076487, 1.9282993517012104`, 
+          1.2161928093877004`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{3.407121103787293, 2.312056433034755,
+           1.7887228796057146`}, {2.9136500610339566`, 2.625255437059748, 
+          1.8304767817724539`}, {2.70332704025296, 3.1705732463117506`, 
+          1.8722306839391605`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{3.407121103787293, 2.312056433034755, 
+          1.7887228796057146`}, {3.482257900548054, 1.620705414444058, 
+          1.2773689101188503`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{3.482257900548054, 1.620705414444058, 
+          1.2773689101188503`}, {3.45247653024004, 1.507554152014958, 
+          2.1175817991384633`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{3.482257900548054, 1.620705414444058,
+           1.2773689101188503`}, {3.2800529883147003`, 1.2740134764254927`, 
+          0.8520775912673126}, {2.8806129312878728`, 1.2349012371593904`, 
+          0.42678627241639333`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0., 1.8105755283582305`, 2.0541230046129826`}, {
+          0.07559329015098881, 1.1192704520345036`, 1.5414411658736566`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0., 1.8105755283582305`, 
+          2.0541230046129826`}, {0.20202761771953912`, 2.1568019641245018`, 
+          2.4790747242601934`}, {0.6009954948623681, 2.1956933018877174`, 
+          2.9040264439074344`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.1560544779225443`, 
+          1.4977216185062179`, 0.}, {1.6523227951034987`, 1.8006729706199045`,
+           0.04265410789637839}, {1.4276848016608696`, 2.343869898009458, 
+          0.08530821579276782}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.1560544779225443`, 1.4977216185062179`, 0.}, {
+          2.1835983238985657`, 0.6992152093105373, 0.33935947159559054`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.3248443442867455`, 
+          1.9319986402599856`, 3.3298068312669953`}, {1.8283086229544323`, 
+          1.628549967101726, 3.2867197159280686`}, {2.052416735438096, 
+          1.085104541088735, 3.243632600589179}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.3248443442867455`, 1.9319986402599856`, 
+          3.3298068312669953`}, {0.6009954948623681, 2.1956933018877174`, 
+          2.9040264439074344`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.2979270229020836`, 
+          2.7306189282820315`, 2.990209399600689}, {1.506925368828888, 
+          3.1610492774683854`, 2.649194550149598}, {1.9593943988569804`, 
+          3.316684655726397, 2.308179700699156}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.2979270229020836`, 2.7306189282820315`, 
+          2.990209399600689}, {1.3248443442867455`, 1.9319986402599856`, 
+          3.3298068312669953`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.1835983238985657`, 
+          0.6992152093105373, 0.33935947159559054`}, {1.9743341249193527`, 
+          0.2683382251484507, 0.6796614527901996}, {1.521499206734367, 
+          0.1121747936819415, 1.0199634339847767`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.1835983238985657`, 0.6992152093105373, 
+          0.33935947159559054`}, {2.8806129312878728`, 1.2349012371593904`, 
+          0.42678627241639333`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.8806129312878728`, 
+          1.2349012371593904`, 0.42678627241639333`}, {3.0828178435210503`, 
+          1.5815931751776577`, 0.8520775912675622}, {3.482257900548054, 
+          1.620705414444058, 1.2773689101188503`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.8806129312878728`, 1.2349012371593904`, 
+          0.42678627241639333`}, {2.1560544779225443`, 1.4977216185062179`, 
+          0.}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.6009954948623681, 
+          2.1956933018877174`, 2.9040264439074344`}, {0.3989678771428017, 
+          1.849466866121403, 2.4790747242601667`}, {0., 1.8105755283582305`, 
+          2.0541230046129826`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.6009954948623681, 2.1956933018877174`, 
+          2.9040264439074344`}, {1.2979270229020836`, 2.7306189282820315`, 
+          2.990209399600689}}], 0.06720172499142765]}}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.365478303472744, 3.0370852835885436`, 
+           0.6095834288983317}, 0.06720172499142765],
+          "\"\[Epsilon]\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "\[Epsilon]", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.1116947478724883`, 0.39076183730044445`, 
+           2.7172914222123667`}, 0.06720172499142765],
+          "\"(34)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(34)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.8024379361895084`, 0.9216342474964053, 
+           2.803419738560402}, 0.06720172499142765],
+          "\"(23)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(23)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.6766974820548821, 2.5070304938629207`, 
+           0.5241946077593138}, 0.06720172499142765],
+          "\"(234)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(234)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.4276848016608696`, 2.343869898009458, 
+           0.08530821579276782}, 0.06720172499142765],
+          "\"(243)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(243)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.052416735438096, 1.085104541088735, 3.243632600589179},
+            0.06720172499142765],
+          "\"(24)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(24)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.9720751205498448`, 3.4279351259123687`, 
+           1.452452146931742}, 0.06720172499142765],
+          "\"(12)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(12)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.5060055493584794`, 0., 1.874769053403107}, 
+           0.06720172499142765],
+          "\"(12)(34)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(12)(34)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.7777430077093708, 0.25838779018378677`, 
+           1.4560586768107648`}, 0.06720172499142765],
+          "\"(123)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(123)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.70332704025296, 3.1705732463117506`, 
+           1.8722306839391605`}, 0.06720172499142765],
+          "\"(1234)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1234)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.9593943988569804`, 3.316684655726397, 
+           2.308179700699156}, 0.06720172499142765],
+          "\"(1243)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1243)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.521499206734367, 0.1121747936819415, 
+           1.0199634339847767`}, 0.06720172499142765],
+          "\"(124)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(124)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{3.45247653024004, 1.507554152014958, 
+           2.1175817991384633`}, 0.06720172499142765],
+          "\"(132)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(132)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.03097341609076487, 1.9282993517012104`, 
+           1.2161928093877004`}, 0.06720172499142765],
+          "\"(1342)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1342)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.07559329015098881, 1.1192704520345036`, 
+           1.5414411658736566`}, 0.06720172499142765],
+          "\"(13)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(13)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{3.407121103787293, 2.312056433034755, 
+           1.7887228796057146`}, 0.06720172499142765],
+          "\"(134)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(134)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{3.482257900548054, 1.620705414444058, 
+           1.2773689101188503`}, 0.06720172499142765],
+          "\"(13)(24)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(13)(24)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0., 1.8105755283582305`, 2.0541230046129826`}, 
+           0.06720172499142765],
+          "\"(1324)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1324)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.1560544779225443`, 1.4977216185062179`, 0.}, 
+           0.06720172499142765],
+          "\"(1432)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1432)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.3248443442867455`, 1.9319986402599856`, 
+           3.3298068312669953`}, 0.06720172499142765],
+          "\"(142)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(142)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.2979270229020836`, 2.7306189282820315`, 
+           2.990209399600689}, 0.06720172499142765],
+          "\"(143)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(143)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.1835983238985657`, 0.6992152093105373, 
+           0.33935947159559054`}, 0.06720172499142765],
+          "\"(14)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(14)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.8806129312878728`, 1.2349012371593904`, 
+           0.42678627241639333`}, 0.06720172499142765],
+          "\"(1423)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1423)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.6009954948623681, 2.1956933018877174`, 
+           2.9040264439074344`}, 0.06720172499142765],
+          "\"(14)(23)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(14)(23)", "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->106550488,ExpressionUUID->"df7a92f8-e913-414b-bb57-1b9b2a81f781"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {26.472656144876964`, 33.527343855123036`}}], 
+    GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData["MCayleyGraph"], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "ff5859c6-bc27-514c-8233-126d9aa70118"]], "SeeAlso",ExpressionUUID->
+        "c5c23907-8e8e-9f47-b831-377f92a9def2"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"ee107ed2-b81f-8949-a7e9-\
+3bbf01356921"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {26.472656144876964`, 33.527343855123036`}}], 
+    GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["MGroups Package"]], 
+           "paclet:Taggar/MGroups/guide/MGroupsPackage"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "fdcadcf3-bde7-9043-a47c-0ce4e74cf1d8"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"1c33d25b-82f4-b147-9a9d-\
+2af44cce84bb"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"8f8a3b5c-cd61-2841-9677-5653e5aa5e3f"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MCayleyGraph3D",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed, "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "HasOptions" -> 
+  True, "RootCaptions" -> "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 6, 2, 18, 37, 7.6001271}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Taggar`MGroups`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Taggar/ M Groups Symbol", "language" -> "en", "paclet" -> 
+    "Taggar/MGroups", "status" -> "None", "summary" -> 
+    "MCayleyGraph3D[group, generators] draws the 3-D Cayley graph of group \
+corresponding to generators.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "MCayleyGraph3D", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "MCayleyGraph3D", "type" -> "Symbol", "uri" -> 
+    "Taggar/MGroups/ref/MCayleyGraph3D", "WorkflowDockedCell" -> ""}, 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "14.1 for Microsoft Windows (64-bit) (July 16, 2024)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"9712f78a-4cc0-5d4d-a784-69377a79d522"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[9546, 257, 1439, 38, 34, "PrimaryExamplesSection",ExpressionUUID->"9d8c997f-68d4-c44b-9f4a-c50a0b0ae5bf",
+   CellTags->"PrimaryExamplesSection",
+   CellID->514537462]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 43691, 973}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 4506, 108, 50, "AnchorBarGrid",ExpressionUUID->"6ef6c2b5-18d0-ca4e-abe3-d5cbfdd94f33",
+ CellID->1],
+Cell[5091, 131, 97, 0, 22, "ContextNameCell",ExpressionUUID->"319e3345-a6f8-cc46-8d56-374fb7a50748"],
+Cell[CellGroupData[{
+Cell[5213, 135, 557, 14, 55, "ObjectNameGrid",ExpressionUUID->"fa0a3063-cc18-b44f-a7e3-4539bd9f7bba"],
+Cell[5773, 151, 1107, 28, 104, "Usage",ExpressionUUID->"313ded54-3536-5141-b929-6525e75df803",
+ CellID->51396497]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6917, 184, 1920, 48, 34, "NotesSection",ExpressionUUID->"d1daa617-53e1-624c-a750-ae6ffbc92a7c",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->407506742],
+Cell[8840, 234, 579, 17, 70, "Notes",ExpressionUUID->"a8674c0c-0a7f-e64d-ba6d-9a729fa7db0b",
+ CellID->88610315]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[9546, 257, 1439, 38, 34, "PrimaryExamplesSection",ExpressionUUID->"9d8c997f-68d4-c44b-9f4a-c50a0b0ae5bf",
+ CellTags->"PrimaryExamplesSection",
+ CellID->514537462],
+Cell[10988, 297, 204, 4, 26, "Input",ExpressionUUID->"2824939a-e06b-5e44-9c9b-dd8b9aa39865",
+ CellID->73030701],
+Cell[CellGroupData[{
+Cell[11217, 305, 1418, 37, 29, "ExampleSection",ExpressionUUID->"664b1876-ce2e-ef4b-850b-86b5acbd3047",
+ CellID->246828020],
+Cell[12638, 344, 297, 8, 37, "ExampleText",ExpressionUUID->"6de2325c-c5d6-6e41-b7a0-8c54baecdf7a",
+ CellID->70363883],
+Cell[CellGroupData[{
+Cell[12960, 356, 416, 9, 71, "Input",ExpressionUUID->"9f9c3116-a024-cd4e-8efa-3c4d40625e33",
+ CellID->58547310],
+Cell[13379, 367, 26531, 510, 118, "Output",ExpressionUUID->"df7a92f8-e913-414b-bb57-1b9b2a81f781",
+ CellID->106550488]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[40152, 886, 667, 16, 70, "SeeAlsoSection",ExpressionUUID->"ee107ed2-b81f-8949-a7e9-3bbf01356921"],
+Cell[40822, 904, 768, 20, 70, "MoreAboutSection",ExpressionUUID->"1c33d25b-82f4-b147-9a9d-2af44cce84bb"],
+Cell[41593, 926, 78, 0, 70, "FooterCell",ExpressionUUID->"8f8a3b5c-cd61-2841-9677-5653e5aa5e3f"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

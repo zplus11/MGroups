@@ -1,0 +1,1505 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     62976,       1497]
+NotebookOptionsPosition[     44661,       1123]
+NotebookOutlinePosition[     61034,       1460]
+CellTagsIndexPosition[     60991,       1457]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"MSubgroupQ", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MAdditiveGroup", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"2", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0", ",", "9"}], "]"}]}]}], "\[IndentingNewLine]", 
+  "]"}]], "VerificationTest",
+ CellChangeTimes->{{3.970298046637665*^9, 3.9702980687113304`*^9}},
+ CellLabel->"In[543]:=",
+ CellID->841594826,ExpressionUUID->"69812341-541e-1f44-b900-abebf4f14904"],
+
+Cell[BoxData["True"], "ExpectedOutput",
+ CellChangeTimes->{{3.970298073030199*^9, 3.970298073453491*^9}},
+ CellID->5930065,ExpressionUUID->"4e73564e-19f1-4446-afb8-20e6e0490095"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "TestID", "\[Rule]", "\"\<660cc740-efa2-46ee-a210-d969ee64194c\>\""}], 
+  "}"}]], "TestOptions",
+ CellID->671301869,ExpressionUUID->"2336747d-76d5-de4a-88a7-964537fc23cb"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    
+                    ImageSizeCache->{
+                    77.4882621910572, {2.25048833002802, 8.701172063592821}}],
+                     "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              115.4882621910572, {10.67529296875, 15.32470703125}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    
+                    ImageSizeCache->{
+                    67.73435546422004, {2.121582077234052, 
+                    8.701172063592821}}], "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  105.73435546422004`, {10.67529296875, 15.32470703125}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"],{
+                DynamicBox[SymbolName[MemoryConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MemoryConstraint]]], 
+                 DynamicBox[SymbolName[MetaInformation]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MetaInformation]]], 
+                 DynamicBox[SymbolName[SameTest]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[SameTest]]], 
+                 DynamicBox[SymbolName[TestID]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TestID]]], 
+                 DynamicBox[SymbolName[TimeConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TimeConstraint]]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {5.17529296875, 9.82470703125}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                
+                ImageSizeCache->{
+                 21.269532680511475`, {0.13427734666038305`, 
+                  8.169433770817704}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->252031074,ExpressionUUID->"285736b9-88a9-1d46-a4e0-ffadc0816ab2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupQ", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "10", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"MSymmetry", "[", 
+      RowBox[{"1", ",", "3"}], "]"}], ",", 
+     RowBox[{"MSymmetry", "[", 
+      RowBox[{"0", ",", "0"}], "]"}], ",", 
+     RowBox[{"MSymmetry", "[", 
+      RowBox[{"0", ",", "2"}], "]"}], ",", 
+     RowBox[{"MSymmetry", "[", 
+      RowBox[{"0", ",", "3"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "VerificationTest",
+ CellChangeTimes->{{3.9702980812115765`*^9, 3.970298101645277*^9}, {
+  3.9704515724310436`*^9, 3.970451691664732*^9}},
+ CellLabel->"In[550]:=",
+ CellID->676883954,ExpressionUUID->"99ad6539-23d2-0e46-aefe-b9ef5b3cf011"],
+
+Cell[BoxData["False"], "ExpectedOutput",
+ CellChangeTimes->{{3.9702981040069675`*^9, 3.970298104522747*^9}},
+ CellID->44621674,ExpressionUUID->"d10ba288-18c4-ca4d-8334-f8d9aef44c52"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "TestID", "\[Rule]", "\"\<15b7e686-75b5-4833-9723-2f0b08ba7f09\>\""}], 
+  "}"}]], "TestOptions",
+ CellID->68382,ExpressionUUID->"303c3db7-793a-4047-bae1-df0b2bdfc784"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    
+                    ImageSizeCache->{
+                    77.4882621910572, {2.25048833002802, 8.701172063592821}}],
+                     "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              115.4882621910572, {10.67529296875, 15.32470703125}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    
+                    ImageSizeCache->{
+                    67.73435546422004, {2.121582077234052, 
+                    8.701172063592821}}], "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  105.73435546422004`, {10.67529296875, 15.32470703125}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"],{
+                DynamicBox[SymbolName[MemoryConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MemoryConstraint]]], 
+                 DynamicBox[SymbolName[MetaInformation]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MetaInformation]]], 
+                 DynamicBox[SymbolName[SameTest]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[SameTest]]], 
+                 DynamicBox[SymbolName[TestID]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TestID]]], 
+                 DynamicBox[SymbolName[TimeConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TimeConstraint]]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {5.17529296875, 9.82470703125}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                
+                ImageSizeCache->{
+                 21.269532680511475`, {0.13427734666038305`, 
+                  8.169433770817704}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->175287553,ExpressionUUID->"08a343c9-0a4a-db4b-843f-84e684b6d618"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"MSubgroups", "[", 
+   RowBox[{
+    RowBox[{"MPermutationsGroup", "[", "4", "]"}], ",", 
+    RowBox[{"MPresentation", "->", "\"\<Subgroups\>\""}]}], "]"}], 
+  "]"}]], "VerificationTest",
+ CellChangeTimes->{{3.970298118030487*^9, 3.9702981616182976`*^9}, 
+   3.970451704548115*^9},
+ CellLabel->"In[552]:=",
+ CellID->50675954,ExpressionUUID->"55755233-a9ae-8646-9259-be3c6e17a5c9"],
+
+Cell[BoxData["30"], "ExpectedOutput",
+ CellChangeTimes->{{3.9702981404981956`*^9, 3.9702981640726566`*^9}, {
+  3.970298202010023*^9, 3.9702982024164906`*^9}},
+ CellID->190080221,ExpressionUUID->"3df02fe4-b393-f140-a8e8-85eaf2a79b54"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "TestID", "\[Rule]", "\"\<258f3782-9824-478a-bc55-45a5f1bee9c0\>\""}], 
+  "}"}]], "TestOptions",
+ CellID->161173033,ExpressionUUID->"41ea5963-5c90-8540-b38f-57126521acab"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    
+                    ImageSizeCache->{
+                    77.4882621910572, {2.25048833002802, 8.701172063592821}}],
+                     "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              115.4882621910572, {10.67529296875, 15.32470703125}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    
+                    ImageSizeCache->{
+                    67.73435546422004, {2.121582077234052, 
+                    8.701172063592821}}], "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  105.73435546422004`, {10.67529296875, 15.32470703125}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"],{
+                DynamicBox[SymbolName[MemoryConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MemoryConstraint]]], 
+                 DynamicBox[SymbolName[MetaInformation]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MetaInformation]]], 
+                 DynamicBox[SymbolName[SameTest]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[SameTest]]], 
+                 DynamicBox[SymbolName[TestID]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TestID]]], 
+                 DynamicBox[SymbolName[TimeConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TimeConstraint]]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {5.17529296875, 9.82470703125}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                
+                ImageSizeCache->{
+                 21.269532680511475`, {0.13427734666038305`, 
+                  8.169433770817704}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->55408714,ExpressionUUID->"b6ead744-23b0-2046-b0bb-e9cd8cb140fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MNormalSubgroupQ", "[", 
+  RowBox[{"MQuaternionGroup", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<1\>\"", ",", "\"\<-1\>\""}], "}"}]}], 
+  "]"}]], "VerificationTest",
+ CellChangeTimes->{{3.970298214471592*^9, 3.9702982475079155`*^9}},
+ CellLabel->"In[553]:=",
+ CellID->621849476,ExpressionUUID->"12fec485-c508-3c46-91d8-b12e544b7ba3"],
+
+Cell[BoxData["True"], "ExpectedOutput",
+ CellChangeTimes->{{3.9702982512148952`*^9, 3.9702982516052227`*^9}},
+ CellID->87131101,ExpressionUUID->"bed23e04-0c3b-a14b-9b8e-dc15a7aff618"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "TestID", "\[Rule]", "\"\<d2ce5c15-f7f6-49ce-82c8-2c0fed52898e\>\""}], 
+  "}"}]], "TestOptions",
+ CellID->80824501,ExpressionUUID->"08dcf892-d3ee-eb40-bf11-8fe5eb5bd2af"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    
+                    ImageSizeCache->{
+                    77.4882621910572, {2.25048833002802, 8.701172063592821}}],
+                     "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              115.4882621910572, {10.67529296875, 15.32470703125}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {3.67529296875, 8.32470703125}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    
+                    ImageSizeCache->{
+                    67.73435546422004, {2.121582077234052, 
+                    8.701172063592821}}], "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  105.73435546422004`, {10.67529296875, 15.32470703125}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"],{
+                DynamicBox[SymbolName[MemoryConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MemoryConstraint]]], 
+                 DynamicBox[SymbolName[MetaInformation]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MetaInformation]]], 
+                 DynamicBox[SymbolName[SameTest]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[SameTest]]], 
+                 DynamicBox[SymbolName[TestID]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TestID]]], 
+                 DynamicBox[SymbolName[TimeConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TimeConstraint]]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {5.17529296875, 9.82470703125}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                
+                ImageSizeCache->{
+                 21.269532680511475`, {0.13427734666038305`, 
+                  8.169433770817704}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->6406230,ExpressionUUID->"a3f12b09-2eaf-f94c-8260-3e4aefe30958"]
+}, Open  ]]
+},
+WindowSize->{1012.5, 501.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->Cell[
+  BoxData[
+   PanelBox[
+    PaneBox[
+     TagBox[
+      GridBox[{{
+         StyleBox[
+          DynamicBox[
+           FEPrivate`FrontEndResource[
+           "MUnitStrings", "TestingNotebook-Title"], 
+           ImageSizeCache -> {100., {3., 9.}}], StripOnInput -> False, 
+          FontSize -> 12, FontColor -> GrayLevel[0.4]], "\[SpanFromLeft]", 
+         "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+         "\[SpanFromLeft]"}, {
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             ButtonBox[
+              PaneBox[
+               TagBox[
+                GridBox[{{
+                   PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitExpressions", "New"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                   StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitStrings", "New-Label"], 
+                    ImageSizeCache -> {26., {0., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                 AutoDelete -> False, 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+               ImageMargins -> {{0, 0}, {2, 0}}], Appearance -> 
+              FEPrivate`FrontEndResource[
+               "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+              Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteInsertTest[
+                  InputNotebook[], "Test"]], Evaluator -> Automatic, 
+              FrameMargins -> {{10, 10}, {0, 0}}, 
+              ImageSize -> {Automatic, 28}, Method -> "Queued"], 
+             DynamicBox[
+              FEPrivate`FrontEndResource["MUnitStrings", "New-Tooltip"]], 
+             TooltipDelay -> 0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource["MUnitStrings", "New-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {68., {11., 17.}}], DynamicModuleValues :> {}], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             ButtonBox[
+              PaneBox[
+               TagBox[
+                GridBox[{{
+                   PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ConvertSelection"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                   StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "ConvertSelectiontoTest-Label"], 
+                    ImageSizeCache -> {99., {1., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                 AutoDelete -> False, 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+               ImageMargins -> {{0, 0}, {2, 0}}], Appearance -> 
+              FEPrivate`FrontEndResource[
+               "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+              Block[{$ContextPath}, Needs["MUnit`"]; 
+                MUnit`buttonConvertCellGroup[
+                  InputNotebook[]]], Evaluator -> Automatic, 
+              FrameMargins -> {{10, 10}, {0, 0}}, 
+              ImageSize -> {Automatic, 28}, Method -> "Queued"], 
+             DynamicBox[
+              FEPrivate`FrontEndResource[
+              "MUnitStrings", "ConvertSelectiontoTest-Tooltip"]], 
+             TooltipDelay -> 0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource[
+               "MUnitStrings", "ConvertSelectiontoTest-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {141., {11., 17.}}], DynamicModuleValues :> {}], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             ButtonBox[
+              PaneBox[
+               TagBox[
+                GridBox[{{
+                   PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitExpressions", "Run"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                   StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitStrings", "Run-Label"], 
+                    ImageSizeCache -> {22., {0., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                 AutoDelete -> False, 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{0.3}}, "Rows" -> {{Automatic}}}], "Grid"], 
+               ImageMargins -> {{0, 0}, {2, 0}}], Appearance -> 
+              FEPrivate`FrontEndResource[
+               "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+              Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteRun[
+                  InputNotebook[]]], Evaluator -> Automatic, 
+              FrameMargins -> {{10, 10}, {0, 0}}, 
+              ImageSize -> {Automatic, 28}, Method -> "Queued"], 
+             DynamicBox[
+              FEPrivate`FrontEndResource["MUnitStrings", "Run-Tooltip"]], 
+             TooltipDelay -> 0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource["MUnitStrings", "Run-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {63., {11., 17.}}], DynamicModuleValues :> {}], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           ActionMenuBox[
+            ButtonBox[
+             PaneBox[
+              TagBox[
+               GridBox[{{
+                  StyleBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitStrings", "More-Label"], 
+                    ImageSizeCache -> {30., {0., 9.}}], "ButtonText", 
+                   StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]], 
+                  PaneSelectorBox[{True -> DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Arrow-Hover"], 
+                    ImageSizeCache -> {9., {2., 7.}}], False -> DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Arrow-Off"], 
+                    ImageSizeCache -> {9., {2., 7.}}]}, 
+                   Dynamic[$CellContext`hover$$], 
+                   BaselinePosition -> (Center -> Scaled[0.5])]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{0.5}}, "Rows" -> {{Automatic}}}], "Grid"], 
+              ImageMargins -> {{0, 0}, {0, 0}}], Appearance -> 
+             FEPrivate`FrontEndResource[
+              "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> {}, 
+             ContentPadding -> True, Evaluator -> None, 
+             FrameMargins -> {{10, 10}, {0, 0}}, ImageSize -> {Automatic, 28},
+              Method -> "Preemptive"], {TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "AssignTestIDs"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "AssignTestIDs-Label"]]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteAddTestIDs[
+                 InputNotebook[]]], TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "SaveAsDotwlt"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "SaveAsDotwlt-Label"]]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteSaveAs[
+                 InputNotebook[]]], TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "NewEnvironCell"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "NewEnvironCell-Label"]]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteInsertTest[
+                 InputNotebook[], "Environ"]], TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitExpressions", "Help"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "Help-Label"]]}}, AutoDelete -> False, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             SystemOpen["paclet:tutorial/UsingTheTestingFramework"]}, 
+            Appearance -> None, Method -> "Queued"], $CellContext`hover$$ = 
+           CurrentValue["MouseOver"], ImageSizeCache -> {67., {10., 18.}}], 
+          DynamicModuleValues :> {}], 
+         ItemBox["\"\"", ItemSize -> Fit, StripOnInput -> False], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             PaneSelectorBox[{True -> ButtonBox[
+                 TagBox[
+                  GridBox[{{
+                    PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ClearTestResults-on"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                    StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "ClearTestResults-Label"], 
+                    ImageSizeCache -> {96., {1., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                   AutoDelete -> False, 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                   GridBoxSpacings -> {
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+                 Appearance -> 
+                 FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`clearTestResults[]], Evaluator -> Automatic, 
+                 FrameMargins -> {{10, 10}, {0, 0}}, 
+                 ImageSize -> {Automatic, 28}, Method -> "Queued"], False -> 
+               ButtonBox[
+                 TagBox[
+                  GridBox[{{
+                    PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ClearTestResults-off"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                    StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "ClearTestResults-Label"], 
+                    ImageSizeCache -> {96., {1., 9.}}], "ButtonText", 
+                    StripOnInput -> False, LineColor -> GrayLevel[0.7], 
+                    FrontFaceColor -> GrayLevel[0.7], BackFaceColor -> 
+                    GrayLevel[0.7], GraphicsColor -> GrayLevel[0.7], 
+                    FontColor -> GrayLevel[0.7]]}}, AutoDelete -> False, 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                   GridBoxSpacings -> {
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+                 Appearance -> 
+                 FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+                 Null, Enabled -> False, Evaluator -> Automatic, 
+                 FrameMargins -> {{10, 10}, {0, 0}}, 
+                 ImageSize -> {Automatic, 28}, Method -> "Queued"]}, 
+              Dynamic[CurrentValue[
+                 ButtonNotebook[], {TaggingRules, "$testsRun"}, False] === 
+               True]], 
+             DynamicBox[
+              FEPrivate`FrontEndResource[
+              "MUnitStrings", "ClearTestResults-Tooltip"]], TooltipDelay -> 
+             0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource[
+               "MUnitStrings", "ClearTestResults-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {138., {10., 18.}}], 
+          DynamicModuleValues :> {}]}}, AutoDelete -> False, 
+       BaseStyle -> {
+        "DialogStyle", Bold, FontColor -> 
+         RGBColor[
+          0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`]}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Bottom}}}, 
+       GridBoxDividers -> {"Columns" -> {{False}}}, 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+       GridBoxSpacings -> {"Columns" -> {{Automatic}}, "Rows" -> {{1}}}], 
+      "Grid"], ImageMargins -> {{5, 5}, {Automatic, Automatic}}], Appearance -> 
+    FEPrivate`FrontEndResource["MUnitExpressions", "StaticToolbarNinePatch"], 
+    FrameMargins -> {{26, 12}, {8, 12}}, ImageMargins -> -1]], "DockedCell", 
+  CellFrameMargins -> 0, ShowCellTags -> False, CellTags -> 
+  "MUnitStaticToolbar"],
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"ed94358e-762e-864d-bccf-744d6d9a9a79"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 459, 10, 103, "VerificationTest",ExpressionUUID->"69812341-541e-1f44-b900-abebf4f14904",
+ CellID->841594826],
+Cell[1038, 34, 178, 2, 38, "ExpectedOutput",ExpressionUUID->"4e73564e-19f1-4446-afb8-20e6e0490095",
+ CellID->5930065],
+Cell[1219, 38, 213, 5, 39, "TestOptions",ExpressionUUID->"2336747d-76d5-de4a-88a7-964537fc23cb",
+ CellID->671301869],
+Cell[1435, 45, 10074, 246, 38, "BottomCell",ExpressionUUID->"285736b9-88a9-1d46-a4e0-ffadc0816ab2",
+ CellID->252031074]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11546, 296, 764, 18, 103, "VerificationTest",ExpressionUUID->"99ad6539-23d2-0e46-aefe-b9ef5b3cf011",
+ CellID->676883954],
+Cell[12313, 316, 182, 2, 38, "ExpectedOutput",ExpressionUUID->"d10ba288-18c4-ca4d-8334-f8d9aef44c52",
+ CellID->44621674],
+Cell[12498, 320, 209, 5, 39, "TestOptions",ExpressionUUID->"303c3db7-793a-4047-bae1-df0b2bdfc784",
+ CellID->68382],
+Cell[12710, 327, 10074, 246, 38, "BottomCell",ExpressionUUID->"08a343c9-0a4a-db4b-843f-84e684b6d618",
+ CellID->175287553]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22821, 578, 428, 10, 70, "VerificationTest",ExpressionUUID->"55755233-a9ae-8646-9259-be3c6e17a5c9",
+ CellID->50675954],
+Cell[23252, 590, 233, 3, 70, "ExpectedOutput",ExpressionUUID->"3df02fe4-b393-f140-a8e8-85eaf2a79b54",
+ CellID->190080221],
+Cell[23488, 595, 213, 5, 70, "TestOptions",ExpressionUUID->"41ea5963-5c90-8540-b38f-57126521acab",
+ CellID->161173033],
+Cell[23704, 602, 10073, 246, 70, "BottomCell",ExpressionUUID->"b6ead744-23b0-2046-b0bb-e9cd8cb140fb",
+ CellID->55408714]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33814, 853, 355, 8, 70, "VerificationTest",ExpressionUUID->"12fec485-c508-3c46-91d8-b12e544b7ba3",
+ CellID->621849476],
+Cell[34172, 863, 183, 2, 70, "ExpectedOutput",ExpressionUUID->"bed23e04-0c3b-a14b-9b8e-dc15a7aff618",
+ CellID->87131101],
+Cell[34358, 867, 212, 5, 70, "TestOptions",ExpressionUUID->"08dcf892-d3ee-eb40-bf11-8fe5eb5bd2af",
+ CellID->80824501],
+Cell[34573, 874, 10072, 246, 70, "BottomCell",ExpressionUUID->"a3f12b09-2eaf-f94c-8260-3e4aefe30958",
+ CellID->6406230]
+}, Open  ]]
+}
+]
+*)
+

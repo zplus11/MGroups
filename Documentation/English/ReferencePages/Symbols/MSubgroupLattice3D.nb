@@ -1,0 +1,3456 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    159870,       3448]
+NotebookOptionsPosition[    149850,       3234]
+NotebookOutlinePosition[    150628,       3260]
+CellTagsIndexPosition[    150547,       3255]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MSubgroupLattice3D", "ObjectName",
+ CellID->124135484,ExpressionUUID->"89d753ee-df19-0648-ac69-8e41c944929b"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"ac24201f-d68a-b248-af0b-c3b36b413809"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["MSubgroupLattice3D",
+    BaseStyle->"Link",
+    ButtonData->"paclet:Taggar/MGroups/ref/MSubgroupLattice3D"], "[", 
+   StyleBox["group", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+  "88eb9d13-bf39-ff41-86cb-1ec20eadbcab"],
+ "\[LineSeparator]draws the 3-D subgroup lattice of ",
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "da04fc51-494d-0e45-9093-51ea1fb5f9d6"],
+ "."
+}], "Usage",
+ CellChangeTimes->{3.956971082372692*^9, 3.9569853655458527`*^9},
+ CellID->235858633,ExpressionUUID->"6d40d498-b58c-c94c-8341-6f743bbac2f7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "98bf76db-3174-f241-a5bc-b4953e35cb4b"],
+ " should be an ",
+ Cell[BoxData[
+  ButtonBox["MGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroup"]], "InlineFormula",
+  ExpressionUUID->"4b087ad5-4494-4147-9f7c-be85ec6be343"],
+ " object."
+}], "Notes",
+ CellChangeTimes->{{3.9569867225136795`*^9, 3.9569867227813835`*^9}},
+ CellID->793391568,ExpressionUUID->"5eca03dc-6655-7847-b503-3eb0bac79eb7"],
+
+Cell["The following options can be given: ", "Notes",
+ CellChangeTimes->{3.9569867225136795`*^9},
+ CellID->344045184,ExpressionUUID->"9ca075e6-a9a3-834f-8bff-9feae7ef410c"],
+
+Cell[BoxData[GridBox[{
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "1bda08eb-7955-b443-99db-6ca2c9c7b4be"], "MHighlight", 
+    RowBox[{
+     RowBox[{"True", " ", "&"}], " "}], Cell[
+    "Criterion for highlighting of subgroups in the lattice.", "TableText",
+     ExpressionUUID->"a348567b-7ee2-604a-8f31-e46677b1436c"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "8ee9deeb-3948-344d-8e14-7e72113bf75f"], "MShowInfo", "\"\<All\>\"", 
+    Cell["\<\
+Information regarding subgroups to be printed in the lattice.\
+\>", "TableText",ExpressionUUID->"53b322aa-4daf-2e45-8a66-feb729406ed5"]},
+   {Cell["   ", "ModInfo",ExpressionUUID->
+     "becebfac-56af-1943-bca5-bb277d641d55"], "MCombinationsLimit", "2", 
+    Cell["\<\
+Maximum cardinality of subsets to check for generating subgroups.\
+\>", "TableText",ExpressionUUID->"1b8f2889-514b-a34a-b5d1-024fb2b97b7f"]}
+  }]], "3ColumnTableMod",
+ CellChangeTimes->{{3.9567256385653973`*^9, 3.956725652263117*^9}, {
+  3.956725695051262*^9, 3.956725790119648*^9}, {3.9702042347394867`*^9, 
+  3.9702042420207844`*^9}},
+ CellID->56841579,ExpressionUUID->"3a784769-dce1-134f-9b67-f54fc1368b4d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "49a4385b-fb94-8f4a-9ce7-9ba35cd82334"]
+}], "SeeAlsoSection",
+ CellID->746284669,ExpressionUUID->"33b5c6b5-aac0-c440-a619-387b602b01d4"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   FrameBox["\<\"XXXX\"\>"],
+   "FunctionPlaceholder"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "ecd7547d-97c1-a04f-b136-7995a7045eab"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "0c997225-197d-014f-9363-60ce9fdc9913"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "08a91758-b409-0745-9a33-ddbe259aaf2c", 
+     "44df2f29-b938-3b4d-a810-57ab6ddab217"], $CellContext`cellobj$$ = 
+    CellObject[
+    "67f36246-db3b-444b-b490-513fe1f1866a", 
+     "67c5547c-96b3-f34b-bd12-ceaaf7eeec0b"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "67f36246-db3b-444b-b490-513fe1f1866a"]
+}], "SeeAlso",
+ CellID->42340817,ExpressionUUID->"41ab4dbc-b462-bd4f-add0-062bd4acb13a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "dd577c27-aa84-f340-8552-dd234d3acff4"]
+}], "TechNotesSection",
+ CellID->513831728,ExpressionUUID->"08ca6888-c43e-fc41-9850-26ae985a043a"],
+
+Cell["XXXX", "Tutorials",
+ CellID->151760530,ExpressionUUID->"ac731201-3453-3343-a486-cf6177a06b3f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->777031691,ExpressionUUID->"28e109e2-c553-b949-8846-24059e4a664e"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->33239895,ExpressionUUID->"70d39b09-c0e0-134b-9a6c-55fbbc3aa89f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "514961b1-ec30-7246-a74c-dd6dab09c0e1"]
+}], "RelatedLinksSection",
+ CellID->740337575,ExpressionUUID->"12babaad-9ae4-5f4e-ac40-e62c920de05a"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->40759136,ExpressionUUID->"2db4c104-a50e-9b48-9ca4-2708d9c003d3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "b9d65417-3736-6949-b367-a3da69c26681"]
+}], "ExamplesInitializationSection",
+ CellID->52840409,ExpressionUUID->"fc0899dd-984e-2740-a20b-b1e8f59ab3e8"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->676770855,ExpressionUUID->"9464a49f-297b-c948-a355-68e5413e74a2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->220426013,ExpressionUUID->"97025c4e-5fd4-8949-84a5-37acd94d9fc2"],
+
+Cell[TextData[{
+ "Draw the 3-D subgroup lattice of ",
+ Cell[BoxData[
+  SubscriptBox["U", "30"]], "InlineFormula",ExpressionUUID->
+  "09874371-6e49-3e42-a49e-b7328daeca30"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.956725798837967*^9, 3.9567258149813976`*^9}, {
+  3.956985379326105*^9, 3.956985380229519*^9}},
+ CellID->195258644,ExpressionUUID->"aaafc6b9-6abf-ed4e-bc6a-d034d37fa483"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MMultiplicativeGroup", "[", "30", "]"}], "//", 
+  "MSubgroupLattice3D"}]], "Input",
+ CellChangeTimes->{{3.9567258188533382`*^9, 3.9567258255323944`*^9}, {
+  3.956985382192526*^9, 3.956985387956478*^9}},
+ CellLabel->"In[801]:=",
+ CellID->201704552,ExpressionUUID->"4cea3ea9-89b9-7045-94a0-1b2908c3c406"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{1, 7, 13, 19}, {7}}, {{1, 19}, {19}}, {{1}, {
+       1}}, {{1, 11}, {11}}, {{1, 17, 19, 23}, {17}}, {{1, 29}, {29}}, {{1, 7,
+         11, 13, 17, 19, 23, 29}, {7, 11}}, {{1, 11, 19, 29}, {11, 19}}}, {{{
+       1, 2}, {2, 3}, {4, 3}, {5, 2}, {6, 3}, {7, 1}, {7, 5}, {7, 8}, {8, 
+       2}, {8, 4}, {8, 6}}, Null}, {EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{1, 7, 11, 13, 17, 19, 23, 29}, {7, 11}} -> Placed[
+           
+           Grid[{{{1, 7, 11, 13, 17, 19, 23, 29}}, {"Generated by {7, 11}"}, {
+             "Order = 8"}}, Frame -> All], Tooltip], {{1, 19}, {19}} -> Placed[
+           
+           Grid[{{{1, 19}}, {"Generated by {19}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{1, 17, 19, 23}, {17}} -> Placed[
+           
+           Grid[{{{1, 17, 19, 23}}, {"Generated by {17}"}, {"Order = 4"}}, 
+            Frame -> All], Tooltip], {{1, 29}, {29}} -> Placed[
+           
+           Grid[{{{1, 29}}, {"Generated by {29}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{1}, {1}} -> Placed[
+           Grid[{{{1}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All], 
+           Tooltip], {{1, 11, 19, 29}, {11, 19}} -> Placed[
+           
+           Grid[{{{1, 11, 19, 29}}, {"Generated by {11, 19}"}, {"Order = 4"}},
+             Frame -> All], Tooltip], {{1, 11}, {11}} -> Placed[
+           
+           Grid[{{{1, 11}}, {"Generated by {11}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{1, 7, 13, 19}, {7}} -> Placed[
+           
+           Grid[{{{1, 7, 13, 19}}, {"Generated by {7}"}, {"Order = 4"}}, 
+            Frame -> All], Tooltip]}, 
+       VertexStyle -> {{{1, 19}, {19}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           29}, {29}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+          1}, {1}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           11}, {11}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           11, 19, 29}, {11, 19}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           7, 13, 19}, {7}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           7, 11, 13, 17, 19, 23, 29}, {7, 11}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{1, 
+           17, 19, 23}, {17}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 2., 0.}, {1., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{2., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {1., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{3., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {0., 2., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {1., 2., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {2., 2., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{2., 2., 0.}, {1., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{2., 2., 0.}, {2., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{2., 2., 0.}, {3., 1., 0.}}], 
+         0.06047904191616765]}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "7", ",", "13", ",", "19"}], "}"}]}, {
+             "\"Generated by {7}\""}, {"\"Order = 4\""}}, AutoDelete -> False,
+             GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          Grid[{{{1, 7, 13, 19}}, {"Generated by {7}"}, {"Order = 4"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "19"}], "}"}]}, {"\"Generated by {19}\""}, {
+             "\"Order = 2\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 19}}, {"Generated by {19}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 0., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "1", "}"}]}, {"\"Generated by {1}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          Grid[{{{1}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "11"}], "}"}]}, {"\"Generated by {11}\""}, {
+             "\"Order = 2\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 11}}, {"Generated by {11}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "17", ",", "19", ",", "23"}], "}"}]}, {
+             "\"Generated by {17}\""}, {"\"Order = 4\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 17, 19, 23}}, {"Generated by {17}"}, {"Order = 4"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{3., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "29"}], "}"}]}, {"\"Generated by {29}\""}, {
+             "\"Order = 2\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 29}}, {"Generated by {29}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 3., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "1", ",", "7", ",", "11", ",", "13", ",", "17", ",", "19", 
+                  ",", "23", ",", "29"}], "}"}]}, {
+             "\"Generated by {7, 11}\""}, {"\"Order = 8\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 7, 11, 13, 17, 19, 23, 29}}, {"Generated by {7, 11}"}, {
+            "Order = 8"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "11", ",", "19", ",", "29"}], "}"}]}, {
+             "\"Generated by {11, 19}\""}, {"\"Order = 4\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{1, 11, 19, 29}}, {"Generated by {11, 19}"}, {"Order = 4"}}, 
+           Frame -> All], "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}},
+  ViewPoint->{1.7820424428317003`, -2.6118891580077475`, 1.205138895824047},
+  ViewVertical->{0.023330366405159973`, -0.988722220666894, 
+   0.14793263454331806`}]], "Output",
+ CellChangeTimes->{
+  3.9567258270653152`*^9, 3.9569853886489315`*^9, 3.956985509117964*^9, {
+   3.9569855872363625`*^9, 3.9569856005517063`*^9}, 3.970204247128458*^9},
+ CellLabel->"Out[801]=",
+ CellID->950732034,ExpressionUUID->"7d8cf337-e7fd-fe46-af70-ba8061252a8e"]
+}, Open  ]],
+
+Cell["\<\
+The layers are clearly visible. Hovering on nodes reveals information about \
+the respective group.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.9569856107608147`*^9, 3.9569856419617653`*^9}},
+ CellID->311651084,ExpressionUUID->"e1a86c18-f287-2f44-bc68-3b65bb1bcbb4"],
+
+Cell[TextData[{
+ "For ",
+ Cell[BoxData[
+  SubscriptBox["D", "3"]], "InlineFormula",ExpressionUUID->
+  "b4c0616f-fcd0-f547-be08-4a273160b86e"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.9567258710152016`*^9, 3.956725875526697*^9}},
+ CellID->515873538,ExpressionUUID->"14419200-f0dc-5341-896f-5532eb9cee38"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MDihedralGroup", "[", "3", "]"}], "//", 
+  "MSubgroupLattice3D"}]], "Input",
+ CellChangeTimes->{{3.956725877236553*^9, 3.9567258825301323`*^9}, {
+  3.9569856458165092`*^9, 3.956985647123455*^9}},
+ CellLabel->"In[802]:=",
+ CellID->359248587,ExpressionUUID->"eed67260-ae68-714b-95a7-70e6dc0b686c"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0", "r1", "r2"}, {"r1"}}, {{"r0"}, {"r0"}}, {{"r0", "s0"}, {
+        "s0"}}, {{"r0", "s1"}, {"s1"}}, {{"r0", "s2"}, {"s2"}}, {{
+        "r0", "r1", "r2", "s0", "s1", "s2"}, {"r1", "s0"}}}, {{{1, 2}, {3, 
+       2}, {4, 2}, {5, 2}, {6, 1}, {6, 3}, {6, 4}, {6, 5}}, Null}, {EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{"r0", "s2"}, {"s2"}} -> Placed[
+           
+           Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s0"}, {"s0"}} -> Placed[
+           
+           Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r1", "r2", "s0", "s1", "s2"}, {
+           "r1", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "s0", "s1", "s2"}}, {
+             "Generated by {r1, s0}"}, {"Order = 6"}}, Frame -> All], 
+           Tooltip], {{"r0"}, {"r0"}} -> Placed[
+           
+           Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{"r0", "s1"}, {"s1"}} -> Placed[
+           
+           Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r1", "r2"}, {"r1"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2"}}, {"Generated by {r1}"}, {"Order = 3"}}, 
+            Frame -> All], Tooltip]}, 
+       VertexStyle -> {{{"r0", "r1", "r2", "s0", "s1", "s2"}, {"r1", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s2"}, {"s2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s1"}, {"s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0"}, {"r0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r1", "r2"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{2., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{3., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {0., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {1., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {2., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {3., 1., 0.}}], 
+         0.06047904191616765]}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"r1\"", ",", "\"r2\""}], "}"}]}, {
+             "\"Generated by {r1}\""}, {"\"Order = 3\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2"}}, {"Generated by {r1}"}, {"Order = 3"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 0., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"r0\"", "}"}]}, {"\"Generated by {r0}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s0\""}], "}"}]}, {
+             "\"Generated by {s0}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s1\""}], "}"}]}, {
+             "\"Generated by {s1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{3., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {s2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"s0\"", ",", 
+                  "\"s1\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {r1, s0}\""}, {"\"Order = 6\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "s0", "s1", "s2"}}, {
+            "Generated by {r1, s0}"}, {"Order = 6"}}, Frame -> All], 
+          "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}},
+  ViewPoint->{1.3889034831583695`, -2.8170472278873797`, 1.2590440938754193`},
+  ViewVertical->{0.08552958970942325, -0.7261368890114752, 
+   0.6822095775499449}]], "Output",
+ CellChangeTimes->{
+  3.956725883142807*^9, {3.956985647720955*^9, 3.956985667029585*^9}, 
+   3.9702042563090057`*^9},
+ CellLabel->"Out[802]=",
+ CellID->155972895,ExpressionUUID->"d8219fae-1dce-e14e-b2be-6aa54dadc261"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "79cf7cfb-2dd5-cc49-992a-4969385bfbbf"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->21332645,ExpressionUUID->"cfc7b417-96a9-ce45-926b-a38befdeec50"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "92a6b1d1-007e-6342-b70c-ec14873c0043"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->530606623,ExpressionUUID->"ed60fcc5-d7ac-b54a-b826-2fd9acbdc50b"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "5e007e24-2929-3d41-a6a0-265b5124dcc3"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->604303560,ExpressionUUID->"db0b8125-13fa-bb46-8a0b-31ca1d198472"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "dce3e7e4-f596-bc48-94a7-83462d7b0323"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->24237513,ExpressionUUID->"00198045-e2d0-7241-84dd-88148e82f35b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "MCombinationsLimit", "ExampleSubsection",ExpressionUUID->
+   "0c053e0d-5d65-274a-8573-b862d72f0653"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.9579128806052*^9, 3.9579128806052*^9}, {
+  3.9702042657637787`*^9, 3.9702042657637787`*^9}},
+ CellID->444255716,ExpressionUUID->"bdf31cf1-98db-2248-94c6-25731bd6d4cb"],
+
+Cell[TextData[{
+ "CombinationsLimit can be set to define the maximum cardinality of subsets \
+that should be used to generate subgroups. For example, all subgroups of ",
+ Cell[BoxData[
+  SubscriptBox["S", "4"]], "InlineFormula",ExpressionUUID->
+  "e651af4d-7d65-ee4d-a290-0e6141b09fca"],
+ " can be generated by a maximum of 2 elements as the rank of this group is \
+2. Hence, compare MCombinationsLimit set to 3:"
+}], "ExampleText",
+ CellChangeTimes->{{3.956725356230221*^9, 3.9567254166430225`*^9}, {
+  3.9702042758054466`*^9, 3.970204283323309*^9}},
+ CellID->556403549,ExpressionUUID->"f82c6930-3ce4-a14c-b5e6-57ac60418776"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MSubgroupLattice3D", "[", 
+    RowBox[{
+     RowBox[{"MPermutationsGroup", "[", "4", "]"}], ",", 
+     RowBox[{"MCombinationsLimit", "->", "3"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.9567254182431755`*^9, 3.9567254435431976`*^9}, {
+  3.9569856932601967`*^9, 3.95698571906448*^9}, {3.9702042874671307`*^9, 
+  3.9702042899283943`*^9}},
+ CellLabel->"In[803]:=",
+ CellID->116169446,ExpressionUUID->"6e3a9c9c-26ff-db4c-916a-0d07e64ae3c0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1.9002169`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.9567254470487843`*^9, 3.956985726963953*^9, 
+  3.9702042923353767`*^9},
+ CellLabel->"Out[803]=",
+ CellID->79182795,ExpressionUUID->"07a31a82-6e82-8a4e-9b81-d09711bfc968"]
+}, Open  ]],
+
+Cell["with the sufficing default value:", "ExampleText",
+ CellChangeTimes->{{3.956725449682106*^9, 3.9567254624469223`*^9}, {
+  3.9702043006390934`*^9, 3.9702043050069065`*^9}},
+ CellID->858087461,ExpressionUUID->"2fda43a2-96f6-c846-8df6-07f61826ca57"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MSubgroupLattice3D", "[", 
+    RowBox[{"MPermutationsGroup", "[", "4", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.9567254699932575`*^9, 3.956725475412262*^9}, {
+  3.9569857209648743`*^9, 3.956985722015522*^9}, {3.9702042964327736`*^9, 
+  3.9702042970397053`*^9}},
+ CellLabel->"In[804]:=",
+ CellID->305057397,ExpressionUUID->"e8d32620-9c65-794c-a9c6-06944a0ca6a0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.2452986`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.9567254760225525`*^9, 3.9569857284352665`*^9, 
+  3.9702043062463493`*^9},
+ CellLabel->"Out[804]=",
+ CellID->353093496,ExpressionUUID->"aa02c341-cc8a-d94d-8f4a-4988e23a50e3"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "MHighlight", "ExampleSubsection",ExpressionUUID->
+   "b2f33deb-47c5-1843-9347-1f2ae80772a1"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.9579128837595596`*^9, 3.9579128837595596`*^9}, {
+  3.970204309635622*^9, 3.970204309635622*^9}},
+ CellID->73041630,ExpressionUUID->"c19816d1-a44f-9d44-b2d5-91178a35b3a4"],
+
+Cell["\<\
+Nodes can be highlighted using certain criterion. For example, cyclic \
+subgroups can be highlighted using the MCyclicQ function:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.9567259131747704`*^9, 3.956725939851015*^9}, {
+  3.956726005776026*^9, 3.9567260065772457`*^9}, {3.957912374109812*^9, 
+  3.957912379807602*^9}},
+ CellID->333207987,ExpressionUUID->"07c2ff58-0522-5a40-91bb-8dbe3c2f91bd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "8", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "MCyclicQ"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.956725974857252*^9, 3.9567259957259464`*^9}, {
+   3.9569857751039257`*^9, 3.956985775759802*^9}, {3.95791235646278*^9, 
+   3.957912369368414*^9}, {3.9579129752139225`*^9, 3.9579129756052856`*^9}, 
+   3.9702043133387794`*^9},
+ CellLabel->"In[805]:=",
+ CellID->121211298,ExpressionUUID->"33fa0539-3669-d545-b6e3-a3d7e8c4c589"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}, {"r1"}}, {{
+        "r0", "r2", "r4", "r6"}, {"r2"}}, {{"r0", "r4"}, {"r4"}}, {{"r0"}, {
+        "r0"}}, {{"r0", "s0"}, {"s0"}}, {{"r0", "s1"}, {"s1"}}, {{
+        "r0", "s2"}, {"s2"}}, {{"r0", "s3"}, {"s3"}}, {{"r0", "s4"}, {
+        "s4"}}, {{"r0", "s5"}, {"s5"}}, {{"r0", "s6"}, {"s6"}}, {{
+        "r0", "s7"}, {"s7"}}, {{
+        "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", "s2", 
+         "s3", "s4", "s5", "s6", "s7"}, {"r1", "s0"}}, {{
+        "r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}, {"r2", "s0"}}, {{
+        "r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}, {"r2", "s1"}}, {{
+        "r0", "r4", "s0", "s4"}, {"r4", "s0"}}, {{"r0", "r4", "s2", "s6"}, {
+        "r4", "s2"}}, {{"r0", "r4", "s1", "s5"}, {"r4", "s1"}}, {{
+        "r0", "r4", "s3", "s7"}, {"r4", "s3"}}}, {{{1, 2}, {2, 3}, {3, 4}, {5,
+        4}, {6, 4}, {7, 4}, {8, 4}, {9, 4}, {10, 4}, {11, 4}, {12, 4}, {13, 
+       1}, {13, 14}, {13, 15}, {14, 2}, {14, 16}, {14, 17}, {15, 2}, {15, 
+       18}, {15, 19}, {16, 3}, {16, 5}, {16, 9}, {18, 3}, {18, 6}, {18, 10}, {
+       17, 3}, {17, 7}, {17, 11}, {19, 3}, {19, 8}, {19, 12}}, Null}, {
+      EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{"r0", "s6"}, {"s6"}} -> Placed[
+           
+           Grid[{{{"r0", "s6"}}, {"Generated by {s6}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0"}, {"r0"}} -> Placed[
+           
+           Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}, {"r2", "s0"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}}, {
+             "Generated by {r2, s0}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip], {{"r0", "r4", "s2", "s6"}, {"r4", "s2"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s2", "s6"}}, {"Generated by {r4, s2}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", "s2", 
+            "s3", "s4", "s5", "s6", "s7"}, {"r1", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1",
+                "s2", "s3", "s4", "s5", "s6", "s7"}}, {
+             "Generated by {r1, s0}"}, {"Order = 16"}}, Frame -> All], 
+           Tooltip], {{"r0", "r4", "s1", "s5"}, {"r4", "s1"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s1", "s5"}}, {"Generated by {r4, s1}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "r0", "r4", "s0", "s4"}, {"r4", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s0", "s4"}}, {"Generated by {r4, s0}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s3"}, {"s3"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s4"}, {"s4"}} -> Placed[
+           
+           Grid[{{{"r0", "s4"}}, {"Generated by {s4}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s1"}, {"s1"}} -> Placed[
+           
+           Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r2", "r4", "r6"}, {"r2"}} -> Placed[
+           
+           Grid[{{{"r0", "r2", "r4", "r6"}}, {"Generated by {r2}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s7"}, {"s7"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s7"}}, {"Generated by {s7}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r4"}, {"r4"}} -> Placed[
+           
+           Grid[{{{"r0", "r4"}}, {"Generated by {r4}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r4", "s3", "s7"}, {"r4", "s3"}} -> Placed[
+           
+           Grid[{{{"r0", "r4", "s3", "s7"}}, {"Generated by {r4, s3}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s5"}, {"s5"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s5"}}, {"Generated by {s5}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}, {"r1"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}}, {
+             "Generated by {r1}"}, {"Order = 8"}}, Frame -> All], Tooltip], {{
+           "r0", "s2"}, {"s2"}} -> Placed[
+           
+           Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s0"}, {"s0"}} -> Placed[
+           
+           Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}, {"r2", "s1"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}}, {
+             "Generated by {r2, s1}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip]}, 
+       VertexStyle -> {{{"r0", "s2"}, {"s2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "r4", "r6"}, {"r2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s4"}, {"s4"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0"}, {"r0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s7"}, {"s7"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r4", "s1", "s5"}, {"r4", "s1"}} -> 
+         GrayLevel[0.85], {{"r0", "r4"}, {"r4"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r4", "s3", "s7"}, {"r4", "s3"}} -> 
+         GrayLevel[0.85], {{"r0", "s1"}, {"s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s3"}, {"s3"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}, {"r2", "s0"}} -> 
+         GrayLevel[
+          0.85], {{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}, {"r2", "s1"}} -> 
+         GrayLevel[0.85], {{"r0", "r4", "s0", "s4"}, {"r4", "s0"}} -> 
+         GrayLevel[0.85], {{"r0", "s5"}, {"s5"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r4", "s2", "s6"}, {"r4", "s2"}} -> 
+         GrayLevel[0.85], {{"r0", "s6"}, {"s6"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", "s2", 
+            "s3", "s4", "s5", "s6", "s7"}, {"r1", "s0"}} -> 
+         GrayLevel[0.85]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 3., 0.}, {0., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{0., 2., 0.}, {0., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{0., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{-2., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{5., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{-1., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{4., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{2., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{6., 1., 0.}, {2., 0., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 4., 0.}, {0., 3., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 4., 0.}, {1., 3., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 4., 0.}, {3., 3., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {0., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {-1., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {1., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 3., 0.}, {0., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 3., 0.}, {3., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 3., 0.}, {5., 2., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{-1., 2., 0.}, {0., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{-1., 2., 0.}, {-2., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{-1., 2., 0.}, {-1., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {0., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {1., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {2., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {0., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {3., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {4., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{5., 2., 0.}, {0., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{5., 2., 0.}, {5., 1., 0.}}], 
+         0.11566820276497694`], 
+        Arrow3DBox[TubeBox[{{5., 2., 0.}, {6., 1., 0.}}], 
+         0.11566820276497694`]}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 3., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\"", ",", 
+                  "\"r4\"", ",", "\"r5\"", ",", "\"r6\"", ",", "\"r7\""}], 
+                "}"}]}, {"\"Generated by {r1}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7"}}, {
+            "Generated by {r1}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 2., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"r4\"", ",", "\"r6\""}], 
+                "}"}]}, {"\"Generated by {r2}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "r4", "r6"}}, {"Generated by {r2}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"r4\""}], "}"}]}, {
+             "\"Generated by {r4}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4"}}, {"Generated by {r4}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 0., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"r0\"", "}"}]}, {"\"Generated by {r0}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{-2., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s0\""}], "}"}]}, {
+             "\"Generated by {s0}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{3., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s1\""}], "}"}]}, {
+             "\"Generated by {s1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {s2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{5., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s3\""}], "}"}]}, {
+             "\"Generated by {s3}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{-1., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s4\""}], "}"}]}, {
+             "\"Generated by {s4}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s4"}}, {"Generated by {s4}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{4., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s5\""}], "}"}]}, {
+             "\"Generated by {s5}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s5"}}, {"Generated by {s5}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s6\""}], "}"}]}, {
+             "\"Generated by {s6}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s6"}}, {"Generated by {s6}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{6., 1., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s7\""}], "}"}]}, {
+             "\"Generated by {s7}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s7"}}, {"Generated by {s7}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{1., 4., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\"", ",", 
+                  "\"r4\"", ",", "\"r5\"", ",", "\"r6\"", ",", "\"r7\"", ",", 
+                  "\"s0\"", ",", "\"s1\"", ",", "\"s2\"", ",", "\"s3\"", ",", 
+                  "\"s4\"", ",", "\"s5\"", ",", "\"s6\"", ",", "\"s7\""}], 
+                "}"}]}, {"\"Generated by {r1, s0}\""}, {"\"Order = 16\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "s0", "s1", 
+              "s2", "s3", "s4", "s5", "s6", "s7"}}, {
+            "Generated by {r1, s0}"}, {"Order = 16"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{1., 3., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"r4\"", ",", "\"r6\"", ",", 
+                  "\"s0\"", ",", "\"s2\"", ",", "\"s4\"", ",", "\"s6\""}], 
+                "}"}]}, {"\"Generated by {r2, s0}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "r4", "r6", "s0", "s2", "s4", "s6"}}, {
+            "Generated by {r2, s0}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{3., 3., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"r4\"", ",", "\"r6\"", ",", 
+                  "\"s1\"", ",", "\"s3\"", ",", "\"s5\"", ",", "\"s7\""}], 
+                "}"}]}, {"\"Generated by {r2, s1}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "r4", "r6", "s1", "s3", "s5", "s7"}}, {
+            "Generated by {r2, s1}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{-1., 2., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s0\"", ",", "\"s4\""}], 
+                "}"}]}, {"\"Generated by {r4, s0}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s0", "s4"}}, {"Generated by {r4, s0}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{1., 2., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s2\"", ",", "\"s6\""}], 
+                "}"}]}, {"\"Generated by {r4, s2}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s2", "s6"}}, {"Generated by {r4, s2}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{3., 2., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s1\"", ",", "\"s5\""}], 
+                "}"}]}, {"\"Generated by {r4, s1}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s1", "s5"}}, {"Generated by {r4, s1}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{5., 2., 0.}, 0.11566820276497694`]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r4\"", ",", "\"s3\"", ",", "\"s7\""}], 
+                "}"}]}, {"\"Generated by {r4, s3}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r4", "s3", "s7"}}, {"Generated by {r4, s3}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellChangeTimes->{
+  3.956725997359913*^9, 3.956985784495594*^9, 3.9569862169789467`*^9, 
+   3.956986337970068*^9, {3.957912359334303*^9, 3.9579123822237206`*^9}, 
+   3.957912977112156*^9, 3.9702043140129166`*^9},
+ CellLabel->"Out[805]=",
+ CellID->22657120,ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJyUvQecVPW5/z9uZVmqiKgIriAIYqGqSBtAOtgRFdQB7C32XgbB3o2ixjL2
+Ems0apqZmGq6KffemOR6kptEc9NjTDFRvr/n/ZQzZzf4//9++3oBy+7MnHOe
++nnqd9nqs0849tTVZ5+4dnXXgjNXn37CiWvP6pr/kTPlR81blEpb/KxUKv2w
+q9Qi3yf5tudfPy+V8u9/oN/26iqV2quDRi1Io+ZU0+h916fR865IYxdfn20/
+cU21c/DYtsJbvq/fdlb7bjtBXroh7bH84TSl8pk09fivpX1O+Hra+5gvpkmr
+nk+77n9XNmzKCRVe3VJ4//f02771rUbNT7ss/Wjaa/Xn08zT30hzL/htmn/p
+u/Lnr2neRX9Ks8/5RZp+8nfTpJXPZSPLF5eb2ztLzYXPeV2/7V/tGDgyjVt2
+e5p63JfTnPPeTosu/1dadm1K+98of25Kab/rU1pyVdLPnnXGj9Oelc9ko+dd
+3cW7m/7985QE8po059xfpsUb/pkOuDmlQ+5I6dCPyZ+7U1p+Z0oHfVQ+97qU
+Fq3/Z9r3wt+lfY5/rdY19Yxun/dd/XZApfeWo9JuB9yTpp/y/bSg+q7eE59x
+eC2llQ/Kn4dSOuKBlA671z/7Nrvn+Ze8k02ufPrfP3JgbZtxB6eJRzwrJPof
+ebRN6eDb5e33pbTq4ZSOfDylox63f498VH72iF2CW9/vhiSP9VZ5yLiDS1sU
+Pvc7+u2WkERYdlyafPTLae75vxEyfpAO4Vbvl896LKWjP55S5amUVj+T0ppn
+5c9z8v+n7RqH3pXSwnX/LI+cdVnxo1/Tb7fho8vypzp06NDqscceW7///vvT
+f/3Xf6Xf/va36eC1V6YpR39KJWDZdZu6X/JJu8wxn0zpuJdTOv5TKR37otzC
+0/aaZdduqgybuKZ4yS/mMl0q77HHHtUddtihetlll9U//vGPp5/97GfpD3/4
+Q/rXv/7VmuSr1DsdVLlMiPlMKp8txLzy/XTwbQ1i8rDHvCBX/XRqSie+kkqt
+fJvWPm80XXZd6tphj6O70fJzjatXuLLcQe26666rf/KTn0z//d//nX73u9+l
+TZs29dKrD0offPBB9u6779Z+9atf1Q4/6gS0RiTle2nBZX9XCUbyjnjQyHzs
+Symd+LmUTqrLn8+ndMJn7Vb4vdx5N+l7UcVbhbytMmLEiOry5cvrt9xyS/aN
+b3xDqfCnP/2pQ++hLRNiZH/9619rcnvVZ599tvylL32JN5qyDeDbtOP0s5VF
+s8/+eVq0wRQAodXbetFu5aRXEjRKx33KJGTF3amy15qvFe/q2QJrQhrWrl1b
+v/fee9OPfvSj9L//+7/pb3/7m91Yaybf1t95553qG2+8Ub3ooovKRx99dKlT
+P6Jfpe/gXdLYRTemvda+Kir4+7S/yPaKe0z213zCiIWwIDQIkPCrvviKD4oW
+5InN3M0ll1xSf/zxx1OWZcqq9957z1jVBtcgU10oV/2P//iP6vHHH8/bttRP
+6VvtP2yqcO9jacapP1C7cNCtpuMoImSCJEizcCsT+9TV3t6/mz17qIfYjhs3
+rnbNNdfUP/GJT6Sf/OQn6e23307vv/9+3I18G4JT/d73vle5/PLLuZtt9FM6
+K01NTemE0y5OE1Z8PM087T9QzXSAWB50CzIJczAb9fmXvldqLdzFPT3l5uCD
+D67feOON9ddee02JItoTcvPPf/5TbwG5efrpp8v1ep03DrNbKIv0p+uvv15v
+/s3sZ7Wp+51fn7jq+WzmGT/JxLpk8y75c3XaqW907bzgqlLRwWzcDFuE8/U7
+77wz/fCHP1RCyGV7ColYk1xIRupHtFZ23nnndPfdd6fvfOc7qHzt+9//fqlv
+4VI3b+ZS8hn1hx9+OP34xz9Ov/nNb9Lf//73oLkra11oUP3BD34QEjBGP6Wt
+NnXq1FSr1ZKIK1fjTZWnnnqqeMFrezBZbrB26aWX1p955plcAYSsRSb/5S9/
+qf3iF78oMnlXezw+pX7IIYekBx98MMmv05///OdSk761uQsyxFdn4Q7WNxjc
+rgzef//9azfffHP9y1/+cvrpT3+qFllEvdTL6etcVvqKLMLl0kS7Ae4lnXHG
+Gemhhx5K3/3ud2FN3ADEym+gT+EGLilIWHXbbbetrly5sn777ben119/Pf38
+5z/nKYq8lf+quolmKm9b8vdPMLpXtttuu3T66aen++67L2HefvnLX0JEv5Ha
+r3/9683eyHmbYf4FF1ygrkkuqLwQfS+qf5H54sV4W7t9SrW5uaO+7W6HphEz
+zkuj565Po+ZennXtfWptq50W8rLdXEaGDx+uFOMiX/va18IUN9u9Vj/72c9u
+9l7P6CE3o0aNqq5bt64u4pX+8z//U3WiYKqQG9GJ2v/8z/9UhS8hNyYHnSo3
+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
+1WendYykDLUXJAeTw+qkyF7SKSk+xm5S/24UZSgUI+8gmqLLg/y+riK31HHI
+ACGUQy0+x4ss/Wu77rora2FzdxR7Q2PHHP/y2bH+hXCUFV2cZFPO6WCBpjeU
+gKz89KHSCfYAmuqJnY2wmRyUsLrdfw3qiy5jQlXyuldddZUzoc5ST4+F0Zmu
+BhNskowjGccvf0QbPlnARdMnRZq5p3xJtRXcueDEF6iZZWPmX0uHtk8v6aI3
+4kRCDdAfl0HeoKlWVmDH1rpdK4bJSlb0y/PadADGBv9YzuaL2PKUSjhMmmNh
+hcM1a0Hqz6SqJusxP7H0OUr/cDH+jZF3rBtZj0ceecTbmFrx3arqcOjtt99W
+ZHW43e5xJniK37D0uHdCBcIyhJrZw6I+AG4QSj4KjC4c89KxhoWRcxF5jQO8
+th6zTMvDzFmWz/65njC7+IrURNqq1JYufuD36f5X3pNg4k/aYS2MynZffo/3
+SuleXaJo8DXKxv0B+Ij5zCYNhJI11h4wjsrvojIMmYLi2B6v0WviSgRZFztF
+taYwxdCpu8NZp8/FMczIH2yMM9BiooHeOO1qieFvoDd1PD8bdHqBcHT4eeu0
+ElZA3RHGgmOcBSWHf0BkTCj+GpNDft21AYes+sTdiEBpQkJI49qgF6KxAosl
+KqnhokUibWnkzPP1xGEys/MvYc+rVnKatLzTnhd29rvuA/nVJj0jburxXyv3
+H7qXRyLtyggyhjGN43DWe32SroeB4Ig62LDH6LCmuRBxx4RWezGiD9YTHljy
+zJ4CyhFi/vXgPkw4hA+PEhyFCYhcMKe4WDqGLgvTEbrmkq9pDaZkJEqIm3ER
+Ph630piy1l6laBLrBDombqXWI2rY3viQGh6eINPLRSR0+hf4gfko5oCMH+00
+quiqVfKNOvq3/gNt66TO1qQnwrVrrYdyBJldemv5/dzzf1MV1+K7JDvC3uhJ
+LiAEbgVbisn1tG6+Dh7Ay37aOEuC3iARH2svUTSJMhTlX/d2S9SQIbvYH1jR
+/UAFGiQG5MFUYZlx8RAl/R5SRK9pHMmFKZT3xOQIGsQCOL68qlUGqDq40fwI
+TuRIY9NqI6YCVfxqbAUnGRfFjtAd7Dmxg5ft0C0wXoFX6prhtNyY1oYtdOpd
+be8/LO2y+BaxYV/RI58XX/GBKkyMaepo1YOiS6sewQyQVeLHi6/YVJ2w4knr
+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
+8tZmgJSwP539+z+v/nsx4X9KtzGK\
+\>", "ImageResolution" -> 96., "LightDark" -> \
+"Light"],ExpressionUUID->"f1b3d014-5e13-844d-8c79-ddb2c44dc350"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Abelian subgroups of ",
+ Cell[BoxData[
+  ButtonBox["MQuaternionGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MQuaternionGroup"]], 
+  "InlineFormula",ExpressionUUID->"c00fbace-33e7-d94b-a08d-57da1883dc9a"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.9567260095113487`*^9, 3.956726024372841*^9}},
+ CellID->289203421,ExpressionUUID->"4bb7204d-39e2-2943-b05a-a087c006808c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice3D", "[", "\[IndentingNewLine]", 
+  RowBox[{"MQuaternionGroup", ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "MAbelianQ"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.956726034575758*^9, 3.9567260419558105`*^9}, {
+   3.9569863475193443`*^9, 3.956986348005516*^9}, {3.957912387560177*^9, 
+   3.9579123887852917`*^9}, 3.9702043194248695`*^9},
+ CellLabel->"In[806]:=",
+ CellID->163700922,ExpressionUUID->"8550544e-9189-3647-9ff6-a835b5b2beed"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"-1", "1"}, {"-1"}}, {{"1"}, {"1"}}, {{"-1", "1", "-i", "i"}, {
+        "i"}}, {{"-1", "1", "-j", "j"}, {"j"}}, {{"-1", "1", "-k", "k"}, {
+        "k"}}, {{"-1", "1", "-i", "i", "-j", "j", "-k", "k"}, {
+        "i", "j"}}}, {{{1, 2}, {3, 1}, {4, 1}, {5, 1}, {6, 3}, {6, 4}, {6, 
+       5}}, Null}, {EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{"-1", "1"}, {"-1"}} -> Placed[
+           
+           Grid[{{{"-1", "1"}}, {"Generated by {-1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"-1", "1", "-i", "i"}, {"i"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-i", "i"}}, {"Generated by {i}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "-1", "1", "-k", "k"}, {"k"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-k", "k"}}, {"Generated by {k}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{
+           "-1", "1", "-i", "i", "-j", "j", "-k", "k"}, {"i", "j"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-i", "i", "-j", "j", "-k", "k"}}, {
+             "Generated by {i, j}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip], {{"-1", "1", "-j", "j"}, {"j"}} -> Placed[
+           
+           Grid[{{{"-1", "1", "-j", "j"}}, {"Generated by {j}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"1"}, {"1"}} -> Placed[
+           Grid[{{{"1"}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All],
+            Tooltip]}, 
+       VertexStyle -> {{{"-1", "1", "-i", "i"}, {"i"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1"}, {"-1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1", "-j", "j"}, {"j"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1", "-i", "i", "-j", "j", "-k", "k"}, {"i", "j"}} -> 
+         GrayLevel[0.85], {{"1"}, {"1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "-1", "1", "-k", "k"}, {"k"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 1., 0.}, {0., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{-1., 2., 0.}, {0., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{0., 2., 0.}, {0., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {0., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{0., 3., 0.}, {-1., 2., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{0., 3., 0.}, {0., 2., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{0., 3., 0.}, {1., 2., 0.}}], 
+         0.06047904191616765]}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\""}], "}"}]}, {
+             "\"Generated by {-1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1"}}, {"Generated by {-1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 0., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"1\"", "}"}]}, {"\"Generated by {1}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          Grid[{{{"1"}}, {"Generated by {1}"}, {"Order = 1"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{-1., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\"", ",", "\"-i\"", ",", "\"i\""}],
+                 "}"}]}, {"\"Generated by {i}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-i", "i"}}, {"Generated by {i}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\"", ",", "\"-j\"", ",", "\"j\""}],
+                 "}"}]}, {"\"Generated by {j}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-j", "j"}}, {"Generated by {j}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"-1\"", ",", "\"1\"", ",", "\"-k\"", ",", "\"k\""}],
+                 "}"}]}, {"\"Generated by {k}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-k", "k"}}, {"Generated by {k}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{0., 3., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"-1\"", ",", "\"1\"", ",", "\"-i\"", ",", "\"i\"", ",", 
+                  "\"-j\"", ",", "\"j\"", ",", "\"-k\"", ",", "\"k\""}], 
+                "}"}]}, {"\"Generated by {i, j}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"-1", "1", "-i", "i", "-j", "j", "-k", "k"}}, {
+            "Generated by {i, j}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellChangeTimes->{
+  3.9567260425853863`*^9, 3.9569857970267277`*^9, 3.956985888838827*^9, {
+   3.9569863452117367`*^9, 3.956986348585251*^9}, 3.9579123893039474`*^9, 
+   3.9702043208200855`*^9},
+ CellLabel->"Out[806]=",
+ CellID->19361711,ExpressionUUID->"a5c75918-c442-cd49-8442-e9720c2c890f"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Normal subgroups of ",
+ Cell[BoxData[
+  SubscriptBox["S", "3"]], "InlineFormula",ExpressionUUID->
+  "16a38f35-abea-024a-93d3-7de6f0fdcda1"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.956726050181383*^9, 3.95672605510425*^9}},
+ CellID->214006743,ExpressionUUID->"dc821f9d-eaa8-8b40-bfb3-0ac9c3a12e37"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MPermutationsGroup", "[", "3", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "MNormalSubgroupQ"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9567260602883472`*^9, 3.956726067949606*^9}, {
+   3.95698635268186*^9, 3.9569863531534786`*^9}, {3.9579123957719727`*^9, 
+   3.957912398788309*^9}, 3.9702043244243965`*^9},
+ CellLabel->"In[807]:=",
+ CellID->225127098,ExpressionUUID->"8e503e50-58a1-d242-a3df-1e3e4ac0ff6f"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"(1)", "(23)"}, {"(23)"}}, {{"(1)"}, {"(1)"}}, {{
+        "(1)", "(12)"}, {"(12)"}}, {{"(1)", "(123)", "(132)"}, {"(123)"}}, {{
+        "(1)", "(13)"}, {"(13)"}}, {{
+        "(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}, {
+        "(23)", "(12)"}}}, {{{1, 2}, {3, 2}, {4, 2}, {5, 2}, {6, 1}, {6, 3}, {
+       6, 4}, {6, 5}}, Null}, {EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{"(1)", "(12)"}, {"(12)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(12)"}}, {"Generated by {(12)}"}, {"Order = 2"}}, 
+            Frame -> All], Tooltip], {{
+           "(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}, {
+           "(23)", "(12)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}}, {
+             "Generated by {(23), (12)}"}, {"Order = 6"}}, Frame -> All], 
+           Tooltip], {{"(1)", "(13)"}, {"(13)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(13)"}}, {"Generated by {(13)}"}, {"Order = 2"}}, 
+            Frame -> All], Tooltip], {{"(1)", "(23)"}, {"(23)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(23)"}}, {"Generated by {(23)}"}, {"Order = 2"}}, 
+            Frame -> All], Tooltip], {{"(1)"}, {"(1)"}} -> Placed[
+           
+           Grid[{{{"(1)"}}, {"Generated by {(1)}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{"(1)", "(123)", "(132)"}, {"(123)"}} -> Placed[
+           
+           Grid[{{{"(1)", "(123)", "(132)"}}, {"Generated by {(123)}"}, {
+             "Order = 3"}}, Frame -> All], Tooltip]}, 
+       VertexStyle -> {{{"(1)", "(23)"}, {"(23)"}} -> 
+         GrayLevel[
+          0.85], {{"(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}, {
+           "(23)", "(12)"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "(1)", "(13)"}, {"(13)"}} -> GrayLevel[0.85], {{"(1)"}, {"(1)"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "(1)", "(12)"}, {"(12)"}} -> 
+         GrayLevel[0.85], {{"(1)", "(123)", "(132)"}, {"(123)"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{2., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{3., 1., 0.}, {2., 0., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {0., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {1., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {2., 1., 0.}}], 
+         0.06047904191616765], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {3., 1., 0.}}], 
+         0.06047904191616765]}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{0., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(23)\""}], "}"}]}, {
+             "\"Generated by {(23)}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(23)"}}, {"Generated by {(23)}"}, {"Order = 2"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 0., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"(1)\"", "}"}]}, {"\"Generated by {(1)}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)"}}, {"Generated by {(1)}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{1., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(12)\""}], "}"}]}, {
+             "\"Generated by {(12)}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(12)"}}, {"Generated by {(12)}"}, {"Order = 2"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{2., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(123)\"", ",", "\"(132)\""}], 
+                "}"}]}, {"\"Generated by {(123)}\""}, {"\"Order = 3\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(123)", "(132)"}}, {"Generated by {(123)}"}, {
+            "Order = 3"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{3., 1., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"(1)\"", ",", "\"(13)\""}], "}"}]}, {
+             "\"Generated by {(13)}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(13)"}}, {"Generated by {(13)}"}, {"Order = 2"}}, 
+           Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 2., 0.}, 0.06047904191616765]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"(1)\"", ",", "\"(12)\"", ",", "\"(123)\"", ",", 
+                  "\"(13)\"", ",", "\"(132)\"", ",", "\"(23)\""}], "}"}]}, {
+             "\"Generated by {(23), (12)}\""}, {"\"Order = 6\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"(1)", "(12)", "(123)", "(13)", "(132)", "(23)"}}, {
+            "Generated by {(23), (12)}"}, {"Order = 6"}}, Frame -> All], 
+          "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellChangeTimes->{3.9567260713223267`*^9, 3.956986353717985*^9, 
+  3.9579123993836594`*^9, 3.9702043250386505`*^9},
+ CellLabel->"Out[807]=",
+ CellID->432271846,ExpressionUUID->"2104269b-a7cf-8c4b-b1c0-17405a6fa453"]
+}, Open  ]],
+
+Cell["Highlight subgroups of length 4:", "ExampleText",
+ CellChangeTimes->{{3.9579124022069225`*^9, 3.9579124085776825`*^9}},
+ CellID->425773105,ExpressionUUID->"f796bac1-f47e-564e-bda9-f6a8dfcaa4ed"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"len4", "[", 
+   RowBox[{"g_", ",", "h_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Length", "[", "h", "]"}], "==", "4"}]}], "\[IndentingNewLine]", 
+ RowBox[{"MSubgroupLattice3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "4", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MHighlight", "->", "len4"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9579124231544056`*^9, 3.9579124310711765`*^9}, {
+   3.9579124710697536`*^9, 3.9579125032628155`*^9}, {3.957912565987999*^9, 
+   3.9579125865782967`*^9}, {3.9579128119097404`*^9, 3.95791282727948*^9}, {
+   3.957912983117693*^9, 3.957912983525093*^9}, 3.9702043279715824`*^9},
+ CellLabel->"In[808]:=",
+ CellID->92136134,ExpressionUUID->"09864173-73c9-1b47-964b-5a4963ae3289"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0", "r1", "r2", "r3"}, {"r1"}}, {{"r0", "r2"}, {"r2"}}, {{
+        "r0"}, {"r0"}}, {{"r0", "s0"}, {"s0"}}, {{"r0", "s1"}, {"s1"}}, {{
+        "r0", "s2"}, {"s2"}}, {{"r0", "s3"}, {"s3"}}, {{
+        "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}}, {{
+        "r0", "r2", "s0", "s2"}, {"r2", "s0"}}, {{"r0", "r2", "s1", "s3"}, {
+        "r2", "s1"}}}, {{{1, 2}, {2, 3}, {4, 3}, {5, 3}, {6, 3}, {7, 3}, {8, 
+       1}, {8, 9}, {8, 10}, {9, 2}, {9, 4}, {9, 6}, {10, 2}, {10, 5}, {10, 
+       7}}, Null}, {EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{"r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> Placed[
+           
+           Grid[{{{"r0", "r2", "s0", "s2"}}, {"Generated by {r2, s0}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "s1"}, {"s1"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> Placed[
+           
+           Grid[{{{"r0", "r2", "s1", "s3"}}, {"Generated by {r2, s1}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0", "r2"}, {"r2"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r2"}}, {"Generated by {r2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{
+           "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}} -> 
+         Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}}, {
+             "Generated by {r1, s0}"}, {"Order = 8"}}, Frame -> All], 
+           Tooltip], {{"r0", "s2"}, {"s2"}} -> Placed[
+           
+           Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "r1", "r2", "r3"}, {"r1"}} -> Placed[
+           
+           Grid[{{{"r0", "r1", "r2", "r3"}}, {"Generated by {r1}"}, {
+             "Order = 4"}}, Frame -> All], Tooltip], {{"r0"}, {"r0"}} -> 
+         Placed[
+           
+           Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+            All], Tooltip], {{"r0", "s3"}, {"s3"}} -> Placed[
+           
+           Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip], {{"r0", "s0"}, {"s0"}} -> Placed[
+           
+           Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+            All], Tooltip]}, 
+       VertexStyle -> {{{"r0", "r1", "r2", "r3"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s3"}, {"s3"}} -> GrayLevel[0.85], {{"r0", "s1"}, {"s1"}} -> 
+         GrayLevel[0.85], {{"r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> GrayLevel[0.85], {{"r0"}, {"r0"}} -> 
+         GrayLevel[0.85], {{"r0", "r2"}, {"r2"}} -> 
+         GrayLevel[0.85], {{"r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s2"}, {"s2"}} -> 
+         GrayLevel[
+          0.85], {{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {
+           "r1", "s0"}} -> GrayLevel[0.85]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 2., 0.}, {0., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{0., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{2., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{4., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {0., 2., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {1., 2., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {3., 2., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {0., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {1., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {2., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {0., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {3., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {4., 1., 0.}}], 
+         0.07401129943502824]}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{0., 2., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\""}], 
+                "}"}]}, {"\"Generated by {r1}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3"}}, {"Generated by {r1}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{0., 1., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"r2\""}], "}"}]}, {
+             "\"Generated by {r2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2"}}, {"Generated by {r2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{2., 0., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", "\"r0\"", "}"}]}, {"\"Generated by {r0}\""}, {
+             "\"Order = 1\""}}, AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0"}}, {"Generated by {r0}"}, {"Order = 1"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{1., 1., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s0\""}], "}"}]}, {
+             "\"Generated by {s0}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s0"}}, {"Generated by {s0}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{3., 1., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s1\""}], "}"}]}, {
+             "\"Generated by {s1}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s1"}}, {"Generated by {s1}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{2., 1., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s2\""}], "}"}]}, {
+             "\"Generated by {s2}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s2"}}, {"Generated by {s2}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{4., 1., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                RowBox[{"\"r0\"", ",", "\"s3\""}], "}"}]}, {
+             "\"Generated by {s3}\""}, {"\"Order = 2\""}}, AutoDelete -> 
+            False, GridBoxFrame -> {
+             "Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "s3"}}, {"Generated by {s3}"}, {"Order = 2"}}, Frame -> 
+           All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {GrayLevel[0.85], SphereBox[{1., 3., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r1\"", ",", "\"r2\"", ",", "\"r3\"", ",", 
+                  "\"s0\"", ",", "\"s1\"", ",", "\"s2\"", ",", "\"s3\""}], 
+                "}"}]}, {"\"Generated by {r1, s0}\""}, {"\"Order = 8\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}}, {
+            "Generated by {r1, s0}"}, {"Order = 8"}}, Frame -> All], 
+          "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{1., 2., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"s0\"", ",", "\"s2\""}], 
+                "}"}]}, {"\"Generated by {r2, s0}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "s0", "s2"}}, {"Generated by {r2, s0}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          {RGBColor[
+           0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+           SphereBox[{3., 2., 0.}, 0.07401129943502824]},
+          TagBox[
+           GridBox[{{
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"r0\"", ",", "\"r2\"", ",", "\"s1\"", ",", "\"s3\""}], 
+                "}"}]}, {"\"Generated by {r2, s1}\""}, {"\"Order = 4\""}}, 
+            AutoDelete -> False, 
+            GridBoxFrame -> {"Columns" -> {{True}}, "Rows" -> {{True}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"]],
+         Annotation[#, 
+          
+          Grid[{{{"r0", "r2", "s1", "s3"}}, {"Generated by {r2, s1}"}, {
+            "Order = 4"}}, Frame -> All], "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellChangeTimes->{{3.957912492026787*^9, 3.957912514816326*^9}, {
+   3.9579125670822372`*^9, 3.9579125871355305`*^9}, {3.9579128085865097`*^9, 
+   3.95791282787607*^9}, 3.95791298413962*^9, 3.970204328788969*^9},
+ CellLabel->"Out[809]=",
+ CellID->399568276,ExpressionUUID->"1bcadf0d-2a97-d748-b363-245b2492ec88"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "ShowInfo", "ExampleSubsection",ExpressionUUID->
+   "57f380cd-c68e-0f42-b241-ebe62e74c227"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.9579128910528603`*^9, 3.9579128910528603`*^9}},
+ CellID->897777693,ExpressionUUID->"a268b639-0251-6146-8004-81a45df3a197"],
+
+Cell["\<\
+ShowInfo can be set to \"Generators\" to show generators without hovering:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.9567262226315823`*^9, 3.9567262406270504`*^9}},
+ CellID->26472660,ExpressionUUID->"a2adb51f-3760-6245-913b-89302c741d37"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSubgroupLattice3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MDihedralGroup", "[", "4", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"MShowInfo", "->", "\"\<Generators\>\""}]}], "\[IndentingNewLine]",
+   "]"}]], "Input",
+ CellChangeTimes->{{3.9567262427752724`*^9, 3.95672625899*^9}, {
+   3.9567262990126247`*^9, 3.956726300630659*^9}, {3.9569863712476482`*^9, 
+   3.956986386038826*^9}, 3.9702043334772854`*^9},
+ CellLabel->"In[810]:=",
+ CellID->897345503,ExpressionUUID->"d574fbd9-0244-304a-8722-f286a04d0788"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"r0", "r1", "r2", "r3"}, {"r1"}}, {{"r0", "r2"}, {"r2"}}, {{
+        "r0"}, {"r0"}}, {{"r0", "s0"}, {"s0"}}, {{"r0", "s1"}, {"s1"}}, {{
+        "r0", "s2"}, {"s2"}}, {{"r0", "s3"}, {"s3"}}, {{
+        "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}}, {{
+        "r0", "r2", "s0", "s2"}, {"r2", "s0"}}, {{"r0", "r2", "s1", "s3"}, {
+        "r2", "s1"}}}, {{{1, 2}, {2, 3}, {4, 3}, {5, 3}, {6, 3}, {7, 3}, {8, 
+       1}, {8, 9}, {8, 10}, {9, 2}, {9, 4}, {9, 6}, {10, 2}, {10, 5}, {10, 
+       7}}, Null}, {EdgeStyle -> {
+         GrayLevel[0.85]}, 
+       GraphLayout -> {
+        "Dimension" -> 3, "VertexLayout" -> "LayeredDigraphEmbedding"}, 
+       VertexLabels -> {{{"r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> 
+         "{r2, s0}", {{"r0", "s1"}, {"s1"}} -> 
+         "{s1}", {{"r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> 
+         "{r2, s1}", {{"r0", "r2"}, {"r2"}} -> 
+         "{r2}", {{"r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {
+           "r1", "s0"}} -> "{r1, s0}", {{"r0", "s2"}, {"s2"}} -> 
+         "{s2}", {{"r0", "r1", "r2", "r3"}, {"r1"}} -> 
+         "{r1}", {{"r0"}, {"r0"}} -> "{r0}", {{"r0", "s3"}, {"s3"}} -> 
+         "{s3}", {{"r0", "s0"}, {"s0"}} -> "{s0}"}, 
+       VertexStyle -> {{{"r0", "r1", "r2", "r3"}, {"r1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s3"}, {"s3"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s1"}, {"s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "s1", "s3"}, {"r2", "s1"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s0"}, {"s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0"}, {"r0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2"}, {"r2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r2", "s0", "s2"}, {"r2", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "s2"}, {"s2"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], {{
+           "r0", "r1", "r2", "r3", "s0", "s1", "s2", "s3"}, {"r1", "s0"}} -> 
+         RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {GrayLevel[0.85], Arrowheads[Medium], 
+        Arrow3DBox[TubeBox[{{0., 2., 0.}, {0., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{0., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{2., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{4., 1., 0.}, {2., 0., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {0., 2., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {1., 2., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 3., 0.}, {3., 2., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {0., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {1., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{1., 2., 0.}, {2., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {0., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {3., 1., 0.}}], 
+         0.07401129943502824], 
+        Arrow3DBox[TubeBox[{{3., 2., 0.}, {4., 1., 0.}}], 
+         0.07401129943502824]}, 
+       {Hue[0.6, 0.6, 1], {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{0., 2., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{r1}\"\>", {-0.10361581920903953`, 2., 
+          1.3877787807814457`*^-17}, {1.5, -3.3306690738754696`*^-16},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{0., 1., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{r2}\"\>", {-0.10361581920903953`, 1., 
+          1.3877787807814457`*^-17}, {1.5, -3.3306690738754696`*^-16},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{2., 0., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{r0}\"\>", {2., 0., -0.08141242937853106}, {0, 1},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{1., 1., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{s0}\"\>", {0.8963841807909605, 1., 
+          1.3877787807814457`*^-17}, {1.5, -3.3306690738754696`*^-16},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{3., 1., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{s1}\"\>", {3., 1., 
+          0.10361581920903953`}, {-2.220446049250313*^-16, -1.5},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{2., 1., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{s2}\"\>", {2., 1., 
+          0.10361581920903953`}, {-2.220446049250313*^-16, -1.5},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{4., 1., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{s3}\"\>", {4.10361581920904, 
+          1., -2.7755575615628914`*^-17}, {-1.5, 4.440892098500626*^-16},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{1., 3., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{r1, s0}\"\>", {1., 3., 0.08141242937853106}, {0, -1},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{1., 2., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{r2, s0}\"\>", {1., 2., 
+          0.10361581920903953`}, {-2.220446049250313*^-16, -1.5},
+          BaseStyle->"Graphics"]}, {
+         {RGBColor[
+          0.28627450980392155`, 0.5137254901960784, 0.996078431372549], 
+          SphereBox[{3., 2., 0.}, 0.07401129943502824]}, 
+         Text3DBox["\<\"{r2, s1}\"\>", {3., 2., 
+          0.10361581920903953`}, {-2.220446049250313*^-16, -1.5},
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellChangeTimes->{
+  3.956726256249708*^9, 3.9567263014642773`*^9, {3.9569863724726276`*^9, 
+   3.9569863866189766`*^9}, 3.970204334027006*^9},
+ CellLabel->"Out[810]=",
+ CellID->103800980,ExpressionUUID->"ed9b0da5-d78e-ac4f-a307-8fdaad7343ef"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "e5968761-0e03-db42-aba6-6a527862cefe"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->867145658,ExpressionUUID->"ce9aea68-a69c-9b47-8e67-e484e7812dbe"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "b4e048ce-0bae-d24b-a665-aad6328f0c46"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->481516310,ExpressionUUID->"84256e54-27dd-234f-aa28-eede0cdcc53e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "8e0e26b9-5837-c84d-835c-d8aa2b920f7f"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2166375,ExpressionUUID->"bc269543-7154-8947-954a-8b5bc4bd2603"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "c13aaf01-db1c-9c45-b550-26cb8d492da1"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->250750673,ExpressionUUID->"c827ab2e-f9ec-e344-9738-5cd01dc3cd05"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "96322999-1c3d-7c47-8a44-7bdeaf501bf3"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->464222199,ExpressionUUID->"5d3d1ddf-1564-e146-aa0e-b03d8ea3b7a2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->406633410,ExpressionUUID->"1b6425a6-507c-4149-9aa6-4598e93288aa"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"fbb2ef76-f41b-c942-b2e7-db428c459d19"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"eede6368-c427-b34d-9f40-fe2f233ab868"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "d5cc1748-a01a-1c45-b328-d199e0837e72"]
+}], "History",
+ CellID->502088227,ExpressionUUID->"0c5a2a58-435d-e94f-864b-55fa96dc40e0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "016f688a-e948-af47-93e5-c0c99f97415a"]
+}], "CategorizationSection",
+ CellID->393889979,ExpressionUUID->"88b94c7a-5c97-664b-8b9b-e7adccb19fff"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->843924709,ExpressionUUID->"718852b6-c9c7-b24d-b204-40700beaa1d6"],
+
+Cell["Taggar/MGroups", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->374330970,ExpressionUUID->"d1fa4c86-8f64-db4d-b406-d2eac128d7bb"],
+
+Cell["Taggar`MGroups`", "Categorization",
+ CellLabel->"Context",
+ CellID->426804045,ExpressionUUID->"cc78d2b2-fd08-f949-aa1c-f3ccb544e7af"],
+
+Cell["Taggar/MGroups/ref/MSubgroupLattice3D", "Categorization",
+ CellLabel->"URI",
+ CellID->643188952,ExpressionUUID->"528405e8-d71e-7744-a765-3a533140de2b"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->159547435,ExpressionUUID->"888d22a2-48eb-c64b-947b-6691e9e96410"],
+
+Cell["XXXX", "Keywords",
+ CellID->144170068,ExpressionUUID->"fef00e94-be59-134a-8ebd-bcfc9776d88c"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->238047705,ExpressionUUID->"dc71a963-0035-a844-93c8-bec41a1fac5a"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->239490208,ExpressionUUID->"33db9e1a-3bc1-3145-b504-6a5135a7d9eb"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->741287690,ExpressionUUID->"187c0beb-674e-1e49-8463-d0e276a992af"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->263532371,ExpressionUUID->"ce12bd47-854b-2e47-83b8-8f33daf49600"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->726229473,ExpressionUUID->"c9b6be2d-7d6d-0342-b305-a71df13bc4a0"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700.5, 495.75},
+WindowMargins->{{4.5, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "MGroups"|>,
+CellContext->"Global`",
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"08a91758-b409-0745-9a33-ddbe259aaf2c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[29270, 735, 486, 13, 56, "ExtendedExamplesSection",ExpressionUUID->"cfc7b417-96a9-ce45-926b-a38befdeec50",
+   CellTags->"ExtendedExamples",
+   CellID->21332645]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 150354, 3248}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 115, 1, 72, "ObjectName",ExpressionUUID->"89d753ee-df19-0648-ac69-8e41c944929b",
+ CellID->124135484],
+Cell[694, 25, 695, 16, 76, "Usage",ExpressionUUID->"6d40d498-b58c-c94c-8341-6f743bbac2f7",
+ CellID->235858633],
+Cell[1392, 43, 511, 13, 26, "Notes",ExpressionUUID->"5eca03dc-6655-7847-b503-3eb0bac79eb7",
+ CellID->793391568],
+Cell[1906, 58, 172, 2, 26, "Notes",ExpressionUUID->"9ca075e6-a9a3-834f-8bff-9feae7ef410c",
+ CellID->344045184],
+Cell[2081, 62, 1136, 21, 91, "3ColumnTableMod",ExpressionUUID->"3a784769-dce1-134f-9b67-f54fc1368b4d",
+ CellID->56841579]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3254, 88, 458, 13, 38, "SeeAlsoSection",ExpressionUUID->"33b5c6b5-aac0-c440-a619-387b602b01d4",
+ CellID->746284669],
+Cell[3715, 103, 1652, 42, 21, "SeeAlso",ExpressionUUID->"41ab4dbc-b462-bd4f-add0-062bd4acb13a",
+ CellID->42340817]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5404, 150, 435, 12, 39, "TechNotesSection",ExpressionUUID->"08ca6888-c43e-fc41-9850-26ae985a043a",
+ CellID->513831728],
+Cell[5842, 164, 100, 1, 17, "Tutorials",ExpressionUUID->"ac731201-3453-3343-a486-cf6177a06b3f",
+ CellID->151760530]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5979, 170, 117, 1, 37, "MoreAboutSection",ExpressionUUID->"28e109e2-c553-b949-8846-24059e4a664e",
+ CellID->777031691],
+Cell[6099, 173, 99, 1, 17, "MoreAbout",ExpressionUUID->"70d39b09-c0e0-134b-9a6c-55fbbc3aa89f",
+ CellID->33239895]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6235, 179, 472, 13, 38, "RelatedLinksSection",ExpressionUUID->"12babaad-9ae4-5f4e-ac40-e62c920de05a",
+ CellID->740337575],
+Cell[6710, 194, 102, 1, 17, "RelatedLinks",ExpressionUUID->"2db4c104-a50e-9b48-9ca4-2708d9c003d3",
+ CellID->40759136]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6849, 200, 529, 14, 68, "ExamplesInitializationSection",ExpressionUUID->"fc0899dd-984e-2740-a20b-b1e8f59ab3e8",
+ CellID->52840409],
+Cell[7381, 216, 174, 3, 45, "ExampleInitialization",ExpressionUUID->"9464a49f-297b-c948-a355-68e5413e74a2",
+ CellID->676770855]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7592, 224, 442, 12, 69, "PrimaryExamplesSection",ExpressionUUID->"97025c4e-5fd4-8949-84a5-37acd94d9fc2",
+ CellID->220426013],
+Cell[8037, 238, 388, 9, 23, "ExampleText",ExpressionUUID->"aaafc6b9-6abf-ed4e-bc6a-d034d37fa483",
+ CellID->195258644],
+Cell[CellGroupData[{
+Cell[8450, 251, 337, 7, 25, "Input",ExpressionUUID->"4cea3ea9-89b9-7045-94a0-1b2908c3c406",
+ CellID->201704552],
+Cell[8790, 260, 10827, 242, 318, "Output",ExpressionUUID->"7d8cf337-e7fd-fe46-af70-ba8061252a8e",
+ CellID->950732034]
+}, Open  ]],
+Cell[19632, 505, 275, 5, 23, "ExampleText",ExpressionUUID->"e1a86c18-f287-2f44-bc68-3b65bb1bcbb4",
+ CellID->311651084],
+Cell[19910, 512, 309, 8, 23, "ExampleText",ExpressionUUID->"14419200-f0dc-5341-896f-5532eb9cee38",
+ CellID->515873538],
+Cell[CellGroupData[{
+Cell[20244, 524, 330, 7, 25, "Input",ExpressionUUID->"eed67260-ae68-714b-95a7-70e6dc0b686c",
+ CellID->359248587],
+Cell[20577, 533, 8644, 196, 243, "Output",ExpressionUUID->"d8219fae-1dce-e14e-b2be-6aa54dadc261",
+ CellID->155972895]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29270, 735, 486, 13, 56, "ExtendedExamplesSection",ExpressionUUID->"cfc7b417-96a9-ce45-926b-a38befdeec50",
+ CellTags->"ExtendedExamples",
+ CellID->21332645],
+Cell[29759, 750, 241, 5, 32, "ExampleSection",ExpressionUUID->"ed60fcc5-d7ac-b54a-b826-2fd9acbdc50b",
+ CellID->530606623],
+Cell[30003, 757, 264, 5, 20, "ExampleSection",ExpressionUUID->"db0b8125-13fa-bb46-8a0b-31ca1d198472",
+ CellID->604303560],
+Cell[CellGroupData[{
+Cell[30292, 766, 242, 5, 20, "ExampleSection",ExpressionUUID->"00198045-e2d0-7241-84dd-88148e82f35b",
+ CellID->24237513],
+Cell[CellGroupData[{
+Cell[30559, 775, 375, 7, 23, "ExampleSubsection",ExpressionUUID->"bdf31cf1-98db-2248-94c6-25731bd6d4cb",
+ CellID->444255716],
+Cell[30937, 784, 626, 11, 55, "ExampleText",ExpressionUUID->"f82c6930-3ce4-a14c-b5e6-57ac60418776",
+ CellID->556403549],
+Cell[CellGroupData[{
+Cell[31588, 799, 570, 12, 60, "Input",ExpressionUUID->"6e3a9c9c-26ff-db4c-916a-0d07e64ae3c0",
+ CellID->116169446],
+Cell[32161, 813, 277, 6, 24, "Output",ExpressionUUID->"07a31a82-6e82-8a4e-9b81-d09711bfc968",
+ CellID->79182795]
+}, Open  ]],
+Cell[32453, 822, 252, 3, 23, "ExampleText",ExpressionUUID->"2fda43a2-96f6-c846-8df6-07f61826ca57",
+ CellID->858087461],
+Cell[CellGroupData[{
+Cell[32730, 829, 499, 10, 60, "Input",ExpressionUUID->"e8d32620-9c65-794c-a9c6-06944a0ca6a0",
+ CellID->305057397],
+Cell[33232, 841, 280, 6, 24, "Output",ExpressionUUID->"aa02c341-cc8a-d94d-8f4a-4988e23a50e3",
+ CellID->353093496]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33561, 853, 370, 7, 23, "ExampleSubsection",ExpressionUUID->"c19816d1-a44f-9d44-b2d5-91178a35b3a4",
+ CellID->73041630],
+Cell[33934, 862, 403, 7, 39, "ExampleText",ExpressionUUID->"07c2ff58-0522-5a40-91bb-8dbe3c2f91bd",
+ CellID->333207987],
+Cell[CellGroupData[{
+Cell[34362, 873, 596, 11, 77, "Input",ExpressionUUID->"33fa0539-3669-d545-b6e3-a3d7e8c4c589",
+ CellID->121211298],
+Cell[34961, 886, 68946, 1282, 168, 26039, 577, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"f1b3d014-5e13-844d-8c79-ddb2c44dc350",
+ CellID->22657120]
+}, Open  ]],
+Cell[103922, 2171, 416, 10, 23, "ExampleText",ExpressionUUID->"4bb7204d-39e2-2943-b05a-a087c006808c",
+ CellID->289203421],
+Cell[CellGroupData[{
+Cell[104363, 2185, 519, 9, 77, "Input",ExpressionUUID->"8550544e-9189-3647-9ff6-a835b5b2beed",
+ CellID->163700922],
+Cell[104885, 2196, 8535, 189, 309, "Output",ExpressionUUID->"a5c75918-c442-cd49-8442-e9720c2c890f",
+ CellID->19361711]
+}, Open  ]],
+Cell[113435, 2388, 322, 8, 23, "ExampleText",ExpressionUUID->"dc821f9d-eaa8-8b40-bfb3-0ac9c3a12e37",
+ CellID->214006743],
+Cell[CellGroupData[{
+Cell[113782, 2400, 556, 10, 77, "Input",ExpressionUUID->"8e503e50-58a1-d242-a3df-1e3e4ac0ff6f",
+ CellID->225127098],
+Cell[114341, 2412, 8336, 185, 198, "Output",ExpressionUUID->"2104269b-a7cf-8c4b-b1c0-17405a6fa453",
+ CellID->432271846]
+}, Open  ]],
+Cell[122692, 2600, 200, 2, 23, "ExampleText",ExpressionUUID->"f796bac1-f47e-564e-bda9-f6a8dfcaa4ed",
+ CellID->425773105],
+Cell[CellGroupData[{
+Cell[122917, 2606, 809, 16, 95, "Input",ExpressionUUID->"09864173-73c9-1b47-964b-5a4963ae3289",
+ CellID->92136134],
+Cell[123729, 2624, 13005, 290, 203, "Output",ExpressionUUID->"1bcadf0d-2a97-d748-b363-245b2492ec88",
+ CellID->399568276]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[136783, 2920, 320, 6, 23, "ExampleSubsection",ExpressionUUID->"a268b639-0251-6146-8004-81a45df3a197",
+ CellID->897777693],
+Cell[137106, 2928, 249, 4, 23, "ExampleText",ExpressionUUID->"a2adb51f-3760-6245-913b-89302c741d37",
+ CellID->26472660],
+Cell[CellGroupData[{
+Cell[137380, 2936, 550, 10, 77, "Input",ExpressionUUID->"d574fbd9-0244-304a-8722-f286a04d0788",
+ CellID->897345503],
+Cell[137933, 2948, 7885, 160, 196, "Output",ExpressionUUID->"ed9b0da5-d78e-ac4f-a307-8fdaad7343ef",
+ CellID->103800980]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[145857, 3113, 248, 5, 32, "ExampleSection",ExpressionUUID->"ce9aea68-a69c-9b47-8e67-e484e7812dbe",
+ CellID->867145658],
+Cell[146108, 3120, 258, 5, 20, "ExampleSection",ExpressionUUID->"84256e54-27dd-234f-aa28-eede0cdcc53e",
+ CellID->481516310],
+Cell[146369, 3127, 249, 5, 20, "ExampleSection",ExpressionUUID->"bc269543-7154-8947-954a-8b5bc4bd2603",
+ CellID->2166375],
+Cell[146621, 3134, 256, 5, 20, "ExampleSection",ExpressionUUID->"c827ab2e-f9ec-e344-9738-5cd01dc3cd05",
+ CellID->250750673],
+Cell[146880, 3141, 249, 5, 20, "ExampleSection",ExpressionUUID->"5d3d1ddf-1564-e146-aa0e-b03d8ea3b7a2",
+ CellID->464222199]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147166, 3151, 110, 1, 71, "MetadataSection",ExpressionUUID->"1b6425a6-507c-4149-9aa6-4598e93288aa",
+ CellID->406633410],
+Cell[147279, 3154, 476, 12, 25, "History",ExpressionUUID->"0c5a2a58-435d-e94f-864b-55fa96dc40e0",
+ CellID->502088227],
+Cell[CellGroupData[{
+Cell[147780, 3170, 484, 13, 20, "CategorizationSection",ExpressionUUID->"88b94c7a-5c97-664b-8b9b-e7adccb19fff",
+ CellID->393889979],
+Cell[148267, 3185, 134, 2, 70, "Categorization",ExpressionUUID->"718852b6-c9c7-b24d-b204-40700beaa1d6",
+ CellID->843924709],
+Cell[148404, 3189, 142, 2, 70, "Categorization",ExpressionUUID->"d1fa4c86-8f64-db4d-b406-d2eac128d7bb",
+ CellID->374330970],
+Cell[148549, 3193, 139, 2, 70, "Categorization",ExpressionUUID->"cc78d2b2-fd08-f949-aa1c-f3ccb544e7af",
+ CellID->426804045],
+Cell[148691, 3197, 157, 2, 70, "Categorization",ExpressionUUID->"528405e8-d71e-7744-a765-3a533140de2b",
+ CellID->643188952]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[148885, 3204, 110, 1, 20, "KeywordsSection",ExpressionUUID->"888d22a2-48eb-c64b-947b-6691e9e96410",
+ CellID->159547435],
+Cell[148998, 3207, 99, 1, 70, "Keywords",ExpressionUUID->"fef00e94-be59-134a-8ebd-bcfc9776d88c",
+ CellID->144170068]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[149134, 3213, 119, 1, 20, "TemplatesSection",ExpressionUUID->"dc71a963-0035-a844-93c8-bec41a1fac5a",
+ CellID->238047705],
+Cell[149256, 3216, 148, 2, 70, "Template",ExpressionUUID->"33db9e1a-3bc1-3145-b504-6a5135a7d9eb",
+ CellID->239490208],
+Cell[149407, 3220, 137, 2, 70, "Template",ExpressionUUID->"187c0beb-674e-1e49-8463-d0e276a992af",
+ CellID->741287690],
+Cell[149547, 3224, 135, 2, 70, "Template",ExpressionUUID->"ce12bd47-854b-2e47-83b8-8f33daf49600",
+ CellID->263532371],
+Cell[149685, 3228, 137, 2, 70, "Template",ExpressionUUID->"c9b6be2d-7d6d-0342-b305-a71df13bc4a0",
+ CellID->726229473]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

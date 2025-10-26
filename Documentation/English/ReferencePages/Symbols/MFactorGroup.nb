@@ -1,0 +1,2107 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    100351,       2098]
+NotebookOptionsPosition[     92814,       1936]
+NotebookOutlinePosition[     93594,       1962]
+CellTagsIndexPosition[     93514,       1957]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MFactorGroup", "ObjectName",
+ CellID->442263119,ExpressionUUID->"c4b1bfc3-66b0-4c46-b4b4-445cc3439dc8"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"9e63a866-66e7-cb40-a104-2e77a36867a3"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["MFactorGroup",
+    BaseStyle->"Link",
+    ButtonData->"paclet:Taggar/MGroups/ref/MFactorGroup"], "[", 
+   RowBox[{
+    StyleBox["group", "TI"], ",", 
+    StyleBox["subgroup", "TI"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "89a0bf0e-5096-104b-b641-7a8a68bc4249"],
+ "\[LineSeparator]defines the factor ",
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "51c6cfe6-38c3-214a-8885-89126a52fe0e"],
+ " by ",
+ Cell[BoxData[
+  StyleBox["subgroup", "TI"]], "InlineFormula",ExpressionUUID->
+  "49eb3ca1-6e03-c149-b062-646f9bd4c9a6"],
+ "."
+}], "Usage",
+ CellChangeTimes->{{3.9569710800421314`*^9, 3.956971080245716*^9}},
+ CellID->436472227,ExpressionUUID->"bda23f22-19a8-dc43-ae69-1003640018a5"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "ccda10c8-52ed-2d4e-a918-cc7ff84dc831"],
+ " should be an ",
+ Cell[BoxData[
+  ButtonBox["MGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroup"]], "InlineFormula",
+  ExpressionUUID->"e3faf2b1-7c7d-6446-ad87-2c8c40f12514"],
+ " object."
+}], "Notes",
+ CellChangeTimes->{{3.9567237456725903`*^9, 3.9567237466907806`*^9}},
+ CellID->291022798,ExpressionUUID->"2ab8cbc5-3a22-f749-91bf-038c8583b72a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["subgroup", "TI"]], "InlineFormula",ExpressionUUID->
+  "1fa4d362-0dad-fb4d-b9a5-9f8242d92dc9"],
+ " should be a valid normal subgroup of ",
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "7728b42b-95bf-1040-a065-2288e52b3182"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.9567237456725903`*^9, 3.956723765188278*^9}, {
+  3.9569880610689125`*^9, 3.9569880618850327`*^9}},
+ CellID->322133260,ExpressionUUID->"aed2a30e-0715-ef4a-939b-454637b51306"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "344ef5cd-5d99-5f43-83f9-def7113f169e"]
+}], "SeeAlsoSection",
+ CellID->367810765,ExpressionUUID->"934a22db-5fbc-1c44-840e-209b3724d8b2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   FrameBox["\<\"XXXX\"\>"],
+   "FunctionPlaceholder"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "46828116-32fc-7f46-a8c8-31e9c64a297e"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "fc92c723-8a1f-c849-8276-6657736d8801"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "587e2fa8-64b1-da40-935c-00cce171bfd2", 
+     "d389ca30-f425-8348-9442-44be16977833"], $CellContext`cellobj$$ = 
+    CellObject[
+    "8fef8d3d-7e50-1e43-ae84-25e6caaa3862", 
+     "506a4816-7fa8-af4c-925f-ef6d5af32c1f"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "8fef8d3d-7e50-1e43-ae84-25e6caaa3862"]
+}], "SeeAlso",
+ CellID->139266438,ExpressionUUID->"2cba38d3-a991-1642-9411-a0546d1306af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "cbf9f6f2-d594-9840-9080-019b486d14df"]
+}], "TechNotesSection",
+ CellID->132099939,ExpressionUUID->"555605af-ad46-4044-bfe1-d784ba977909"],
+
+Cell["XXXX", "Tutorials",
+ CellID->7649920,ExpressionUUID->"3990c960-b6bb-8b43-8d3c-f74f46339fca"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->57957667,ExpressionUUID->"457dd763-b5d3-9447-9099-ec176371ac80"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->681017733,ExpressionUUID->"4ee136f2-a1c9-4747-8bcb-aecf89d071d7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "1f823788-ffbb-db4d-b21d-b9a7e86b0823"]
+}], "RelatedLinksSection",
+ CellID->67319752,ExpressionUUID->"42710b5a-6a17-9049-ae95-b8c51b1f4082"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->14401079,ExpressionUUID->"164344dd-dd76-bd45-a8d4-eb86571d3006"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "655168c1-3f9f-4c42-90b7-2fc965e52413"]
+}], "ExamplesInitializationSection",
+ CellID->756020904,ExpressionUUID->"39a93a19-776e-674c-93b5-ca0aa2ba493f"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->77430053,ExpressionUUID->"467a701a-f4c0-fc4f-8551-3736c0f30389"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->10710148,ExpressionUUID->"0b802c50-aaec-6342-8a6c-bd0359aa3d5a"],
+
+Cell["Define group:", "ExampleText",
+ CellChangeTimes->{{3.9569880661526203`*^9, 3.956988069991436*^9}},
+ CellID->6260495,ExpressionUUID->"fe77cfae-6cbf-d942-b7b1-7ba767dfa2a3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"G", "=", 
+  RowBox[{"MEDP", "[", 
+   RowBox[{
+    RowBox[{"MAdditiveGroup", "[", "4", "]"}], ",", 
+    RowBox[{"MAdditiveGroup", "[", "8", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9569880710020523`*^9, 3.9569880751990337`*^9}, {
+  3.9569882002722282`*^9, 3.956988216002451*^9}},
+ CellLabel->"In[2027]:=",
+ CellID->921565004,ExpressionUUID->"0883e517-02ac-d840-aa8b-6f01b4c65b72"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["MGroup",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              EdgeForm[
+               GrayLevel[0]], 
+              FaceForm[
+               RGBColor[0.87, 0.94, 1]], 
+              RectangleBox[{0, 0}], 
+              InsetBox[
+               FormBox[
+                StyleBox["\"G\"", 
+                 GrayLevel[0], 14, StripOnInput -> False], TraditionalForm], {
+               0.5, 0.5}]}, ImageSize -> {30, 30}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Operation: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Binary\"", "SummaryItem"], "\[InvisibleSpace]", 
+                 TagBox["\[SpanFromLeft]", "SummaryItemAnnotation"]}]}, {
+               RowBox[{
+                 TagBox["\"Order: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["32", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              EdgeForm[
+               GrayLevel[0]], 
+              FaceForm[
+               RGBColor[0.87, 0.94, 1]], 
+              RectangleBox[{0, 0}], 
+              InsetBox[
+               FormBox[
+                StyleBox["\"G\"", 
+                 GrayLevel[0], 14, StripOnInput -> False], TraditionalForm], {
+               0.5, 0.5}]}, ImageSize -> {30, 30}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Operation: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Binary\"", "SummaryItem"], "\[InvisibleSpace]", 
+                 TagBox["\[SpanFromLeft]", "SummaryItemAnnotation"]}]}, {
+               RowBox[{
+                 TagBox["\"Order: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["32", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Identity: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"(0, 0)\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  MGroups`MGroup[<|
+   MGroups`MTuple[{0, 0}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 7}]|>, 
+    MGroups`MTuple[{0, 1}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 0}]|>, 
+    MGroups`MTuple[{0, 2}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 1}]|>, 
+    MGroups`MTuple[{0, 3}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 2}]|>, 
+    MGroups`MTuple[{0, 4}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 3}]|>, 
+    MGroups`MTuple[{0, 5}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 4}]|>, 
+    MGroups`MTuple[{0, 6}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 6}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 5}]|>, 
+    MGroups`MTuple[{0, 7}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 7}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{3, 6}]|>, 
+    MGroups`MTuple[{1, 0}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 7}]|>, 
+    MGroups`MTuple[{1, 1}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 0}]|>, 
+    MGroups`MTuple[{1, 2}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 1}]|>, 
+    MGroups`MTuple[{1, 3}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 2}]|>, 
+    MGroups`MTuple[{1, 4}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 3}]|>, 
+    MGroups`MTuple[{1, 5}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 4}]|>, 
+    MGroups`MTuple[{1, 6}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 6}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 5}]|>, 
+    MGroups`MTuple[{1, 7}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 7}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{0, 6}]|>, 
+    MGroups`MTuple[{2, 0}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 7}]|>, 
+    MGroups`MTuple[{2, 1}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 0}]|>, 
+    MGroups`MTuple[{2, 2}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 1}]|>, 
+    MGroups`MTuple[{2, 3}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 2}]|>, 
+    MGroups`MTuple[{2, 4}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 3}]|>, 
+    MGroups`MTuple[{2, 5}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 4}]|>, 
+    MGroups`MTuple[{2, 6}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 6}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 5}]|>, 
+    MGroups`MTuple[{2, 7}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{2, 7}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{1, 6}]|>, 
+    MGroups`MTuple[{3, 0}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 7}]|>, 
+    MGroups`MTuple[{3, 1}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 0}]|>, 
+    MGroups`MTuple[{3, 2}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 1}]|>, 
+    MGroups`MTuple[{3, 3}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 2}]|>, 
+    MGroups`MTuple[{3, 4}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 3}]|>, 
+    MGroups`MTuple[{3, 5}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 4}]|>, 
+    MGroups`MTuple[{3, 6}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 6}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 6}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 5}]|>, 
+    MGroups`MTuple[{3, 7}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{3, 7}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{3, 0}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{3, 1}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{3, 2}], MGroups`MTuple[{0, 4}] -> 
+      MGroups`MTuple[{3, 3}], MGroups`MTuple[{0, 5}] -> 
+      MGroups`MTuple[{3, 4}], MGroups`MTuple[{0, 6}] -> 
+      MGroups`MTuple[{3, 5}], MGroups`MTuple[{0, 7}] -> 
+      MGroups`MTuple[{3, 6}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 7}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 4}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 5}] -> 
+      MGroups`MTuple[{0, 4}], MGroups`MTuple[{1, 6}] -> 
+      MGroups`MTuple[{0, 5}], MGroups`MTuple[{1, 7}] -> 
+      MGroups`MTuple[{0, 6}], MGroups`MTuple[{2, 0}] -> 
+      MGroups`MTuple[{1, 7}], MGroups`MTuple[{2, 1}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{2, 2}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{2, 3}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{2, 4}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{2, 5}] -> 
+      MGroups`MTuple[{1, 4}], MGroups`MTuple[{2, 6}] -> 
+      MGroups`MTuple[{1, 5}], MGroups`MTuple[{2, 7}] -> 
+      MGroups`MTuple[{1, 6}], MGroups`MTuple[{3, 0}] -> 
+      MGroups`MTuple[{2, 7}], MGroups`MTuple[{3, 1}] -> 
+      MGroups`MTuple[{2, 0}], MGroups`MTuple[{3, 2}] -> 
+      MGroups`MTuple[{2, 1}], MGroups`MTuple[{3, 3}] -> 
+      MGroups`MTuple[{2, 2}], MGroups`MTuple[{3, 4}] -> 
+      MGroups`MTuple[{2, 3}], MGroups`MTuple[{3, 5}] -> 
+      MGroups`MTuple[{2, 4}], MGroups`MTuple[{3, 6}] -> 
+      MGroups`MTuple[{2, 5}], MGroups`MTuple[{3, 7}] -> 
+      MGroups`MTuple[{2, 6}]|>|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.956988075951771*^9, 3.956988217152544*^9},
+ CellLabel->"Out[2027]=",
+ CellID->215089649,ExpressionUUID->"ed3057c6-6b7f-df45-859b-9eb5eb94068d"]
+}, Open  ]],
+
+Cell["Define normal subgroup:", "TechNotes",
+ CellChangeTimes->{{3.956988076845394*^9, 3.9569880834394665`*^9}},
+ CellID->440964337,ExpressionUUID->"8df4f77f-f31b-8045-b276-c317891b2abe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"H", "=", 
+  RowBox[{"MGenerateSubgroup", "[", 
+   RowBox[{"G", ",", 
+    RowBox[{"MTuple", "[", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "2"}], "}"}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9569880848341064`*^9, 3.956988091136694*^9}, {
+  3.9569882200066586`*^9, 3.956988228424452*^9}},
+ CellLabel->"In[2029]:=",
+ CellID->230974675,ExpressionUUID->"5488f3ef-1143-7a48-8ca9-10756d064540"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"(0, 0)\"\>", ",", "\<\"(0, 4)\"\>", ",", "\<\"(2, 2)\"\>", 
+   ",", "\<\"(2, 6)\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9569880918133926`*^9, {3.9569882248228455`*^9, 3.9569882290236664`*^9}},
+ CellLabel->"Out[2029]=",
+ CellID->313571244,ExpressionUUID->"7e1afe3c-8e10-fe47-9cbb-a69e439e88d8"]
+}, Open  ]],
+
+Cell["Define factor group:", "ExampleText",
+ CellChangeTimes->{{3.9569880935216274`*^9, 3.956988096713127*^9}},
+ CellID->47362666,ExpressionUUID->"6b89b2d2-2e72-4645-8fd3-e786d1118b3b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"F", "=", 
+  RowBox[{"MFactorGroup", "[", 
+   RowBox[{"G", ",", "H"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9569880977975063`*^9, 3.9569881225376644`*^9}},
+ CellLabel->"In[2030]:=",
+ CellID->236736942,ExpressionUUID->"5d950410-395d-404b-843e-0943408e9fe8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["MGroup",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              EdgeForm[
+               GrayLevel[0]], 
+              FaceForm[
+               RGBColor[0.87, 0.94, 1]], 
+              RectangleBox[{0, 0}], 
+              InsetBox[
+               FormBox[
+                StyleBox["\"G\"", 
+                 GrayLevel[0], 14, StripOnInput -> False], TraditionalForm], {
+               0.5, 0.5}]}, ImageSize -> {30, 30}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Operation: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Binary\"", "SummaryItem"], "\[InvisibleSpace]", 
+                 TagBox["\[SpanFromLeft]", "SummaryItemAnnotation"]}]}, {
+               RowBox[{
+                 TagBox["\"Order: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["8", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              EdgeForm[
+               GrayLevel[0]], 
+              FaceForm[
+               RGBColor[0.87, 0.94, 1]], 
+              RectangleBox[{0, 0}], 
+              InsetBox[
+               FormBox[
+                StyleBox["\"G\"", 
+                 GrayLevel[0], 14, StripOnInput -> False], TraditionalForm], {
+               0.5, 0.5}]}, ImageSize -> {30, 30}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Operation: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Binary\"", "SummaryItem"], "\[InvisibleSpace]", 
+                 TagBox["\[SpanFromLeft]", "SummaryItemAnnotation"]}]}, {
+               RowBox[{
+                 TagBox["\"Order: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["8", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Identity: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"(0, 0)\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  MGroups`MGroup[<|
+   MGroups`MTuple[{0, 0}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 3}]|>, 
+    MGroups`MTuple[{0, 1}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 0}]|>, 
+    MGroups`MTuple[{0, 2}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 2}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 1}]|>, 
+    MGroups`MTuple[{0, 3}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{0, 3}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{1, 2}]|>, 
+    MGroups`MTuple[{1, 0}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 1}]|>, 
+    MGroups`MTuple[{1, 1}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 2}]|>, 
+    MGroups`MTuple[{1, 2}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 2}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 0}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 3}]|>, 
+    MGroups`MTuple[{1, 3}] -> <|
+     MGroups`MTuple[{0, 0}] -> MGroups`MTuple[{1, 3}], MGroups`MTuple[{0, 1}] -> 
+      MGroups`MTuple[{1, 0}], MGroups`MTuple[{0, 2}] -> 
+      MGroups`MTuple[{1, 1}], MGroups`MTuple[{0, 3}] -> 
+      MGroups`MTuple[{1, 2}], MGroups`MTuple[{1, 0}] -> 
+      MGroups`MTuple[{0, 1}], MGroups`MTuple[{1, 1}] -> 
+      MGroups`MTuple[{0, 2}], MGroups`MTuple[{1, 2}] -> 
+      MGroups`MTuple[{0, 3}], MGroups`MTuple[{1, 3}] -> 
+      MGroups`MTuple[{0, 0}]|>|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.956988107288412*^9, 3.956988123118614*^9}, 
+   3.956988231501257*^9},
+ CellLabel->"Out[2030]=",
+ CellID->124319210,ExpressionUUID->"b2336703-7b4d-6a44-98ff-6e30438f645f"]
+}, Open  ]],
+
+Cell["See information about this factor group:", "ExampleText",
+ CellChangeTimes->{{3.9569881118421726`*^9, 3.9569881183746815`*^9}},
+ CellID->585218726,ExpressionUUID->"101e4878-7e22-7849-b07c-72d4852c27cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MCayleyTable", "[", "F", "]"}]], "Input",
+ CellChangeTimes->{{3.9569881252722206`*^9, 3.956988129683956*^9}},
+ CellLabel->"In[2031]:=",
+ CellID->286404998,ExpressionUUID->"87f99012-c120-d249-878a-c20dd76c30e4"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"(0, 0)\"\>",
+       HoldForm], 
+      TagBox["\<\"(0, 1)\"\>",
+       HoldForm], 
+      TagBox["\<\"(0, 2)\"\>",
+       HoldForm], 
+      TagBox["\<\"(0, 3)\"\>",
+       HoldForm], 
+      TagBox["\<\"(1, 0)\"\>",
+       HoldForm], 
+      TagBox["\<\"(1, 1)\"\>",
+       HoldForm], 
+      TagBox["\<\"(1, 2)\"\>",
+       HoldForm], 
+      TagBox["\<\"(1, 3)\"\>",
+       HoldForm]},
+     {
+      TagBox["\<\"(0, 0)\"\>",
+       HoldForm], "\<\"(0, 0)\"\>", "\<\"(0, 1)\"\>", "\<\"(0, 2)\"\>", \
+"\<\"(0, 3)\"\>", "\<\"(1, 0)\"\>", "\<\"(1, 1)\"\>", "\<\"(1, 2)\"\>", \
+"\<\"(1, 3)\"\>"},
+     {
+      TagBox["\<\"(0, 1)\"\>",
+       HoldForm], "\<\"(0, 1)\"\>", "\<\"(0, 2)\"\>", "\<\"(0, 3)\"\>", \
+"\<\"(0, 0)\"\>", "\<\"(1, 1)\"\>", "\<\"(1, 2)\"\>", "\<\"(1, 3)\"\>", \
+"\<\"(1, 0)\"\>"},
+     {
+      TagBox["\<\"(0, 2)\"\>",
+       HoldForm], "\<\"(0, 2)\"\>", "\<\"(0, 3)\"\>", "\<\"(0, 0)\"\>", \
+"\<\"(0, 1)\"\>", "\<\"(1, 2)\"\>", "\<\"(1, 3)\"\>", "\<\"(1, 0)\"\>", \
+"\<\"(1, 1)\"\>"},
+     {
+      TagBox["\<\"(0, 3)\"\>",
+       HoldForm], "\<\"(0, 3)\"\>", "\<\"(0, 0)\"\>", "\<\"(0, 1)\"\>", \
+"\<\"(0, 2)\"\>", "\<\"(1, 3)\"\>", "\<\"(1, 0)\"\>", "\<\"(1, 1)\"\>", \
+"\<\"(1, 2)\"\>"},
+     {
+      TagBox["\<\"(1, 0)\"\>",
+       HoldForm], "\<\"(1, 0)\"\>", "\<\"(1, 1)\"\>", "\<\"(1, 2)\"\>", \
+"\<\"(1, 3)\"\>", "\<\"(0, 2)\"\>", "\<\"(0, 3)\"\>", "\<\"(0, 0)\"\>", \
+"\<\"(0, 1)\"\>"},
+     {
+      TagBox["\<\"(1, 1)\"\>",
+       HoldForm], "\<\"(1, 1)\"\>", "\<\"(1, 2)\"\>", "\<\"(1, 3)\"\>", \
+"\<\"(1, 0)\"\>", "\<\"(0, 3)\"\>", "\<\"(0, 0)\"\>", "\<\"(0, 1)\"\>", \
+"\<\"(0, 2)\"\>"},
+     {
+      TagBox["\<\"(1, 2)\"\>",
+       HoldForm], "\<\"(1, 2)\"\>", "\<\"(1, 3)\"\>", "\<\"(1, 0)\"\>", \
+"\<\"(1, 1)\"\>", "\<\"(0, 0)\"\>", "\<\"(0, 1)\"\>", "\<\"(0, 2)\"\>", \
+"\<\"(0, 3)\"\>"},
+     {
+      TagBox["\<\"(1, 3)\"\>",
+       HoldForm], "\<\"(1, 3)\"\>", "\<\"(1, 0)\"\>", "\<\"(1, 1)\"\>", \
+"\<\"(1, 2)\"\>", "\<\"(0, 1)\"\>", "\<\"(0, 2)\"\>", "\<\"(0, 3)\"\>", \
+"\<\"(0, 0)\"\>"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, 
+      "Rows" -> {False, True, {False}, False}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$, TableHeadings -> {{
+       MGroups`MTuple[{0, 0}], 
+       MGroups`MTuple[{0, 1}], 
+       MGroups`MTuple[{0, 2}], 
+       MGroups`MTuple[{0, 3}], 
+       MGroups`MTuple[{1, 0}], 
+       MGroups`MTuple[{1, 1}], 
+       MGroups`MTuple[{1, 2}], 
+       MGroups`MTuple[{1, 3}]}, {
+       MGroups`MTuple[{0, 0}], 
+       MGroups`MTuple[{0, 1}], 
+       MGroups`MTuple[{0, 2}], 
+       MGroups`MTuple[{0, 3}], 
+       MGroups`MTuple[{1, 0}], 
+       MGroups`MTuple[{1, 1}], 
+       MGroups`MTuple[{1, 2}], 
+       MGroups`MTuple[{1, 3}]}}, TableDepth -> 2]]]], "Output",
+ CellChangeTimes->{3.9569881302008667`*^9, 3.956988233148491*^9},
+ CellLabel->"Out[2031]//TableForm=",
+ CellID->726957463,ExpressionUUID->"0a6af95d-bc1a-4440-a51d-15be85bd80d8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "168202cd-f19a-2141-bec8-e19ab7f8ab33"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->218707807,ExpressionUUID->"18b75823-12f2-774c-956d-433996b9a3a7"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "3f2dc61c-c16d-ca4b-9763-6ebd3088affe"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->43706930,ExpressionUUID->"2c488eee-4266-3140-b8bb-c34cae5be728"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "7ef0d4fc-5a7e-9f4c-aee1-5915179f0f79"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->699085256,ExpressionUUID->"7b9d729d-7916-b844-87eb-97ab77f45832"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "219fe890-6492-094e-9d77-627a534d4485"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->298903234,ExpressionUUID->"24db4149-169f-2e46-a483-f59ec0f201b2"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "ed7c12fd-9906-9b46-a6da-9e74fe88e365"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->4062180,ExpressionUUID->"4a442a57-2452-814a-8d68-ad1bad23c2fa"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "e0fb565c-8329-794e-95ee-584090f8ac50"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->66032187,ExpressionUUID->"7ce56e90-e8d7-7749-9f6b-3ec05328443e"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "fed97953-ca60-c24d-84e6-b401debd2794"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->767237865,ExpressionUUID->"f30cf09b-a05b-df40-96d5-8f50f35cb89a"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "184e748f-9bda-cb45-9828-a7f3c4c4b62b"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->10349872,ExpressionUUID->"6aa09e05-4223-9e45-8b0c-453c3239b2da"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "b5e643f5-d2ad-0145-b08b-6a62efdd4beb"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->231755592,ExpressionUUID->"bd3067ef-14d4-144b-ab33-93fd9a5cce89"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "efecc39f-c20a-5e4f-a60c-18a0ddb15bad"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->71877927,ExpressionUUID->"a9df9ea3-bbeb-c148-bdea-63a797c8295a"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "69cfa390-0a4e-9c4f-86cc-558d48caf5a9"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->105980331,ExpressionUUID->"7d2ca55e-9d6c-d34c-a0a9-34d2da457ffc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->139471055,ExpressionUUID->"819970f4-7d9d-144a-8c8f-887dbabe19e9"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"5bcf7c11-b3a3-e045-ad1b-dd2336ce6c34"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"278b458f-68f3-cb4c-9a6e-c8bd660587ca"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "1ee2e2b9-956d-0549-86c7-dd6532c82940"]
+}], "History",
+ CellID->345834515,ExpressionUUID->"b5ded03b-61b9-e04c-922d-16d42be0fc78"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "cb809a84-cf12-7243-bbef-b4ee294411d9"]
+}], "CategorizationSection",
+ CellID->186188713,ExpressionUUID->"263e89e3-70c6-1840-afdc-b4fd2e60af11"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->230125856,ExpressionUUID->"1a49e19c-7b3a-c240-a1ef-d245469018eb"],
+
+Cell["Taggar/MGroups", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->429689108,ExpressionUUID->"5a0496c4-8359-2f4d-a715-06abb4b2ee74"],
+
+Cell["Taggar`MGroups`", "Categorization",
+ CellLabel->"Context",
+ CellID->98776012,ExpressionUUID->"e97f61d5-b66b-4340-9ec4-9cd716793a7d"],
+
+Cell["Taggar/MGroups/ref/MFactorGroup", "Categorization",
+ CellLabel->"URI",
+ CellID->50716215,ExpressionUUID->"43e61bde-c837-f246-97f7-95cb4192b141"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->813569128,ExpressionUUID->"daf7dd80-6eb6-484b-a5ec-5f3aa5c1b49f"],
+
+Cell["XXXX", "Keywords",
+ CellID->84310398,ExpressionUUID->"9467d035-dc31-4047-9a7c-c237f5fe5d83"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->122203460,ExpressionUUID->"531b738f-bbf4-a74a-9917-d625139958e0"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->292442814,ExpressionUUID->"3fa829b2-dae3-9344-bb1d-50d35749e4aa"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->486096409,ExpressionUUID->"efb5e517-27db-504d-b5a5-c888e50a2fa7"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->258878941,ExpressionUUID->"45137cd2-02ef-d543-bfa7-45442dd8f9d2"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->32526174,ExpressionUUID->"d6da4781-8b5e-ab4b-af3f-e08e78ddbceb"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700.5, 495.75},
+WindowMargins->{{4.5, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "MGroups"|>,
+CellContext->"Global`",
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"587e2fa8-64b1-da40-935c-00cce171bfd2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[87056, 1762, 487, 13, 70, "ExtendedExamplesSection",ExpressionUUID->"18b75823-12f2-774c-956d-433996b9a3a7",
+   CellTags->"ExtendedExamples",
+   CellID->218707807]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 93319, 1950}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 109, 1, 70, "ObjectName",ExpressionUUID->"c4b1bfc3-66b0-4c46-b4b4-445cc3439dc8",
+ CellID->442263119],
+Cell[688, 25, 854, 22, 70, "Usage",ExpressionUUID->"bda23f22-19a8-dc43-ae69-1003640018a5",
+ CellID->436472227],
+Cell[1545, 49, 511, 13, 70, "Notes",ExpressionUUID->"2ab8cbc5-3a22-f749-91bf-038c8583b72a",
+ CellID->291022798],
+Cell[2059, 64, 513, 12, 70, "Notes",ExpressionUUID->"aed2a30e-0715-ef4a-939b-454637b51306",
+ CellID->322133260]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2609, 81, 458, 13, 70, "SeeAlsoSection",ExpressionUUID->"934a22db-5fbc-1c44-840e-209b3724d8b2",
+ CellID->367810765],
+Cell[3070, 96, 1653, 42, 70, "SeeAlso",ExpressionUUID->"2cba38d3-a991-1642-9411-a0546d1306af",
+ CellID->139266438]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4760, 143, 435, 12, 70, "TechNotesSection",ExpressionUUID->"555605af-ad46-4044-bfe1-d784ba977909",
+ CellID->132099939],
+Cell[5198, 157, 98, 1, 70, "Tutorials",ExpressionUUID->"3990c960-b6bb-8b43-8d3c-f74f46339fca",
+ CellID->7649920]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5333, 163, 116, 1, 70, "MoreAboutSection",ExpressionUUID->"457dd763-b5d3-9447-9099-ec176371ac80",
+ CellID->57957667],
+Cell[5452, 166, 100, 1, 70, "MoreAbout",ExpressionUUID->"4ee136f2-a1c9-4747-8bcb-aecf89d071d7",
+ CellID->681017733]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5589, 172, 471, 13, 70, "RelatedLinksSection",ExpressionUUID->"42710b5a-6a17-9049-ae95-b8c51b1f4082",
+ CellID->67319752],
+Cell[6063, 187, 102, 1, 70, "RelatedLinks",ExpressionUUID->"164344dd-dd76-bd45-a8d4-eb86571d3006",
+ CellID->14401079]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6202, 193, 530, 14, 70, "ExamplesInitializationSection",ExpressionUUID->"39a93a19-776e-674c-93b5-ca0aa2ba493f",
+ CellID->756020904],
+Cell[6735, 209, 173, 3, 70, "ExampleInitialization",ExpressionUUID->"467a701a-f4c0-fc4f-8551-3736c0f30389",
+ CellID->77430053]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6945, 217, 441, 12, 70, "PrimaryExamplesSection",ExpressionUUID->"0b802c50-aaec-6342-8a6c-bd0359aa3d5a",
+ CellID->10710148],
+Cell[7389, 231, 177, 2, 70, "ExampleText",ExpressionUUID->"fe77cfae-6cbf-d942-b7b1-7ba767dfa2a3",
+ CellID->6260495],
+Cell[CellGroupData[{
+Cell[7591, 237, 412, 9, 70, "Input",ExpressionUUID->"0883e517-02ac-d840-aa8b-6f01b4c65b72",
+ CellID->921565004],
+Cell[8006, 248, 64533, 1168, 70, "Output",ExpressionUUID->"ed3057c6-6b7f-df45-859b-9eb5eb94068d",
+ CellID->215089649]
+}, Open  ]],
+Cell[72554, 1419, 187, 2, 70, "TechNotes",ExpressionUUID->"8df4f77f-f31b-8045-b276-c317891b2abe",
+ CellID->440964337],
+Cell[CellGroupData[{
+Cell[72766, 1425, 425, 10, 70, "Input",ExpressionUUID->"5488f3ef-1143-7a48-8ca9-10756d064540",
+ CellID->230974675],
+Cell[73194, 1437, 347, 7, 70, "Output",ExpressionUUID->"7e1afe3c-8e10-fe47-9cbb-a69e439e88d8",
+ CellID->313571244]
+}, Open  ]],
+Cell[73556, 1447, 185, 2, 70, "ExampleText",ExpressionUUID->"6b89b2d2-2e72-4645-8fd3-e786d1118b3b",
+ CellID->47362666],
+Cell[CellGroupData[{
+Cell[73766, 1453, 283, 6, 70, "Input",ExpressionUUID->"5d950410-395d-404b-843e-0943408e9fe8",
+ CellID->236736942],
+Cell[74052, 1461, 9023, 185, 70, "Output",ExpressionUUID->"b2336703-7b4d-6a44-98ff-6e30438f645f",
+ CellID->124319210]
+}, Open  ]],
+Cell[83090, 1649, 208, 2, 70, "ExampleText",ExpressionUUID->"101e4878-7e22-7849-b07c-72d4852c27cb",
+ CellID->585218726],
+Cell[CellGroupData[{
+Cell[83323, 1655, 234, 4, 70, "Input",ExpressionUUID->"87f99012-c120-d249-878a-c20dd76c30e4",
+ CellID->286404998],
+Cell[83560, 1661, 3447, 95, 70, "Output",ExpressionUUID->"0a6af95d-bc1a-4440-a51d-15be85bd80d8",
+ CellID->726957463]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87056, 1762, 487, 13, 70, "ExtendedExamplesSection",ExpressionUUID->"18b75823-12f2-774c-956d-433996b9a3a7",
+ CellTags->"ExtendedExamples",
+ CellID->218707807],
+Cell[87546, 1777, 240, 5, 70, "ExampleSection",ExpressionUUID->"2c488eee-4266-3140-b8bb-c34cae5be728",
+ CellID->43706930],
+Cell[87789, 1784, 264, 5, 70, "ExampleSection",ExpressionUUID->"7b9d729d-7916-b844-87eb-97ab77f45832",
+ CellID->699085256],
+Cell[CellGroupData[{
+Cell[88078, 1793, 243, 5, 70, "ExampleSection",ExpressionUUID->"24db4149-169f-2e46-a483-f59ec0f201b2",
+ CellID->298903234],
+Cell[88324, 1800, 244, 5, 70, "ExampleSubsection",ExpressionUUID->"4a442a57-2452-814a-8d68-ad1bad23c2fa",
+ CellID->4062180],
+Cell[88571, 1807, 245, 5, 70, "ExampleSubsection",ExpressionUUID->"7ce56e90-e8d7-7749-9f6b-3ec05328443e",
+ CellID->66032187]
+}, Open  ]],
+Cell[88831, 1815, 248, 5, 70, "ExampleSection",ExpressionUUID->"f30cf09b-a05b-df40-96d5-8f50f35cb89a",
+ CellID->767237865],
+Cell[89082, 1822, 257, 5, 70, "ExampleSection",ExpressionUUID->"6aa09e05-4223-9e45-8b0c-453c3239b2da",
+ CellID->10349872],
+Cell[89342, 1829, 251, 5, 70, "ExampleSection",ExpressionUUID->"bd3067ef-14d4-144b-ab33-93fd9a5cce89",
+ CellID->231755592],
+Cell[89596, 1836, 255, 5, 70, "ExampleSection",ExpressionUUID->"a9df9ea3-bbeb-c148-bdea-63a797c8295a",
+ CellID->71877927],
+Cell[89854, 1843, 249, 5, 70, "ExampleSection",ExpressionUUID->"7d2ca55e-9d6c-d34c-a0a9-34d2da457ffc",
+ CellID->105980331]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[90140, 1853, 110, 1, 70, "MetadataSection",ExpressionUUID->"819970f4-7d9d-144a-8c8f-887dbabe19e9",
+ CellID->139471055],
+Cell[90253, 1856, 476, 12, 70, "History",ExpressionUUID->"b5ded03b-61b9-e04c-922d-16d42be0fc78",
+ CellID->345834515],
+Cell[CellGroupData[{
+Cell[90754, 1872, 484, 13, 70, "CategorizationSection",ExpressionUUID->"263e89e3-70c6-1840-afdc-b4fd2e60af11",
+ CellID->186188713],
+Cell[91241, 1887, 134, 2, 70, "Categorization",ExpressionUUID->"1a49e19c-7b3a-c240-a1ef-d245469018eb",
+ CellID->230125856],
+Cell[91378, 1891, 142, 2, 70, "Categorization",ExpressionUUID->"5a0496c4-8359-2f4d-a715-06abb4b2ee74",
+ CellID->429689108],
+Cell[91523, 1895, 138, 2, 70, "Categorization",ExpressionUUID->"e97f61d5-b66b-4340-9ec4-9cd716793a7d",
+ CellID->98776012],
+Cell[91664, 1899, 150, 2, 70, "Categorization",ExpressionUUID->"43e61bde-c837-f246-97f7-95cb4192b141",
+ CellID->50716215]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[91851, 1906, 110, 1, 70, "KeywordsSection",ExpressionUUID->"daf7dd80-6eb6-484b-a5ec-5f3aa5c1b49f",
+ CellID->813569128],
+Cell[91964, 1909, 98, 1, 70, "Keywords",ExpressionUUID->"9467d035-dc31-4047-9a7c-c237f5fe5d83",
+ CellID->84310398]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[92099, 1915, 119, 1, 70, "TemplatesSection",ExpressionUUID->"531b738f-bbf4-a74a-9917-d625139958e0",
+ CellID->122203460],
+Cell[92221, 1918, 148, 2, 70, "Template",ExpressionUUID->"3fa829b2-dae3-9344-bb1d-50d35749e4aa",
+ CellID->292442814],
+Cell[92372, 1922, 137, 2, 70, "Template",ExpressionUUID->"efb5e517-27db-504d-b5a5-c888e50a2fa7",
+ CellID->486096409],
+Cell[92512, 1926, 135, 2, 70, "Template",ExpressionUUID->"45137cd2-02ef-d543-bfa7-45442dd8f9d2",
+ CellID->258878941],
+Cell[92650, 1930, 136, 2, 70, "Template",ExpressionUUID->"d6da4781-8b5e-ab4b-af3f-e08e78ddbceb",
+ CellID->32526174]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

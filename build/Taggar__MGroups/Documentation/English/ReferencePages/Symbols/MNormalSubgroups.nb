@@ -1,0 +1,730 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     27688,        721]
+NotebookOptionsPosition[     21658,        598]
+NotebookOutlinePosition[     23968,        657]
+CellTagsIndexPosition[     23883,        652]
+WindowTitle->MNormalSubgroups
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["TAGGAR/ M GROUPS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "6ac289bf-1457-354c-b99d-0c7fc1d99276"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "f81db80b-d171-eb47-affb-00516be8f3c1"],
+        Background->LightDarkSwitched[
+          RGBColor[0.490196, 0.576471, 0.690196]],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "44e2fbf8-5a20-5c4e-ac50-72b9b7a96ede"]
+         }],ExpressionUUID->"b90b9ec5-e4cb-5d4f-a327-5e0636e09ce5"],
+         StripOnInput->False],{
+        "\"MGroups Package\"" :> 
+         Documentation`HelpLookup[
+          "paclet:Taggar/MGroups/guide/MGroupsPackage"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "a07d3008-41f0-4d44-9b54-455cfb25fb36"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "2fd0f4df-2b6d-ae40-895b-00fe2c6ab412"]
+         }],ExpressionUUID->"8909f419-5d5a-d046-ab18-5ca46778a812"],
+         StripOnInput->False],{
+        "\"Taggar/MGroups/ref/MNormalSubgroups\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         CopyToClipboard["Taggar/MGroups/ref/MNormalSubgroups"], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/Taggar/MGroups/ref/\
+MNormalSubgroups.html"], StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[(If[TrueQ[False], 
+                  "http://reference.wolfram.com/system-modeler/", 
+                  "http://reference.wolfram.com/language/"] <> 
+                "Taggar/MGroups/ref/MNormalSubgroups") <> ".html"], None}]}]},
+        
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "cc8e4afd-8848-9f45-b5b3-266b77535088"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "32697f9c-513f-2343-9d05-a3894fb20ce7"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"80363607-836e-a244-bada-4a8223500906"],
+
+Cell["Taggar`MGroups`", "ContextNameCell",ExpressionUUID->"db5565b9-2248-4a41-b7b8-b1ac8c733ef5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MNormalSubgroups", "ObjectName",ExpressionUUID->
+      "7a97f04e-b68d-7646-929f-7c48a5b74105"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"6c5e0d46-de60-564a-95c1-079f0777694a"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "980fcba6-4a94-7f4c-b571-c784325102eb"]
+    }],ExpressionUUID->"e002f02f-465f-6643-b6b3-b7ca1276279a"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"0c1b0482-40a2-ac48-8c15-\
+63730befa719"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["MNormalSubgroups"]], 
+         "paclet:Taggar/MGroups/ref/MNormalSubgroups", 
+         "Taggar Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["group", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d5ba903d-9e1e-9449-a208-f179af26241a"],
+     "\[LineSeparator]finds all normal subgroups of group."
+    }],ExpressionUUID->"c3e9b88f-141d-d743-ad3c-14a27f849e2f"]}
+  }]], "Usage",
+ CellID->38144335,ExpressionUUID->"40e6c04d-ae2e-bb47-aed9-7ef67962c84e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[CurrentValue[
+         EvaluationCell[], "CellGroupOpen"] =!= Closed, 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {-0.16630120645742785`, 13.76630120645743}}]],
+    ExpressionUUID->"4d69584e-f638-8549-be9c-39f4f58fd06e"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"43e8fa03-1edd-be47-8ec7-a64cc10adb0b"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"497ae3a6-cc57-e547-aaf5-e0f0cca5d2f2"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"6c0e363f-227b-154a-9e8b-202e68375262"]], \
+"NotesSection",
+ ShowGroupOpener->"Thumbnail",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->78747580,ExpressionUUID->"39fcb8f2-c055-2242-91b6-eaed123f937a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "6030d521-77a2-4d48-88ba-bd163d7946ba"],
+ " should be an ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MGroup"]], "paclet:Taggar/MGroups/ref/MGroup", 
+    "Taggar Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "0507ae2c-b9ae-6444-bf09-6519ade044dd"],
+ " object."
+}], "Notes",
+ CellID->518534003,ExpressionUUID->"e34c5060-6ed1-3943-a297-7763da3e59c2"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->367691610,ExpressionUUID->"3009e54b-991e-214c-9ca2-e90f7cd76aee"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "ee1627b2-cc74-2142-a60d-dd5370a1e07b"], "MCombinationsLimit", "2", 
+    Cell["\<\
+Maximum cardinality of subsets to check for generating subgroups.\
+\>", "TableText",ExpressionUUID->"621133af-8c03-9047-a85a-5be8af93159a"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}},
+ GridBoxDividers->{"Rows" -> {{True, True}}}},
+ CellID->221532701,ExpressionUUID->"7850fca8-d85a-1f43-88b2-054c45599afa"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "20a1e2af-04f1-3645-948e-808a2edc5fbc"], "MPresentation", "\"\<Table\>\"",
+     Cell["Presentation of the subgroups.", "TableText",ExpressionUUID->
+     "0ed9a57c-0486-9047-ad77-233e3443924b"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}},
+ GridBoxDividers->{"Rows" -> {{True, True}}}},
+ CellID->641354459,ExpressionUUID->"d3bfe885-329d-0d44-b765-f616ec0870f4"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell["", "PageDelimiter",ExpressionUUID->"8cbd3908-67e7-9848-8a5a-e60ba6d9ecd8"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.253698793542572, 9.34630120645743}}]],
+  ExpressionUUID->"04e30c7e-5002-794e-9a8e-acfdb190735b"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"c7e9c7f8-5812-8a49-9bf2-bab9c68ff403"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount",ExpressionUUID->
+  "f3e60d45-6606-a44a-b54a-c467427b0f43"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->53769602,ExpressionUUID->"dbe29967-86ef-f74d-a878-2e48addae7e1"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", "]"}]], "Input", \
+"ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->195781628,ExpressionUUID->"3a71f16b-d202-b446-9f76-71d3874fbc94"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.551318296301179, 9.048681703698822}}]],
+  ExpressionUUID->"570d37d1-70b1-af49-adf5-692912b96381"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"ceef8e8d-7a62-ac46-b569-7e4039a3391e"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "a17f5e15-3330-9946-8a13-f49abc795a10"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->539290595,ExpressionUUID->"995829e9-7b08-c64c-a35b-f00f1316880c"],
+
+Cell["Find all normal subgroups of a group:", "ExampleText",
+ CellID->434558990,ExpressionUUID->"f4feaa02-fdee-f544-9bf4-11eaaa9274c2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MDihedralGroup", "[", "6", "]"}], "//", 
+  "MNormalSubgroups"}]], "Input",
+ CellProlog:>Needs["Taggar`MGroups`"],
+ CellLabel->"In[1]:=",
+ CellID->82580526,ExpressionUUID->"501e3243-134e-054d-848c-51985f881f6c"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"Subgroup\"\>",
+       HoldForm], 
+      TagBox["\<\"Generated by\"\>",
+       HoldForm]},
+     {
+      RowBox[{"{", "\<\"r0\"\>", "}"}], 
+      RowBox[{"{", "\<\"r0\"\>", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"\<\"r0\"\>", ",", "\<\"r1\"\>", ",", "\<\"r2\"\>", 
+        ",", "\<\"r3\"\>", ",", "\<\"r4\"\>", ",", "\<\"r5\"\>"}], "}"}], 
+      RowBox[{"{", "\<\"r1\"\>", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"\<\"r0\"\>", ",", "\<\"r2\"\>", ",", "\<\"r4\"\>"}], "}"}], 
+      RowBox[{"{", "\<\"r2\"\>", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"\<\"r0\"\>", ",", "\<\"r3\"\>"}], "}"}], 
+      RowBox[{"{", "\<\"r3\"\>", "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"\<\"r0\"\>", ",", "\<\"r1\"\>", ",", "\<\"r2\"\>", 
+        ",", "\<\"r3\"\>", ",", "\<\"r4\"\>", ",", "\<\"r5\"\>", 
+        ",", "\<\"s0\"\>", ",", "\<\"s1\"\>", ",", "\<\"s2\"\>", 
+        ",", "\<\"s3\"\>", ",", "\<\"s4\"\>", ",", "\<\"s5\"\>"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"\<\"r1\"\>", ",", "\<\"s0\"\>"}], "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"\<\"r0\"\>", ",", "\<\"r2\"\>", ",", "\<\"r4\"\>", 
+        ",", "\<\"s0\"\>", ",", "\<\"s2\"\>", ",", "\<\"s4\"\>"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"\<\"r2\"\>", ",", "\<\"s0\"\>"}], "}"}]},
+     {
+      RowBox[{"{", 
+       RowBox[{"\<\"r0\"\>", ",", "\<\"r2\"\>", ",", "\<\"r4\"\>", 
+        ",", "\<\"s1\"\>", ",", "\<\"s3\"\>", ",", "\<\"s5\"\>"}], "}"}], 
+      RowBox[{"{", 
+       RowBox[{"\<\"r2\"\>", ",", "\<\"s1\"\>"}], "}"}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{
+     "Columns" -> {{False}}, "Rows" -> {False, True, {False}, False}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}],
+   {None, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, TableHeadings -> {None, {"Subgroup", "Generated by"}}, 
+    TableDepth -> 2]]]], "Output",
+ CellLabel->"Out[1]//TableForm=",
+ CellID->141233305,ExpressionUUID->"c4aefc25-e228-3a4e-bdc4-0c2d876abba9"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]]]],ExpressionUUID->
+  "010cb509-ba13-8846-a3aa-22ada75dcba2"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"15c05bce-bcd8-694f-a477-bd9ffdf3374d"],
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "dcd1d916-e3b0-5647-a108-e14779ca2523"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->116229437,ExpressionUUID->"f9317e86-65aa-3a41-ad18-ce6e61627c4e"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "ExampleSubsection", "0"}, Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]]]],ExpressionUUID->
+  "1b27b7cf-2eb5-b943-996a-0b80b1c20297"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"e7584954-484e-c045-a13b-a3cd4f8105ee"],
+ "MMCombinationsLimit",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "7160c244-cf99-f443-807f-ba93f4d2ea04"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->203715823,ExpressionUUID->"fabe1bdf-7545-b245-aa50-9dc79a99fdc4"],
+
+Cell[TextData[{
+ "CombinationsLimit can be set to define the maximum cardinality of subsets \
+that should be used to generate subgroups. For example, all subgroups of ",
+ Cell[BoxData[
+  SubscriptBox["S", "4"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "5a940d74-ebf4-8440-bfeb-4f1460bdb8cb"],
+ " can be generated by a maximum of 2 elements as the rank of this group is \
+2. Hence, compare the default value:"
+}], "ExampleText",
+ CellID->556403549,ExpressionUUID->"89538063-3903-394b-87da-b47928bb78b1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MNormalSubgroups", "[", 
+    RowBox[{"MPermutationsGroup", "[", "4", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellProlog:>Needs["Taggar`MGroups`"],
+ CellLabel->"In[1]:=",
+ CellID->116169446,ExpressionUUID->"2395e14a-54ba-df44-a3e3-49bd34187080"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.5631919`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->680834859,ExpressionUUID->"b87f8c3c-65d7-2c47-9588-ea13503cab25"]
+}, Open  ]],
+
+Cell["with CombinationsLimit rather set to 3:", "ExampleText",
+ CellID->858087461,ExpressionUUID->"9be518be-b1b0-d148-851a-b533c3328d7e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MNormalSubgroups", "[", 
+    RowBox[{
+     RowBox[{"MPermutationsGroup", "[", "4", "]"}], ",", 
+     RowBox[{"MCombinationsLimit", "->", "3"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellProlog:>Needs["Taggar`MGroups`"],
+ CellLabel->"In[2]:=",
+ CellID->305057397,ExpressionUUID->"c1618356-5bc7-4e46-aaeb-a8b4d9497dfa"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.2646031`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->130419515,ExpressionUUID->"090436d4-4e17-934e-82a5-9505665ba364"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {26.472656144876964`, 33.527343855123036`}}], 
+    GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["MGroups Package"]], 
+           "paclet:Taggar/MGroups/guide/MGroupsPackage"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "bdb59a17-9d6f-fc49-808d-ef4140ff8cae"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"fb1d5dc5-3fdc-1740-af20-\
+72c60fea4328"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"358fe3bc-67e8-d34d-b52f-6289bfe510ea"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MNormalSubgroups",
+Visible->True,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "1" -> Closed}, "AllOptsTable" -> 
+    Closed, "NotesSection" -> Closed, "ExampleSubsection" -> {"0" -> Closed}},
+   "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "HasOptions" -> True, "RootCaptions" -> "", 
+  "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 10, 23, 16, 11, 16.6566317}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Taggar`MGroups`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Taggar/ M Groups Symbol", "language" -> "en", "paclet" -> 
+    "Taggar/MGroups", "status" -> "None", "summary" -> 
+    "MNormalSubgroups[group] finds all normal subgroups of group.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "MNormalSubgroups", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "MNormalSubgroups", "type" -> "Symbol", "uri" -> 
+    "Taggar/MGroups/ref/MNormalSubgroups"}},
+CellContext->"Global`",
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "14.3 for Microsoft Windows (64-bit) (July 8, 2025)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"ef5bbfd4-a966-cc46-954f-8aaef601ea72"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[9895, 265, 1438, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"dbe29967-86ef-f74d-a878-2e48addae7e1",
+   CellTags->"PrimaryExamplesSection",
+   CellID->53769602]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 23685, 645}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 4080, 102, 70, "AnchorBarGrid",ExpressionUUID->"80363607-836e-a244-bada-4a8223500906",
+ CellID->1],
+Cell[4667, 125, 97, 0, 70, "ContextNameCell",ExpressionUUID->"db5565b9-2248-4a41-b7b8-b1ac8c733ef5"],
+Cell[CellGroupData[{
+Cell[4789, 129, 559, 14, 70, "ObjectNameGrid",ExpressionUUID->"0c1b0482-40a2-ac48-8c15-63730befa719"],
+Cell[5351, 145, 686, 17, 70, "Usage",ExpressionUUID->"40e6c04d-ae2e-bb47-aed9-7ef67962c84e",
+ CellID->38144335]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6074, 167, 1853, 45, 70, "NotesSection",ExpressionUUID->"39fcb8f2-c055-2242-91b6-eaed123f937a",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->78747580],
+Cell[7930, 214, 580, 17, 70, "Notes",ExpressionUUID->"e34c5060-6ed1-3943-a297-7763da3e59c2",
+ CellID->518534003],
+Cell[8513, 233, 128, 1, 70, "Notes",ExpressionUUID->"3009e54b-991e-214c-9ca2-e90f7cd76aee",
+ CellID->367691610],
+Cell[8644, 236, 534, 10, 70, "3ColumnTableMod",ExpressionUUID->"7850fca8-d85a-1f43-88b2-054c45599afa",
+ CellID->221532701],
+Cell[9181, 248, 504, 9, 70, "3ColumnTableMod",ExpressionUUID->"d3bfe885-329d-0d44-b765-f616ec0870f4",
+ CellID->641354459]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[9790, 261, 80, 0, 70, "PageDelimiter",ExpressionUUID->"8cbd3908-67e7-9848-8a5a-e60ba6d9ecd8"],
+Cell[CellGroupData[{
+Cell[9895, 265, 1438, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"dbe29967-86ef-f74d-a878-2e48addae7e1",
+ CellTags->"PrimaryExamplesSection",
+ CellID->53769602],
+Cell[11336, 305, 205, 4, 70, "Input",ExpressionUUID->"3a71f16b-d202-b446-9f76-71d3874fbc94",
+ CellID->195781628],
+Cell[CellGroupData[{
+Cell[11566, 313, 1418, 37, 70, "ExampleSection",ExpressionUUID->"995829e9-7b08-c64c-a35b-f00f1316880c",
+ CellID->539290595],
+Cell[12987, 352, 135, 1, 70, "ExampleText",ExpressionUUID->"f4feaa02-fdee-f544-9bf4-11eaaa9274c2",
+ CellID->434558990],
+Cell[CellGroupData[{
+Cell[13147, 357, 245, 6, 70, "Input",ExpressionUUID->"501e3243-134e-054d-848c-51985f881f6c",
+ CellID->82580526],
+Cell[13395, 365, 2309, 61, 70, "Output",ExpressionUUID->"c4aefc25-e228-3a4e-bdc4-0c2d876abba9",
+ CellID->141233305]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[15853, 434, 1324, 35, 70, "ExampleSection",ExpressionUUID->"f9317e86-65aa-3a41-ad18-ce6e61627c4e",
+ CellID->116229437],
+Cell[CellGroupData[{
+Cell[17202, 473, 1345, 35, 70, "ExampleSubsection",ExpressionUUID->"fabe1bdf-7545-b245-aa50-9dc79a99fdc4",
+ CellID->203715823],
+Cell[18550, 510, 530, 10, 70, "ExampleText",ExpressionUUID->"89538063-3903-394b-87da-b47928bb78b1",
+ CellID->556403549],
+Cell[CellGroupData[{
+Cell[19105, 524, 362, 8, 70, "Input",ExpressionUUID->"2395e14a-54ba-df44-a3e3-49bd34187080",
+ CellID->116169446],
+Cell[19470, 534, 183, 4, 70, "Output",ExpressionUUID->"b87f8c3c-65d7-2c47-9588-ea13503cab25",
+ CellID->680834859]
+}, Open  ]],
+Cell[19668, 541, 137, 1, 70, "ExampleText",ExpressionUUID->"9be518be-b1b0-d148-851a-b533c3328d7e",
+ CellID->858087461],
+Cell[CellGroupData[{
+Cell[19830, 546, 432, 10, 70, "Input",ExpressionUUID->"c1618356-5bc7-4e46-aaeb-a8b4d9497dfa",
+ CellID->305057397],
+Cell[20265, 558, 183, 4, 70, "Output",ExpressionUUID->"090436d4-4e17-934e-82a5-9505665ba364",
+ CellID->130419515]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[20805, 574, 768, 20, 70, "MoreAboutSection",ExpressionUUID->"fb1d5dc5-3fdc-1740-af20-72c60fea4328"],
+Cell[21576, 596, 78, 0, 70, "FooterCell",ExpressionUUID->"358fe3bc-67e8-d34d-b52f-6289bfe510ea"]
+}
+]
+*)
+
+(* End of internal cache information *)

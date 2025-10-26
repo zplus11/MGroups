@@ -1,0 +1,1082 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     46576,       1073]
+NotebookOptionsPosition[     40334,        937]
+NotebookOutlinePosition[     41112,        963]
+CellTagsIndexPosition[     41033,        958]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MCayleyGraph3D", "ObjectName",
+ CellID->3333146,ExpressionUUID->"0a3927a1-6e97-8d4f-bfa1-2030abc70024"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"eefbfdf5-d39c-004a-9ec6-89b2bc7ad4f6"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["MCayleyGraph3D",
+    BaseStyle->"Link",
+    ButtonData->"paclet:Taggar/MGroups/ref/MCayleyGraph3D"], "[", 
+   RowBox[{
+    StyleBox["group", "TI"], ",", 
+    StyleBox["generators", "TI"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "327df0aa-d956-db42-9660-8746976a02f0"],
+ "\[LineSeparator]draws the 3-D Cayley graph of ",
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "169c6c25-b695-d440-ace7-c70d2f26ec26"],
+ " corresponding to ",
+ Cell[BoxData[
+  StyleBox["generators", "TI"]], "InlineFormula",ExpressionUUID->
+  "8726d0fe-43d6-114b-a804-2fa199a1e6e5"],
+ "."
+}], "Usage",
+ CellChangeTimes->{{3.9569710778259106`*^9, 3.956971078029064*^9}},
+ CellID->51396497,ExpressionUUID->"313ded54-3536-5141-b929-6525e75df803"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["group", "TI"]], "InlineFormula",ExpressionUUID->
+  "2185d117-ee6a-8944-9d9a-3df6ff7f1608"],
+ " should be an ",
+ Cell[BoxData[
+  ButtonBox["MGroup",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Taggar/MGroups/ref/MGroup"]], "InlineFormula",
+  ExpressionUUID->"a745da76-d0fa-6b45-94b1-a7c25475daf5"],
+ " object."
+}], "Notes",
+ CellChangeTimes->{3.956986690566702*^9},
+ CellID->88610315,ExpressionUUID->"a8674c0c-0a7f-e64d-ba6d-9a729fa7db0b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "f28b1e27-2e68-ee44-bf1a-89d4b538d83f"]
+}], "SeeAlsoSection",
+ CellID->428485867,ExpressionUUID->"1d225e07-8a53-8f4a-a818-6d2c9ec63eea"],
+
+Cell[TextData[{
+ Cell[BoxData["MCayleyGraph"], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "ff5859c6-bc27-514c-8233-126d9aa70118"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "e7a5d25d-bf79-d341-b826-57ad30ed4f89"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "4360aad6-d05e-1246-9b91-092c7f70c555", 
+     "d389ca30-f425-8348-9442-44be16977833"], $CellContext`cellobj$$ = 
+    CellObject[
+    "83753fc8-9781-f54a-86b0-80face475293", 
+     "95fa64e3-7e88-6542-989c-10eddac85984"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "83753fc8-9781-f54a-86b0-80face475293"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.9569850062549496`*^9, 3.956985009115885*^9}},
+ CellID->564724575,ExpressionUUID->"c5c23907-8e8e-9f47-b831-377f92a9def2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "7073a23a-7d3d-5e44-9a89-2fa6831ee2b7"]
+}], "TechNotesSection",
+ CellID->240127610,ExpressionUUID->"fcb4622a-3a78-d745-b333-130978d73532"],
+
+Cell["XXXX", "Tutorials",
+ CellID->416700182,ExpressionUUID->"c97c21fa-eac1-184c-80a1-ea85645551dd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->100964944,ExpressionUUID->"f2f7e31c-63b6-104e-851a-cc41c100978c"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->376326593,ExpressionUUID->"39f08269-2544-d844-83df-dd5a985f8497"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "11a5a3d1-3a90-6543-b367-83602ee2ba7f"]
+}], "RelatedLinksSection",
+ CellID->203602059,ExpressionUUID->"7da5e507-b975-a94b-8373-15a6407465e1"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->782624989,ExpressionUUID->"330b8408-9891-5641-9b28-a617e02fb869"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "03afec76-9945-ef47-a4eb-299a9d25b84c"]
+}], "ExamplesInitializationSection",
+ CellID->63701981,ExpressionUUID->"d6e43658-674f-b24f-ac02-ed0396acf8db"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->73030701,ExpressionUUID->"2824939a-e06b-5e44-9c9b-dd8b9aa39865"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->42822701,ExpressionUUID->"e288bd74-16e2-044b-804d-9ccc3cb2ebb7"],
+
+Cell[TextData[{
+ "See the 3-D Cayley graph of ",
+ Cell[BoxData[
+  SubscriptBox["S", "5"]], "InlineFormula",ExpressionUUID->
+  "5f01cf2f-0269-f04d-9017-e5ea441b1023"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.9569850181994305`*^9, 3.9569850272424126`*^9}, {
+  3.9569850914660606`*^9, 3.9569850919839096`*^9}},
+ CellID->70363883,ExpressionUUID->"6de2325c-c5d6-6e41-b7a0-8c54baecdf7a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MCayleyGraph3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MPermutationsGroup", "[", "4", "]"}], ",", "\[IndentingNewLine]", 
+   
+   RowBox[{"{", 
+    RowBox[{"\"\<(12)\>\"", ",", "\"\<(234)\>\""}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.956985028843609*^9, 3.9569851280477066`*^9}, {
+  3.956985183516697*^9, 3.956985249003729*^9}},
+ CellLabel->"In[25]:=",
+ CellID->58547310,ExpressionUUID->"9f9c3116-a024-cd4e-8efa-3c4d40625e33"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+      "\[Epsilon]", "(34)", "(23)", "(234)", "(243)", "(24)", "(12)", 
+       "(12)(34)", "(123)", "(1234)", "(1243)", "(124)", "(132)", "(1342)", 
+       "(13)", "(134)", "(13)(24)", "(1324)", "(1432)", "(142)", "(143)", 
+       "(14)", "(1423)", "(14)(23)"}, {{{1, 7}, {2, 8}, {3, 13}, {4, 14}, {5, 
+       19}, {6, 20}, {7, 1}, {8, 2}, {9, 15}, {10, 16}, {11, 21}, {12, 22}, {
+       13, 3}, {14, 4}, {15, 9}, {16, 10}, {17, 23}, {18, 24}, {19, 5}, {20, 
+       6}, {21, 11}, {22, 12}, {23, 17}, {24, 18}, {1, 4}, {2, 6}, {3, 2}, {4,
+        5}, {5, 1}, {6, 3}, {7, 10}, {8, 12}, {9, 8}, {10, 11}, {11, 7}, {12, 
+       9}, {13, 16}, {14, 18}, {15, 14}, {16, 17}, {17, 13}, {18, 15}, {19, 
+       22}, {20, 24}, {21, 20}, {22, 23}, {23, 19}, {24, 21}}, Null}, {
+      EdgeStyle -> {
+        DirectedEdge["(14)(23)", "(1324)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1342)", "(1324)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(14)", "(1423)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1234)", "(134)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(12)", "\[Epsilon]"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(124)", "(14)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(24)", "(142)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(123)", "(13)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1324)", "(14)(23)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1243)", "(143)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], DirectedEdge["(24)", "(23)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(143)", "(142)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(132)", "(134)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(14)(23)", "(143)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(143)", "(1243)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(234)", "(243)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(132)", "(23)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1423)", "(1432)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1423)", "(13)(24)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(123)", "(12)(34)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1432)", "(14)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1324)", "(13)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(13)", "(1342)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(23)", "(132)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(134)", "(1234)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(234)", "(1342)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1234)", "(1243)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["\[Epsilon]", "(12)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(243)", "\[Epsilon]"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(13)(24)", "(1423)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(134)", "(13)(24)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(142)", "(24)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(243)", "(1432)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(13)", "(123)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(1432)", "(243)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["\[Epsilon]", "(234)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(12)(34)", "(124)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(12)(34)", "(34)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(142)", "(14)(23)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(13)(24)", "(132)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(14)", "(124)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], DirectedEdge["(23)", "(34)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], DirectedEdge["(34)", "(24)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(124)", "(123)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1243)", "(12)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128], 
+         DirectedEdge["(1342)", "(234)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(34)", "(12)(34)"] -> 
+         RGBColor[0.471412, 0.108766, 0.527016], 
+         DirectedEdge["(12)", "(1234)"] -> 
+         RGBColor[0.857359, 0.131106, 0.132128]}, 
+       GraphLayout -> {"Dimension" -> 3}, VertexLabels -> {
+         Placed["Name", Tooltip]}}]]}, 
+    TagBox[GraphicsGroup3DBox[{
+       {Hue[0.6, 0.2, 0.8], Arrowheads[0.027160416770407578`], 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.365478303472744, 3.0370852835885436`, 
+          0.6095834288983317}, {0.6766974820548821, 2.5070304938629207`, 
+          0.5241946077593138}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.365478303472744, 
+          3.0370852835885436`, 0.6095834288983317}, {1.5699506398906076`, 
+          3.385887728037067, 1.0310177879149542`}, {1.9720751205498448`, 
+          3.4279351259123687`, 1.452452146931742}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.1116947478724883`, 0.39076183730044445`, 
+          2.7172914222123667`}, {2.052416735438096, 1.085104541088735, 
+          3.243632600589179}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.1116947478724883`, 
+          0.39076183730044445`, 2.7172914222123667`}, {1.907694629771064, 
+          0.042169860522768776`, 2.2960302378077846`}, {1.5060055493584794`, 
+          0., 1.874769053403107}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.8024379361895084`, 0.9216342474964053, 
+          2.803419738560402}, {2.1116947478724883`, 0.39076183730044445`, 
+          2.7172914222123667`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.8024379361895084`, 
+          0.9216342474964053, 2.803419738560402}, {3.005045199020412, 
+          1.350402090884342, 2.4605007688490708`}, {3.45247653024004, 
+          1.507554152014958, 2.1175817991384633`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.6766974820548821, 2.5070304938629207`, 
+          0.5241946077593138}, {1.4276848016608696`, 2.343869898009458, 
+          0.08530821579276782}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.6766974820548821, 
+          2.5070304938629207`, 0.5241946077593138}, {0.47559258028725115`, 
+          2.081813395017215, 0.8701937085733749}, {0.03097341609076487, 
+          1.9282993517012104`, 1.2161928093877004`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.4276848016608696`, 2.343869898009458, 
+          0.08530821579276782}, {1.365478303472744, 3.0370852835885436`, 
+          0.6095834288983317}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.4276848016608696`, 
+          2.343869898009458, 0.08530821579276782}, {1.931416484479921, 
+          2.040918545895779, 0.04265410789638964}, {2.1560544779225443`, 
+          1.4977216185062179`, 0.}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.052416735438096, 1.085104541088735, 
+          3.243632600589179}, {2.8024379361895084`, 0.9216342474964053, 
+          2.803419738560402}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.052416735438096, 1.085104541088735,
+           3.243632600589179}, {1.5489524567704251`, 1.3885532142469856`, 
+          3.286719715928105}, {1.3248443442867455`, 1.9319986402599856`, 
+          3.3298068312669953`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.9720751205498448`, 
+          3.4279351259123687`, 1.452452146931742}, {1.7676027841323179`, 
+          3.079132681464404, 1.0310177879158053`}, {1.365478303472744, 
+          3.0370852835885436`, 0.6095834288983317}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.9720751205498448`, 3.4279351259123687`, 
+          1.452452146931742}, {2.70332704025296, 3.1705732463117506`, 
+          1.8722306839391605`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.5060055493584794`, 0., 
+          1.874769053403107}, {1.7100056674600324`, 0.3485919767779008, 
+          2.2960302378079644`}, {2.1116947478724883`, 0.39076183730044445`, 
+          2.7172914222123667`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.5060055493584794`, 0., 1.874769053403107}, {
+          1.521499206734367, 0.1121747936819415, 1.0199634339847767`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.7777430077093708, 0.25838779018378677`, 
+          1.4560586768107648`}, {1.5060055493584794`, 0., 
+          1.874769053403107}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.7777430077093708, 
+          0.25838779018378677`, 1.4560586768107648`}, {0.28468645829946027`, 
+          0.5730265751959549, 1.4987499213422109`}, {0.07559329015098881, 
+          1.1192704520345036`, 1.5414411658736566`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.70332704025296, 3.1705732463117506`, 
+          1.8722306839391605`}, {1.9593943988569804`, 3.316684655726397, 
+          2.308179700699156}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.70332704025296, 
+          3.1705732463117506`, 1.8722306839391605`}, {3.196798083006238, 
+          2.857374242286802, 1.8304767817724266`}, {3.407121103787293, 
+          2.312056433034755, 1.7887228796057146`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.9593943988569804`, 3.316684655726397, 
+          2.308179700699156}, {1.9720751205498448`, 3.4279351259123687`, 
+          1.452452146931742}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.9593943988569804`, 
+          3.316684655726397, 2.308179700699156}, {1.750396052930388, 
+          2.886254306540472, 2.649194550149906}, {1.2979270229020836`, 
+          2.7306189282820315`, 2.990209399600689}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.521499206734367, 0.1121747936819415, 
+          1.0199634339847767`}, {0.7777430077093708, 0.25838779018378677`, 
+          1.4560586768107648`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.521499206734367, 
+          0.1121747936819415, 1.0199634339847767`}, {1.7307634057135712`, 
+          0.5430517778440012, 0.6796614527901879}, {2.1835983238985657`, 
+          0.6992152093105373, 0.33935947159559054`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{3.45247653024004, 1.507554152014958, 
+          2.1175817991384633`}, {3.249869267409194, 1.0787863086271374`, 
+          2.4605007688496996`}, {2.8024379361895084`, 0.9216342474964053, 
+          2.803419738560402}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{3.45247653024004, 1.507554152014958, 
+          2.1175817991384633`}, {3.407121103787293, 2.312056433034755, 
+          1.7887228796057146`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.03097341609076487, 
+          1.9282993517012104`, 1.2161928093877004`}, {0.23207831785846092`, 
+          2.3535164505470494`, 0.8701937085735278}, {0.6766974820548821, 
+          2.5070304938629207`, 0.5241946077593138}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.03097341609076487, 1.9282993517012104`, 
+          1.2161928093877004`}, {0., 1.8105755283582305`, 
+          2.0541230046129826`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.07559329015098881, 
+          1.1192704520345036`, 1.5414411658736566`}, {0.5686498395609512, 
+          0.8046316670223016, 1.4987499213422066`}, {0.7777430077093708, 
+          0.25838779018378677`, 1.4560586768107648`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.07559329015098881, 1.1192704520345036`, 
+          1.5414411658736566`}, {0.03097341609076487, 1.9282993517012104`, 
+          1.2161928093877004`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{3.407121103787293, 2.312056433034755,
+           1.7887228796057146`}, {2.9136500610339566`, 2.625255437059748, 
+          1.8304767817724539`}, {2.70332704025296, 3.1705732463117506`, 
+          1.8722306839391605`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{3.407121103787293, 2.312056433034755, 
+          1.7887228796057146`}, {3.482257900548054, 1.620705414444058, 
+          1.2773689101188503`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{3.482257900548054, 1.620705414444058, 
+          1.2773689101188503`}, {3.45247653024004, 1.507554152014958, 
+          2.1175817991384633`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{3.482257900548054, 1.620705414444058,
+           1.2773689101188503`}, {3.2800529883147003`, 1.2740134764254927`, 
+          0.8520775912673126}, {2.8806129312878728`, 1.2349012371593904`, 
+          0.42678627241639333`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0., 1.8105755283582305`, 2.0541230046129826`}, {
+          0.07559329015098881, 1.1192704520345036`, 1.5414411658736566`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0., 1.8105755283582305`, 
+          2.0541230046129826`}, {0.20202761771953912`, 2.1568019641245018`, 
+          2.4790747242601934`}, {0.6009954948623681, 2.1956933018877174`, 
+          2.9040264439074344`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.1560544779225443`, 
+          1.4977216185062179`, 0.}, {1.6523227951034987`, 1.8006729706199045`,
+           0.04265410789637839}, {1.4276848016608696`, 2.343869898009458, 
+          0.08530821579276782}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.1560544779225443`, 1.4977216185062179`, 0.}, {
+          2.1835983238985657`, 0.6992152093105373, 0.33935947159559054`}}], 
+          0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.3248443442867455`, 
+          1.9319986402599856`, 3.3298068312669953`}, {1.8283086229544323`, 
+          1.628549967101726, 3.2867197159280686`}, {2.052416735438096, 
+          1.085104541088735, 3.243632600589179}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.3248443442867455`, 1.9319986402599856`, 
+          3.3298068312669953`}, {0.6009954948623681, 2.1956933018877174`, 
+          2.9040264439074344`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{1.2979270229020836`, 
+          2.7306189282820315`, 2.990209399600689}, {1.506925368828888, 
+          3.1610492774683854`, 2.649194550149598}, {1.9593943988569804`, 
+          3.316684655726397, 2.308179700699156}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{1.2979270229020836`, 2.7306189282820315`, 
+          2.990209399600689}, {1.3248443442867455`, 1.9319986402599856`, 
+          3.3298068312669953`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.1835983238985657`, 
+          0.6992152093105373, 0.33935947159559054`}, {1.9743341249193527`, 
+          0.2683382251484507, 0.6796614527901996}, {1.521499206734367, 
+          0.1121747936819415, 1.0199634339847767`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.1835983238985657`, 0.6992152093105373, 
+          0.33935947159559054`}, {2.8806129312878728`, 1.2349012371593904`, 
+          0.42678627241639333`}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{2.8806129312878728`, 
+          1.2349012371593904`, 0.42678627241639333`}, {3.0828178435210503`, 
+          1.5815931751776577`, 0.8520775912675622}, {3.482257900548054, 
+          1.620705414444058, 1.2773689101188503`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{2.8806129312878728`, 1.2349012371593904`, 
+          0.42678627241639333`}, {2.1560544779225443`, 1.4977216185062179`, 
+          0.}}], 0.06720172499142765]}, 
+        {RGBColor[0.471412, 0.108766, 0.527016], 
+         Arrow3DBox[TubeBezierCurveBox[{{0.6009954948623681, 
+          2.1956933018877174`, 2.9040264439074344`}, {0.3989678771428017, 
+          1.849466866121403, 2.4790747242601667`}, {0., 1.8105755283582305`, 
+          2.0541230046129826`}}], 0.06720172499142765]}, 
+        {RGBColor[0.857359, 0.131106, 0.132128], 
+         Arrow3DBox[TubeBox[{{0.6009954948623681, 2.1956933018877174`, 
+          2.9040264439074344`}, {1.2979270229020836`, 2.7306189282820315`, 
+          2.990209399600689}}], 0.06720172499142765]}}, 
+       {Hue[0.6, 0.6, 1], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.365478303472744, 3.0370852835885436`, 
+           0.6095834288983317}, 0.06720172499142765],
+          "\"\[Epsilon]\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "\[Epsilon]", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.1116947478724883`, 0.39076183730044445`, 
+           2.7172914222123667`}, 0.06720172499142765],
+          "\"(34)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(34)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.8024379361895084`, 0.9216342474964053, 
+           2.803419738560402}, 0.06720172499142765],
+          "\"(23)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(23)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.6766974820548821, 2.5070304938629207`, 
+           0.5241946077593138}, 0.06720172499142765],
+          "\"(234)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(234)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.4276848016608696`, 2.343869898009458, 
+           0.08530821579276782}, 0.06720172499142765],
+          "\"(243)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(243)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.052416735438096, 1.085104541088735, 3.243632600589179},
+            0.06720172499142765],
+          "\"(24)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(24)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.9720751205498448`, 3.4279351259123687`, 
+           1.452452146931742}, 0.06720172499142765],
+          "\"(12)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(12)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.5060055493584794`, 0., 1.874769053403107}, 
+           0.06720172499142765],
+          "\"(12)(34)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(12)(34)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.7777430077093708, 0.25838779018378677`, 
+           1.4560586768107648`}, 0.06720172499142765],
+          "\"(123)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(123)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.70332704025296, 3.1705732463117506`, 
+           1.8722306839391605`}, 0.06720172499142765],
+          "\"(1234)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1234)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.9593943988569804`, 3.316684655726397, 
+           2.308179700699156}, 0.06720172499142765],
+          "\"(1243)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1243)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.521499206734367, 0.1121747936819415, 
+           1.0199634339847767`}, 0.06720172499142765],
+          "\"(124)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(124)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{3.45247653024004, 1.507554152014958, 
+           2.1175817991384633`}, 0.06720172499142765],
+          "\"(132)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(132)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.03097341609076487, 1.9282993517012104`, 
+           1.2161928093877004`}, 0.06720172499142765],
+          "\"(1342)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1342)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.07559329015098881, 1.1192704520345036`, 
+           1.5414411658736566`}, 0.06720172499142765],
+          "\"(13)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(13)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{3.407121103787293, 2.312056433034755, 
+           1.7887228796057146`}, 0.06720172499142765],
+          "\"(134)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(134)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{3.482257900548054, 1.620705414444058, 
+           1.2773689101188503`}, 0.06720172499142765],
+          "\"(13)(24)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(13)(24)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0., 1.8105755283582305`, 2.0541230046129826`}, 
+           0.06720172499142765],
+          "\"(1324)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1324)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.1560544779225443`, 1.4977216185062179`, 0.}, 
+           0.06720172499142765],
+          "\"(1432)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1432)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.3248443442867455`, 1.9319986402599856`, 
+           3.3298068312669953`}, 0.06720172499142765],
+          "\"(142)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(142)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{1.2979270229020836`, 2.7306189282820315`, 
+           2.990209399600689}, 0.06720172499142765],
+          "\"(143)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(143)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.1835983238985657`, 0.6992152093105373, 
+           0.33935947159559054`}, 0.06720172499142765],
+          "\"(14)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(14)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{2.8806129312878728`, 1.2349012371593904`, 
+           0.42678627241639333`}, 0.06720172499142765],
+          "\"(1423)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(1423)", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[
+          SphereBox[{0.6009954948623681, 2.1956933018877174`, 
+           2.9040264439074344`}, 0.06720172499142765],
+          "\"(14)(23)\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "(14)(23)", "Tooltip"]& ]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  BaseStyle->{Graphics3DBoxOptions -> {Method -> {"ShrinkWrap" -> True}}},
+  Boxed->False,
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  Lighting->{{"Directional", 
+     GrayLevel[0.7], 
+     ImageScaled[{1, 1, 0}]}, {"Point", 
+     GrayLevel[0.9], 
+     ImageScaled[{0, 0, 0}], {0, 0, 0.07}}}]], "Output",
+ CellChangeTimes->{
+  3.9569850389644566`*^9, {3.956985074145073*^9, 3.9569851287055416`*^9}, {
+   3.9569851883102913`*^9, 3.956985251202236*^9}},
+ CellLabel->"Out[25]=",
+ CellID->106550488,ExpressionUUID->"df7a92f8-e913-414b-bb57-1b9b2a81f781"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "1fcd60e4-32b8-1c4a-99cb-cc46f059f78d"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->120759046,ExpressionUUID->"594d877e-2839-7048-a1c0-f996745dbbf3"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "8c7fb886-a634-1e4a-899d-d5031b841356"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->102113557,ExpressionUUID->"70bb5cdf-9621-4c44-949d-f3bf5e12f534"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "2e7a96c9-559b-394f-8b26-21d1b813701a"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->11490106,ExpressionUUID->"a754e100-9f99-5546-a635-7e372b687709"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "a9608ad9-f831-ad47-9458-510ad604687f"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->174447524,ExpressionUUID->"9aa5c13b-a14a-8d4d-b8bf-b7d5c1ee90b8"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "ecdb55a0-8b17-5d49-bbfb-03d4b55e5729"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->92555631,ExpressionUUID->"5e9e162b-85e8-294b-8e95-fd6a9cde5543"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "782e4c7a-df28-4548-87e7-95dab966c0e3"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->165164779,ExpressionUUID->"d3540596-e57c-8347-8d60-9b652ef95ae0"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "0923971e-ca8f-7d4f-af60-06fbcdf03eba"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->572407963,ExpressionUUID->"2a300103-bb30-9641-8c4b-92910dc4a659"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "e0068492-b899-494e-a4f2-6aa99e0ac9b5"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->808109105,ExpressionUUID->"04bc561b-5a5a-b74d-9276-55ee301503fc"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "ccfc36c2-8c9a-9743-90a0-1e68ba705f04"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->549710396,ExpressionUUID->"e8bd0b28-904c-2d49-80ca-3efd4968dd7b"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "be08639d-b71f-2540-8867-929681e36186"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1940173,ExpressionUUID->"26126e68-d6dc-d74e-95eb-2417ead84bea"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "e2c7e222-f606-8040-9f5d-13a088e39b2b"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->241430826,ExpressionUUID->"a7506e9a-9627-1147-b768-7002a246e22e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->74845053,ExpressionUUID->"a0968c3f-2981-eb46-83e3-507c0116a3bb"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"de6ec0bd-e4ca-6746-8a66-ab81c18e5bf4"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"5134f041-01d6-7b4e-8457-743ee5305c90"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "cb6edbd8-d467-c945-81d2-8153403c909a"]
+}], "History",
+ CellID->455278405,ExpressionUUID->"28e8d8d5-cbd5-af46-b84f-86ffebf0793e"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "dbb08103-8575-3341-bce9-557ac847fef1"]
+}], "CategorizationSection",
+ CellID->12896423,ExpressionUUID->"82ac1656-052c-3746-a53d-d6e0067d979d"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->173242484,ExpressionUUID->"9f78ac62-c032-944b-927f-b238241f3b2e"],
+
+Cell["Taggar/MGroups", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->223050587,ExpressionUUID->"fcfb989e-d4da-f749-a083-40515121f6f7"],
+
+Cell["Taggar`MGroups`", "Categorization",
+ CellLabel->"Context",
+ CellID->46490157,ExpressionUUID->"6c17c15c-4025-614a-ac74-8f397ab1c8d3"],
+
+Cell["Taggar/MGroups/ref/MCayleyGraph3D", "Categorization",
+ CellLabel->"URI",
+ CellID->253357874,ExpressionUUID->"9fc9fc6e-1540-0e4c-ace1-16669a145d62"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->29783180,ExpressionUUID->"e4951eec-4fe6-9947-9670-bd212e163393"],
+
+Cell["XXXX", "Keywords",
+ CellID->459414420,ExpressionUUID->"487a65d6-2596-da47-9c77-eea7eefce208"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->355744157,ExpressionUUID->"c0fb1c04-013a-8b43-9399-b15b441a5a8a"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->114944069,ExpressionUUID->"9adbf6dd-5845-144a-b724-5a9a0a1be57a"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->432110011,ExpressionUUID->"86751352-5307-ef4d-a16d-ad769408600b"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->593642194,ExpressionUUID->"768d6bdd-2dbd-2f4b-8007-1c04e2fc18d8"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->125334671,ExpressionUUID->"c60aa847-c991-e445-9337-79c8f187d525"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700.5, 495.75},
+WindowMargins->{{4.5, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "MGroups"|>,
+CellContext->"Global`",
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"4360aad6-d05e-1246-9b91-092c7f70c555"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[34572, 763, 487, 13, 70, "ExtendedExamplesSection",ExpressionUUID->"594d877e-2839-7048-a1c0-f996745dbbf3",
+   CellTags->"ExtendedExamples",
+   CellID->120759046]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 40839, 951}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 109, 1, 70, "ObjectName",ExpressionUUID->"0a3927a1-6e97-8d4f-bfa1-2030abc70024",
+ CellID->3333146],
+Cell[688, 25, 886, 22, 70, "Usage",ExpressionUUID->"313ded54-3536-5141-b929-6525e75df803",
+ CellID->51396497],
+Cell[1577, 49, 482, 13, 70, "Notes",ExpressionUUID->"a8674c0c-0a7f-e64d-ba6d-9a729fa7db0b",
+ CellID->88610315]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2096, 67, 458, 13, 70, "SeeAlsoSection",ExpressionUUID->"1d225e07-8a53-8f4a-a818-6d2c9ec63eea",
+ CellID->428485867],
+Cell[2557, 82, 1670, 40, 70, "SeeAlso",ExpressionUUID->"c5c23907-8e8e-9f47-b831-377f92a9def2",
+ CellID->564724575]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4264, 127, 435, 12, 70, "TechNotesSection",ExpressionUUID->"fcb4622a-3a78-d745-b333-130978d73532",
+ CellID->240127610],
+Cell[4702, 141, 100, 1, 70, "Tutorials",ExpressionUUID->"c97c21fa-eac1-184c-80a1-ea85645551dd",
+ CellID->416700182]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4839, 147, 117, 1, 70, "MoreAboutSection",ExpressionUUID->"f2f7e31c-63b6-104e-851a-cc41c100978c",
+ CellID->100964944],
+Cell[4959, 150, 100, 1, 70, "MoreAbout",ExpressionUUID->"39f08269-2544-d844-83df-dd5a985f8497",
+ CellID->376326593]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5096, 156, 472, 13, 70, "RelatedLinksSection",ExpressionUUID->"7da5e507-b975-a94b-8373-15a6407465e1",
+ CellID->203602059],
+Cell[5571, 171, 103, 1, 70, "RelatedLinks",ExpressionUUID->"330b8408-9891-5641-9b28-a617e02fb869",
+ CellID->782624989]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5711, 177, 529, 14, 70, "ExamplesInitializationSection",ExpressionUUID->"d6e43658-674f-b24f-ac02-ed0396acf8db",
+ CellID->63701981],
+Cell[6243, 193, 173, 3, 70, "ExampleInitialization",ExpressionUUID->"2824939a-e06b-5e44-9c9b-dd8b9aa39865",
+ CellID->73030701]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6453, 201, 441, 12, 70, "PrimaryExamplesSection",ExpressionUUID->"e288bd74-16e2-044b-804d-9ccc3cb2ebb7",
+ CellID->42822701],
+Cell[6897, 215, 387, 9, 70, "ExampleText",ExpressionUUID->"6de2325c-c5d6-6e41-b7a0-8c54baecdf7a",
+ CellID->70363883],
+Cell[CellGroupData[{
+Cell[7309, 228, 499, 11, 70, "Input",ExpressionUUID->"9f9c3116-a024-cd4e-8efa-3c4d40625e33",
+ CellID->58547310],
+Cell[7811, 241, 26712, 516, 70, "Output",ExpressionUUID->"df7a92f8-e913-414b-bb57-1b9b2a81f781",
+ CellID->106550488]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34572, 763, 487, 13, 70, "ExtendedExamplesSection",ExpressionUUID->"594d877e-2839-7048-a1c0-f996745dbbf3",
+ CellTags->"ExtendedExamples",
+ CellID->120759046],
+Cell[35062, 778, 241, 5, 70, "ExampleSection",ExpressionUUID->"70bb5cdf-9621-4c44-949d-f3bf5e12f534",
+ CellID->102113557],
+Cell[35306, 785, 263, 5, 70, "ExampleSection",ExpressionUUID->"a754e100-9f99-5546-a635-7e372b687709",
+ CellID->11490106],
+Cell[CellGroupData[{
+Cell[35594, 794, 243, 5, 70, "ExampleSection",ExpressionUUID->"9aa5c13b-a14a-8d4d-b8bf-b7d5c1ee90b8",
+ CellID->174447524],
+Cell[35840, 801, 245, 5, 70, "ExampleSubsection",ExpressionUUID->"5e9e162b-85e8-294b-8e95-fd6a9cde5543",
+ CellID->92555631],
+Cell[36088, 808, 246, 5, 70, "ExampleSubsection",ExpressionUUID->"d3540596-e57c-8347-8d60-9b652ef95ae0",
+ CellID->165164779]
+}, Open  ]],
+Cell[36349, 816, 248, 5, 70, "ExampleSection",ExpressionUUID->"2a300103-bb30-9641-8c4b-92910dc4a659",
+ CellID->572407963],
+Cell[36600, 823, 258, 5, 70, "ExampleSection",ExpressionUUID->"04bc561b-5a5a-b74d-9276-55ee301503fc",
+ CellID->808109105],
+Cell[36861, 830, 251, 5, 70, "ExampleSection",ExpressionUUID->"e8bd0b28-904c-2d49-80ca-3efd4968dd7b",
+ CellID->549710396],
+Cell[37115, 837, 254, 5, 70, "ExampleSection",ExpressionUUID->"26126e68-d6dc-d74e-95eb-2417ead84bea",
+ CellID->1940173],
+Cell[37372, 844, 249, 5, 70, "ExampleSection",ExpressionUUID->"a7506e9a-9627-1147-b768-7002a246e22e",
+ CellID->241430826]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37658, 854, 109, 1, 70, "MetadataSection",ExpressionUUID->"a0968c3f-2981-eb46-83e3-507c0116a3bb",
+ CellID->74845053],
+Cell[37770, 857, 476, 12, 70, "History",ExpressionUUID->"28e8d8d5-cbd5-af46-b84f-86ffebf0793e",
+ CellID->455278405],
+Cell[CellGroupData[{
+Cell[38271, 873, 483, 13, 70, "CategorizationSection",ExpressionUUID->"82ac1656-052c-3746-a53d-d6e0067d979d",
+ CellID->12896423],
+Cell[38757, 888, 134, 2, 70, "Categorization",ExpressionUUID->"9f78ac62-c032-944b-927f-b238241f3b2e",
+ CellID->173242484],
+Cell[38894, 892, 142, 2, 70, "Categorization",ExpressionUUID->"fcfb989e-d4da-f749-a083-40515121f6f7",
+ CellID->223050587],
+Cell[39039, 896, 138, 2, 70, "Categorization",ExpressionUUID->"6c17c15c-4025-614a-ac74-8f397ab1c8d3",
+ CellID->46490157],
+Cell[39180, 900, 153, 2, 70, "Categorization",ExpressionUUID->"9fc9fc6e-1540-0e4c-ace1-16669a145d62",
+ CellID->253357874]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[39370, 907, 109, 1, 70, "KeywordsSection",ExpressionUUID->"e4951eec-4fe6-9947-9670-bd212e163393",
+ CellID->29783180],
+Cell[39482, 910, 99, 1, 70, "Keywords",ExpressionUUID->"487a65d6-2596-da47-9c77-eea7eefce208",
+ CellID->459414420]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[39618, 916, 119, 1, 70, "TemplatesSection",ExpressionUUID->"c0fb1c04-013a-8b43-9399-b15b441a5a8a",
+ CellID->355744157],
+Cell[39740, 919, 148, 2, 70, "Template",ExpressionUUID->"9adbf6dd-5845-144a-b724-5a9a0a1be57a",
+ CellID->114944069],
+Cell[39891, 923, 137, 2, 70, "Template",ExpressionUUID->"86751352-5307-ef4d-a16d-ad769408600b",
+ CellID->432110011],
+Cell[40031, 927, 135, 2, 70, "Template",ExpressionUUID->"768d6bdd-2dbd-2f4b-8007-1c04e2fc18d8",
+ CellID->593642194],
+Cell[40169, 931, 137, 2, 70, "Template",ExpressionUUID->"c60aa847-c991-e445-9337-79c8f187d525",
+ CellID->125334671]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
