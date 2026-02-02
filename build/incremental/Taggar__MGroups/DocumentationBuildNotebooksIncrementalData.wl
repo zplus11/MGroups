@@ -52,12 +52,12 @@
    "FileHash" -> "isfF51g75bZvecy3i2Clex0YNVV61r39pv8/nxwuY+w="|>, 
  "English\\ReferencePages\\Symbols\\MDihedralGroup.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[0.8595589, "Seconds"]|>], 
-   "FileHash" -> "GwUKb/4bk7+C1hwPqVS2mozrEWSy7RvbXWvLAB+sfaw="|>, 
+      "Time" -> Quantity[14.3047755, "Seconds"]|>], 
+   "FileHash" -> "Ygc1zE54YLnn8oSUUzFs9kCwWPOQBM5+WlzGUupUgjc="|>, 
  "English\\ReferencePages\\Symbols\\MEDP.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[0.885274, "Seconds"]|>], 
-   "FileHash" -> "gPu2eMl0LI1MDkvWNayYwoE2sqCnpTPDzchGgzAYWOw="|>, 
+      "Time" -> Quantity[1.3384872, "Seconds"]|>], 
+   "FileHash" -> "TW7sP3VspqqNzCUWSs6pHZOWgHRjRibkzVG7DHPUCgo="|>, 
  "English\\ReferencePages\\Symbols\\MElementCentralizer.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.375043, "Seconds"]|>], 
@@ -160,8 +160,8 @@
    "FileHash" -> "IfQy8j83VkLdl27bmH5ILO1OVsJ5SI/PTR9eAST0tYw="|>, 
  "English\\ReferencePages\\Symbols\\MPermutationsGroup.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[0.8901985, "Seconds"]|>], 
-   "FileHash" -> "rfPaYWoNF348bz/gBter1BRUrYEK1hjbgvT1ir1fRWs="|>, 
+      "Time" -> Quantity[2.163287, "Seconds"]|>], 
+   "FileHash" -> "4wtWRCeWhrOc5kGihXPEzFhFoJ4AQ6KsUmroFVkKwPY="|>, 
  "English\\ReferencePages\\Symbols\\MQuaternionGroup.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[0.8218443, "Seconds"]|>], 
@@ -184,8 +184,8 @@
    "FileHash" -> "EVvIZnYSnA5qJxausG6ZoiV0ULxTkBNqn/5QLilk/bM="|>, 
  "English\\ReferencePages\\Symbols\\MTuple.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[0.940032, "Seconds"]|>], 
-   "FileHash" -> "f2SdDMK3udrZ81voVkPo4Ajm0IWwjxVJxNtpiAjLve4="|>, 
+      "Time" -> Quantity[26.2338089, "Seconds"]|>], 
+   "FileHash" -> "QEFu947CeaNbNwe1wkf1cMvTSXFxz4oh93S4mpf25ug="|>, 
  "English\\ReferencePages\\Symbols\\MVisualiseMorphism.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[0.8815516, "Seconds"]|>], 
@@ -193,4 +193,8 @@
  "English\\ReferencePages\\Symbols\\SemiGroupQ.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[0.8750333, "Seconds"]|>], 
-   "FileHash" -> "laUL24xLdR0YC86f2B4e9bmUk08nDmxtRj4a5by47Vw="|>|>
+   "FileHash" -> "laUL24xLdR0YC86f2B4e9bmUk08nDmxtRj4a5by47Vw="|>, 
+ "English\\ReferencePages\\Symbols\\MSymmetry.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.0924634, "Seconds"]|>], 
+   "FileHash" -> "Y78JwNcjrC72G3pqvB+4gUtUKjTiTez9dP8TYwSCO9U="|>|>

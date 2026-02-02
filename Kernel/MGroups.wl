@@ -43,7 +43,6 @@ MPermutationsGroup[permutations] defines the group of permutation on permutation
 MCycleForm::usage="MCycleForm[permutation] converts the string permutation into Mathematica's Cycles form."
 MKlein4Group::usage="MKlein4Group represents the Klein 4-Group"
 MQuaternionGroup::usage="MQuaternionGroup represents the Quaternion Group"
-MTuple::usage="MTuple[elements] denotes the tuple of elements in an external direct product."
 MEDP::usage="MEDP[groups] defines the external direct product of groups."
 MHomomorphism::usage="MHomomorphism[\!\(\*SubscriptBox[\(group\), \(1\)]\), \!\(\*SubscriptBox[\(group\), \(2\)]\), phi] defines the homomorphism from \!\(\*SubscriptBox[\(group\), \(1\)]\) to \!\(\*SubscriptBox[\(group\), \(2\)]\) defined by phi."
 MMorphismKernel::usage="MMorphismKernel[morphism] finds the kernel of morphism."
@@ -63,7 +62,9 @@ MHighlight::usage="Option for subgroup lattices."
 MShowInfo::usage="Option for subgroup lattices."
 MPresentation::usage="Option for presentation of subgroups."
 
-MSymmetry::usage="Dihedral group element."
+MSymmetry::usage="MSymmetry[0, i] represents the ith rotation of a regular polygon.
+MSymmetry[1, i] represents the ith reflection of a regular polygon."
+MTuple::usage="MTuple[elements] denotes the tuple of elements in an external direct product."
 
 
 Begin["`Private`"]
@@ -186,65 +187,55 @@ powerElement[G_, x_, n_Integer] := Module[
     res
 ]
 
-(* single element, single power *)
-MElementPower[G_MGroup, element_, power_] := Module[{domain = MGroupDomain[G]},
-    If[!MemberQ[domain, element], Message[MElementPower::notin, element]; Return[$Failed]];
-    If[!IntegerQ[power], Message[MElementPower::pown, power]; Return[$Failed]];
-    powerElement[G, element, power]
-]
+MElementPower[G_MGroup, elem_, p_] :=
+	Module[{dom = MGroupDomain[G]},
+		If[!MemberQ[dom, elem], Message[MElementPower::notin, elem]; Return[$Failed]];
+		If[!IntegerQ[p], Message[MElementPower::pown, p]; Return[$Failed]];
+		powerElement[G, elem, p]
+	]
 
-(* multiple elements, same power *)
-MElementPower[G_MGroup, elements_List, power_] := Module[{domain = MGroupDomain[G]},
-    If[!AllTrue[elements, MemberQ[domain, #] &], Message[MElementPower::notin, #] & /@ elements; Return[$Failed]];
-    If[!IntegerQ[power], Message[MElementPower::pown, power]; Return[$Failed]];
-    powerElement[G, #, power] & /@ elements
-]
+MElementPower[G_MGroup, elems_List, p_] :=
+	Module[{dom = MGroupDomain[G], bad},
+		bad = Select[elems, !MemberQ[dom, #] &];
+		If[bad =!= {}, Message[MElementPower::notin, bad]; Return[$Failed]];
+		If[!IntegerQ[p], Message[MElementPower::pown, p]; Return[$Failed]];
+		powerElement[G, #, p] & /@ elems
+	]
 
-(* single element, multiple powers *)
-MElementPower[G_MGroup, element_, powers_List] := Module[{domain = MGroupDomain[G]},
-    If[!MemberQ[domain, element], Message[MElementPower::notin, element]; Return[$Failed]];
-    If[!AllTrue[powers, IntegerQ], Message[MElementPower::pown, #] & /@ powers; Return[$Failed]];
-    powerElement[G, element, #] & /@ powers
-]
+MElementPower[G_MGroup, elem_, ps_List] :=
+	Module[{dom = MGroupDomain[G], bad},
+		If[!MemberQ[dom, elem], Message[MElementPower::notin, elem]; Return[$Failed]];
+		bad = Select[ps, Not@*IntegerQ];
+		If[bad =!= {}, Message[MElementPower::pown, bad]; Return[$Failed]];
+		powerElement[G, elem, #] & /@ ps
+	]
 
 
 MGroupOrder[G_MGroup] := Length@MGroupDomain@G
 
-MElementOrder[G_MGroup, element_] := Module[
-    {domain = MGroupDomain[G], order = MGroupOrder[G], identity, divisors},
-    identity = MGroupIdentity[G];
-    If[!MemberQ[domain, element], Message[MElementOrder::notin, element]; Return[$Failed]];
-    divisors = Divisors[order];
-    FirstCase[divisors, i_ /; powerElement[G, element, i] === identity :> i, Null]
-]
+MElementOrder[G_MGroup, elem_] := 
+	Module[{id = MGroupIdentity[G], div = Divisors[MGroupOrder[G]]},
+		If[!MemberQ[MGroupDomain[G], elem], Return[$Failed]];
+		FirstCase[div, d_ /; powerElement[G, elem, d] == id :> d, Null]
+	]
 
-MElementOrder[G_MGroup, elements_List] := Module[
-    {domain = MGroupDomain[G], order = MGroupOrder[G], identity, divisors},
-    identity = MGroupIdentity[G];
-    If[!AllTrue[elements, MemberQ[domain, #] &], Message[MElementOrder::notin, #] & /@ elements; Return[$Failed]];
-    divisors = Divisors[order];
-    powerElement[G, #, #2] & @@@ 
-        Flatten[Table[{element, i}, {element, elements}, {i, divisors}], 1] // 
-        Partition[#, Length[divisors]] & // 
-        Map[FirstCase[#, identity &, Null] &]
-]
+MElementOrder[G_MGroup, elems_List] :=
+	Module[{id = MGroupIdentity[G], div = Divisors[MGroupOrder[G]]},
+		Map[Function[{elem}, FirstCase[div, d_ /; powerElement[G, elem, d] == id :> d, Null]], elems]
+	]
 
 
-MElementInverse[G_MGroup, element_] := Module[
-    {domain = MGroupDomain[G], identity = MGroupIdentity[G]},
-    If[!MemberQ[domain, element],
-        Message[MElementInverse::notin, element]; Return[$Failed]
-    ];
-    SelectFirst[domain, G[element][#] === identity & , Null]
-]
-
-MElementInverse[G_MGroup, elements_List] := Module[
-    {domain = MGroupDomain[G], identity = MGroupIdentity[G]},
-    If[!AllTrue[elements, MemberQ[domain, #] &],
-        Message[MElementInverse::notin, #] & /@ elements; Return[$Failed]
-    ];
-    Map[SelectFirst[domain, G[#][#2] === identity & , Null] &, elements]
-]
+MElementInverse[G_MGroup, elem_] :=
+	Module[{dom = MGroupDomain[G], id = MGroupIdentity[G]},
+		If[!MemberQ[dom, elem], Message[MElementInverse::notin, elem]; Return[$Failed]];
+		SelectFirst[dom, G[elem, #] === id &, Null]
+	]
+MElementInverse[G_MGroup, elems_List] :=
+	Module[{dom = MGroupDomain[G], bad, id = MGroupIdentity[G]},
+		bad = Select[elems, !MemberQ[dom, #] &];
+		If[bad =!= {}, Message[MElementInverse::notin, bad]; Return[$Failed]];
+		Map[Function[{elem}, SelectFirst[dom, G[elem, #] === id &, Null]], elems]
+	]
 
 
 MCyclicQ[G_MGroup] := Module[
@@ -421,7 +412,7 @@ MSubgroupQ[G_MGroup, H_List] := Module[
 
 
 (* a helper function to calculate the subgroups *)
-FindSubgroups[G_, r_:3] := Module[
+FindSubgroups[G_, r_:2] := Module[
     {domain = MGroupDomain[G], div, gen, subs},
     (* We check if the group is cyclic: *)
 	gen = Null;
@@ -691,8 +682,9 @@ MQuaternionGroup:=MGroup@<|
 	pattern matchings elsewhere. Note for example, that
 	MElementInverse[G, {0, 1}] otherwise could be taken to mean inverses
 	of 0 and 1, AND inverse of tuple {0, 1} as well. *)
-MTuple /: MTuple[elems_][[i_]] := elems[[i]]
-MTuple /: Format[MTuple[elems_]] := "(" <> StringRiffle[elems, ", "] <> ")"
+MTuple /: MTuple[elems___][[i_]] := {elems}[[i]]
+Format[MTuple[elems___]] :=
+  Row[{"(", Row[{elems}, ","],")"}]
 
 MEDP[groups___MGroup] := With[
 	(* number of groups in question: *)
@@ -700,9 +692,9 @@ MEDP[groups___MGroup] := With[
 	(* Forming the group: *)
 	FormMGroup[
 		(* with elements being tuples of groups *)
-		MTuple /@ Tuples[MGroupDomain /@ {groups}],
+		MTuple @@@ Tuples[MGroupDomain /@ {groups}],
 		(* and the operation being component wise *)
-		MTuple@Table[{groups}[[i]][#1[[i]]][#2[[i]]], {i, n}] &,
+		MTuple@@Table[{groups}[[i]][#1[[i]]][#2[[i]]], {i, n}] &,
 		False
 	]
 ]

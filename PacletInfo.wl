@@ -4,7 +4,7 @@ PacletObject[
   <|
     "Name" -> "Taggar/MGroups",
     "Description" -> "Mathematica package that implements some parts of finite group theory",
-    "Creator" -> "Naman Taggar <namtgr@gmail.com>",
+    "Creator" -> "Naman T. <namtgr@gmail.com>",
     "License" -> "MIT",
     "PublisherID" -> "Taggar",
     "Version" -> "1.1.0",
@@ -61,6 +61,7 @@ PacletObject[
           "Taggar`MGroups`MSubgroupLattice3D",
           "Taggar`MGroups`MSubgroupQ",
           "Taggar`MGroups`MSubgroups",
+          "Taggar`MGroups`MSymmetry",
           "Taggar`MGroups`MTuple",
           "Taggar`MGroups`MVisualiseMorphism",
           "Taggar`MGroups`SemiGroupQ"

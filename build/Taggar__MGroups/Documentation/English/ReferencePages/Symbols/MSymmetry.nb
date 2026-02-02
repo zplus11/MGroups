@@ -1,0 +1,409 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     14942,        400]
+NotebookOptionsPosition[     10831,        310]
+NotebookOutlinePosition[     13095,        367]
+CellTagsIndexPosition[     13010,        362]
+WindowTitle->MSymmetry
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["TAGGAR/ M GROUPS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "9e8b6b32-cad4-694d-a1e2-654e3ab72772"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "07846416-d731-094a-9432-cbfea5f52669"],
+        Background->LightDarkSwitched[
+          RGBColor[0.490196, 0.576471, 0.690196]],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "1a488c48-b542-0646-8aee-4ba00a89bbcc"]
+        }],ExpressionUUID->"6d164204-46d2-0446-ae28-95ed47f8dc06"],
+        StripOnInput->False],{
+       "\"Taggar/MGroups/ref/MSymmetry\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        CopyToClipboard["Taggar/MGroups/ref/MSymmetry"], Delimiter, 
+        "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/Taggar/MGroups/ref/\
+MSymmetry.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+               Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[(If[TrueQ[False], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "Taggar/MGroups/ref/MSymmetry") <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "06b56378-b7bf-054b-915b-d6a8d66417e3"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "067e75ee-493a-854b-81be-6c384169a8ae"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"1655c0d4-3dde-3d47-aaa4-d58e2994e9fb"],
+
+Cell["Taggar`MGroups`", "ContextNameCell",ExpressionUUID->"9a7207e5-7b85-0741-b178-181de23d1c6b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MSymmetry", "ObjectName",ExpressionUUID->
+      "b82ebf5d-067d-0e4d-990f-a063f07471a3"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"d4017ce3-93aa-9346-a411-becb81c6b275"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "07aefbfb-2aaf-fc42-98f9-46f1c3b51871"]
+    }],ExpressionUUID->"b1b4a734-1c4f-a34a-8b1d-635876120423"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"a55ce08a-57b5-de4f-9f79-\
+96d36d6a2288"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["MSymmetry"]], "paclet:Taggar/MGroups/ref/MSymmetry", 
+         "Taggar Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["0", "TI"], ",", 
+        StyleBox["i", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "7696dc6c-fab3-7545-9892-c35a2449a0a7"],
+     "\[LineSeparator]represents the ",
+     Cell[BoxData[
+      StyleBox["i", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "12af3ba7-262c-3943-b9a1-3715ddd8159c"],
+     "th rotation of a regular polygon."
+    }],ExpressionUUID->"5992692d-4c6a-9043-a7a0-cd176041476f"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["MSymmetry"]], "paclet:Taggar/MGroups/ref/MSymmetry", 
+         "Taggar Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{"1", ",", 
+        StyleBox["i", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e8496473-7f72-1248-8c9e-4f53db3e3f19"],
+     "\[LineSeparator]represents the ",
+     Cell[BoxData[
+      StyleBox["i", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "652fe3a7-39fa-284c-8b54-ddc265a3d040"],
+     "th reflection of a regular polygon."
+    }],ExpressionUUID->"bdc9277b-8f9b-3f42-9cdb-24593f30df1c"]}
+  }]], "Usage",
+ CellID->365599428,ExpressionUUID->"e0c93ca6-d131-0048-875f-5b0a25a1e266"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.253698793542572, 9.34630120645743}}]],
+  ExpressionUUID->"15c4215c-28d3-0e4d-9dbc-d4cb7003566c"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"f773fe59-82f1-724d-82c6-9b9a90721ca7"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "9bf638de-4d0d-6d4d-97ec-2920a5508791"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->458058166,ExpressionUUID->"5ec3a33c-666f-3b42-9bec-eba863cbbb20"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Taggar`MGroups`\>\"", "]"}]], "Input", \
+"ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->495602235,ExpressionUUID->"3a1b608a-61b9-5340-a2fa-3034ec74c4f0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {4.551318296301179, 9.048681703698822}}]],
+  ExpressionUUID->"0c4d43a9-210d-4545-ae42-67f8428cc9a3"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"2b8cb44b-3b85-9c4f-bc92-1f38b3c19886"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "fba670ce-6185-394e-99f5-c8b46fe046b7"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->327113511,ExpressionUUID->"c9c916ef-69dc-774c-b0d0-386836210b8d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["i", "TI"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "e989aa47-8b77-6a40-8f3c-f8f27d921f98"],
+ "th rotation:"
+}], "ExampleText",
+ CellID->363375450,ExpressionUUID->"17ad3127-4aa8-ca46-a585-a0a75b6f4433"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSymmetry", "[", 
+  RowBox[{"0", ",", "i"}], "]"}]], "Input",
+ CellProlog:>Needs["Taggar`MGroups`"],
+ CellLabel->"In[1]:=",
+ CellID->233733632,ExpressionUUID->"068ef6cb-9468-754f-b952-731dba6c3b7c"],
+
+Cell[BoxData[
+ TemplateBox[{"\"r\"", "i"},
+  "Superscript"]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->9294062,ExpressionUUID->"33437298-a070-7646-bcfa-f3fd41744415"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["i", "TI"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "14d0c128-38a9-c54a-ad76-21d12607ac67"],
+ "th reflection:"
+}], "ExampleText",
+ CellID->734879740,ExpressionUUID->"aecff8bc-aac3-9449-a111-7df7c11c8a82"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MSymmetry", "[", 
+  RowBox[{"1", ",", "i"}], "]"}]], "Input",
+ CellProlog:>Needs["Taggar`MGroups`"],
+ CellLabel->"In[2]:=",
+ CellID->199241128,ExpressionUUID->"b3b6f05f-8050-7d4b-8a34-b2823b6f8b11"],
+
+Cell[BoxData[
+ TemplateBox[{
+   TemplateBox[{"\"r\"", "i"}, "Superscript", SyntaxForm -> SuperscriptBox], 
+   "\"s\""},
+  "RowDefault"]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->54432662,ExpressionUUID->"ba3a2fb3-c72d-8040-99a1-313c79c19e4a"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"e7ab5416-47fc-7a46-9cbb-16460a9ca8d9"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MSymmetry",
+Visible->True,
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "AllOptsTable" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "HasOptions" -> 
+  True, "RootCaptions" -> "", "HeaderCoreAreaLink" -> {}, 
+  "Metadata" -> {
+   "built" -> "{2025, 11, 10, 12, 10, 12.3416240}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "Taggar`MGroups`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Taggar/ M Groups Symbol", "language" -> "en", "paclet" -> 
+    "Taggar/MGroups", "status" -> "None", "summary" -> 
+    "MSymmetry[0, i] represents the ith rotation of a regular polygon. \
+MSymmetry[1, i] represents the ith reflection of a regular polygon.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "MSymmetry", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "MSymmetry", "type" -> "Symbol", "uri" -> "Taggar/MGroups/ref/MSymmetry"}},
+CellContext->"Global`",
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "14.3 for Microsoft Windows (64-bit) (July 8, 2025)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"7eb8a760-e37d-2244-a11a-19b86191cffc"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5940, 163, 1439, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"5ec3a33c-666f-3b42-9bec-eba863cbbb20",
+   CellTags->"PrimaryExamplesSection",
+   CellID->458058166]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12811, 355}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[577, 21, 2985, 72, 70, "AnchorBarGrid",ExpressionUUID->"1655c0d4-3dde-3d47-aaa4-d58e2994e9fb",
+ CellID->1],
+Cell[3565, 95, 97, 0, 70, "ContextNameCell",ExpressionUUID->"9a7207e5-7b85-0741-b178-181de23d1c6b"],
+Cell[CellGroupData[{
+Cell[3687, 99, 552, 14, 70, "ObjectNameGrid",ExpressionUUID->"a55ce08a-57b5-de4f-9f79-96d36d6a2288"],
+Cell[4242, 115, 1661, 43, 70, "Usage",ExpressionUUID->"e0c93ca6-d131-0048-875f-5b0a25a1e266",
+ CellID->365599428]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5940, 163, 1439, 38, 70, "PrimaryExamplesSection",ExpressionUUID->"5ec3a33c-666f-3b42-9bec-eba863cbbb20",
+ CellTags->"PrimaryExamplesSection",
+ CellID->458058166],
+Cell[7382, 203, 205, 4, 70, "Input",ExpressionUUID->"3a1b608a-61b9-5340-a2fa-3034ec74c4f0",
+ CellID->495602235],
+Cell[CellGroupData[{
+Cell[7612, 211, 1418, 37, 70, "ExampleSection",ExpressionUUID->"c9c916ef-69dc-774c-b0d0-386836210b8d",
+ CellID->327113511],
+Cell[9033, 250, 273, 7, 70, "ExampleText",ExpressionUUID->"17ad3127-4aa8-ca46-a585-a0a75b6f4433",
+ CellID->363375450],
+Cell[CellGroupData[{
+Cell[9331, 261, 222, 5, 70, "Input",ExpressionUUID->"068ef6cb-9468-754f-b952-731dba6c3b7c",
+ CellID->233733632],
+Cell[9556, 268, 167, 4, 70, "Output",ExpressionUUID->"33437298-a070-7646-bcfa-f3fd41744415",
+ CellID->9294062]
+}, Open  ]],
+Cell[9738, 275, 275, 7, 70, "ExampleText",ExpressionUUID->"aecff8bc-aac3-9449-a111-7df7c11c8a82",
+ CellID->734879740],
+Cell[CellGroupData[{
+Cell[10038, 286, 222, 5, 70, "Input",ExpressionUUID->"b3b6f05f-8050-7d4b-8a34-b2823b6f8b11",
+ CellID->199241128],
+Cell[10263, 293, 244, 6, 70, "Output",ExpressionUUID->"ba3a2fb3-c72d-8040-99a1-313c79c19e4a",
+ CellID->54432662]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[10749, 308, 78, 0, 70, "FooterCell",ExpressionUUID->"e7ab5416-47fc-7a46-9cbb-16460a9ca8d9"]
+}
+]
+*)
+
+(* End of internal cache information *)

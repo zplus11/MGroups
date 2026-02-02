@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "b41e3ac9b4b24f13f2ec216624b9b70671646189cef2a71463f7e34b0939eaf7"
+            "002e7337d2aceac2fc4abfaa7403d5b46fa40938fade8ccf05ecb1da979ec53c"
                 
         |>
         ,
@@ -206,7 +206,7 @@
             ,
             "Hash"
             ->
-            "fe9ab2f3f6f485b19c3b0d593dd462a2e1382ddc7b7b467d32ea1be9b807bca4"
+            "f91efb24bc815d5637ab1a5b848d7427df3270224da4e887b7f79153dfe7c665"
                 
         |>
         ,
@@ -220,7 +220,7 @@
             ,
             "Hash"
             ->
-            "590381abdb15dd87f7d64f1814c5fbbbe0cb8b140e3bcfe3cb23c8c1605b2543"
+            "ff1012483e70c47245a373f5ab2616d9b87584a517689784ee2d5a23e7730bca"
                 
         |>
         ,
@@ -584,7 +584,7 @@
             ,
             "Hash"
             ->
-            "21e0dbc07233b63d9e3bba59292723d01244370d424fdb78c37825eea26a6632"
+            "e335a5af5996888e8a4706b233549739b3346d05ea5a4356918f58a16e9b9dd8"
                 
         |>
         ,
@@ -662,13 +662,27 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\MSymmetry.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "71e204839bf685b54519f0638974784f0273af6b2f27f92abd9be1636cc3006c"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\MTuple.nb"
                     
             ]
             ,
             "Hash"
             ->
-            "cfd10a85e6b978613f196b5c44e3988933df37a8a6b5608d2d794c0dabca26e6"
+            "3d8c3c5c591252d236f8ce4c1aef72d60daa17403697783eced534a56e71d60f"
                 
         |>
         ,
@@ -684,6 +698,19 @@
             ->
             "5c08606157d46abf4b4cd2f7a36d538828886c2af7a57d452eb55b03ecc6b1ca"
                 
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\MTuple.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
         |>
         ,
         <|
