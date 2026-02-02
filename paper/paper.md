@@ -67,9 +67,9 @@ MFactorGroup[g, h] (* factor group g/h *)
 MHomomorphism[g, g, #&] (* homomorphism from g to itself *)
 ```
 
-As a special mention, the subgroup lattice and Cayley graph generated using the package are illustrated in Figure #fig:s4.
+As a special mention, the subgroup lattice and Cayley graph generated using the package are illustrated in Figure 1.
 
-![Subgroup lattice and Cayley graph of $S_4$.](s4.png){#fig:s4}
+![Subgroup lattice and Cayley graph of $S_4$.](s4.png)
 
 [^1]: https://resources.wolframcloud.com/PacletRepository/resources/Taggar/MGroups/
 
