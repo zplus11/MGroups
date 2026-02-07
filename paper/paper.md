@@ -28,9 +28,17 @@ In contrast, MGroups is a Mathematica package developed with an emphasis on ease
 
 While tools like GAP remain the appropriate choice for large-scale or research-level computations, packages like MGroups fill a complementary niche by providing a gentle and engaging entry point to computational group theory within familiar and friendly environments.
 
-# Design
+# Software design
 
-The package stores group structures using precomputed Cayley tables and simple lookups rather than recalculating on-the-fly. This keeps behaviour predictable and makes repeated operations faster and easier to reason about for users.
+MGroups represents finite groups as explicit data structures built from a fixed domain and a binary operation, with group properties validated at construction time. Group operations are implemented using precomputed Cayley tables and simple lookup mechanisms rather than symbolic or on-the-fly recomputation. This design ensures predictable behaviour, simplifies reasoning about group operations, and makes repeated computations efficient. The package emphasises explicitness and transparency over algorithmic optimisation, and is intentionally restricted to finite groups of small to moderate order. This choice prioritises pedagogical clarity, reproducibility, and ease of inspection within the Mathematica environment.
+
+# Research impact statement
+
+MGroups lowers the entry barrier to computational group theory by embedding core group-theoretic computations within Mathematica's symbolic, notebook-based environment. It is well suited for institutional instruction and can be integrated into coursework to support theoretical learning through classroom demonstrations, assignments, and self-guided exploration. While not intended for large-scale or research-level computation, MGroups complements established systems by providing an accessible pedagogical tool, particularly for introductory abstract algebra courses and first-time exposure to group theory.
+
+# State of the field
+
+A variety of computational tools for group theory are currently available, each addressing different audiences and use cases. Dedicated systems such as GAP provide extensive algorithmic depth and are widely used in research-level computations involving groups, rings, and representations. General computer algebra systems [@mathematica; @maple; @sagemath; @magma; @sympy] include group-theoretic functionality as part of a broader symbolic framework, though such functionality is often dispersed and not tailored specifically to introductory group theory. Research-oriented systems such as Magma and SageMath emphasise algorithmic depth and completeness, while general-purpose CAS such as Mathematica and Maple integrate group theory alongside many other mathematical domains. Within the Mathematica ecosystem, specialised packages such as GTPack [@gtpack] and GroupMath [@groupmath] extend native capabilities, with a particular emphasis on representation theory, symmetry analysis, and applications in physics. The Group Explorer [@explorer] is an excellent visualisation tool that uses pre-computed data using GAP and provides interactive representations of finite groups. Programming-language libraries, such as the group-math [@haskell] package in Haskell, support abstract algebraic structures within software development workflows but are not designed as interactive educational tools. In contrast, MGroups is designed as a lightweight, pedagogy-oriented Mathematica package that focuses on core topics in finite group theory, offering a unified and accessible interface aimed at students and instructors rather than large-scale or research-oriented computation.
 
 # Installation and usage
 
@@ -72,10 +80,6 @@ As a special mention, the subgroup lattice and Cayley graph generated using the 
 ![Subgroup lattice and Cayley graph of $S_4$.](s4.png)
 
 [^1]: https://resources.wolframcloud.com/PacletRepository/resources/Taggar/MGroups/
-
-# State of the field
-
-A variety of computational tools for group theory are currently available, each addressing different audiences and use cases. Dedicated systems such as GAP provide extensive algorithmic depth and are widely used in research-level computations involving groups, rings, and representations. General computer algebra systems [@mathematica; @maple; @sagemath; @magma; @sympy] include group-theoretic functionality as part of a broader symbolic framework, though such functionality is often dispersed and not tailored specifically to introductory group theory. Research-oriented systems such as Magma and SageMath emphasise algorithmic depth and completeness, while general-purpose CAS such as Mathematica and Maple integrate group theory alongside many other mathematical domains. Within the Mathematica ecosystem, specialised packages such as GTPack [@gtpack] and GroupMath [@groupmath] extend native capabilities, with a particular emphasis on representation theory, symmetry analysis, and applications in physics. The Group Explorer [@explorer] is an excellent visualisation tool that uses pre-computed data using GAP and provides interactive representations of finite groups. Programming-language libraries, such as the group-math [@haskell] package in Haskell, support abstract algebraic structures within software development workflows but are not designed as interactive educational tools. In contrast, MGroups is designed as a lightweight, pedagogy-oriented Mathematica package that focuses on core topics in finite group theory, offering a unified and accessible interface aimed at students and instructors rather than large-scale or research-oriented computation.
 
 # Conclusion
 
