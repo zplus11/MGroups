@@ -42,7 +42,7 @@ MGroups lowers the entry barrier to computational group theory by embedding core
 
 # AI usage disclosure
 
-Generative AI tools were used occasionally for code refactoring suggestions. All code was reviewed, tested, and validated by the authors, and full responsibility for correctness and functionality rests with the authors.
+Generative AI tools were used occasionally for code refactoring suggestions. All code was reviewed, tested, and validated by the author, and full responsibility for correctness and functionality rests with the author.
 
 # Installation and usage
 
